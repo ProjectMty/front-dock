@@ -1,3 +1,4 @@
+/* eslint-disable */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
@@ -17,5 +18,23 @@ module.exports = {
       }, */
     },
   },
-  plugins: [],
+  plugins: [require('daisyui'), require('@headlessui/tailwindcss')],
+  daisyui: {
+    theme: true,
+    themes: [
+      {
+        mytheme: {
+          primary: '#041636',
+          secondary: '#FFCA2A',
+          accent: '#92A2AB',
+          neutral: '#000000',
+          'base-100': '#FFFFFF',
+          info: '#0288D1',
+          success: '#2E7D32',
+          warning: '#ED6C02',
+          error: '#D32F2F',
+        },
+      },
+    ],
+  },
 };
