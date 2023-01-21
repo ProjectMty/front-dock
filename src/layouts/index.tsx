@@ -1,3 +1,4 @@
+import { Navbar } from '@/components';
 import { Lato } from '@next/font/google';
 import Head from 'next/head';
 
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
         <meta name='twitter:creator' content='@britzdm' />
         <meta name='robots' content='index, follow' />
       </Head>
+      <Navbar />
       <main className={lato.className}>{children}</main>
     </>
   );
