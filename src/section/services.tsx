@@ -12,19 +12,7 @@ const titles = [
 export default function Services() {
   return (
     <section className='bg-accent px-10 py-8 text-primary'>
-      <button
-        type='button'
-        onClick={() => {
-          console.log('button click');
-        }}
-      >
-        Reset animation
-      </button>
-      <Tab.Group
-        onChange={(index) => {
-          console.log('Changed selected tab to:', index);
-        }}
-      >
+      <Tab.Group>
         <Tab.List className='max-w-full overflow-hidden py-1'>
           <div className='flex space-x-5 overflow-x-scroll py-1'>
             {titles.map((title) => (
