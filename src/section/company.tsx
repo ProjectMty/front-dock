@@ -7,7 +7,7 @@ export default function Company() {
   return (
     <section className='bg-primary px-5 py-8'>
       <motion.h1
-        className='pb-8 text-center text-2xl font-black text-white'
+        className='pb-8 text-center text-2xl font-black text-secondary'
         initial={initial}
         whileInView={animate}
         viewport={{ once: true }}
@@ -44,7 +44,9 @@ export default function Company() {
           your operation.
         </p>
         <p>
-          <strong>Leave the returns to us!</strong>
+          <strong className='text-xl uppercase underline'>
+            Leave the returns to us!
+          </strong>
         </p>
         <p>
           Front Dock operates returns processing centers in San Antonio, Texas
