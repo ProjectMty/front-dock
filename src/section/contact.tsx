@@ -10,7 +10,7 @@ export default function Contact() {
           backgroundImage: `url("assets/contact-background-mobile.png")`,
         }}
       >
-        <div className='absolute -mt-8 min-h-[300px] w-[calc(100%-32px)] bg-primary'>
+        <div className='absolute -mt-8 min-h-[300px] w-[calc(100%-32px)] bg-primary shadow-2xl'>
           <ContactForm />
         </div>
       </div>
