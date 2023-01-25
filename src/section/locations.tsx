@@ -6,15 +6,15 @@ export default function Locations() {
     <section className='bg-white px-5 py-8 text-center text-primary'>
       <h2 className='pb-8 text-2xl font-black'>LOCATIONS</h2>
       <Image
-        src='/assets/usa-map-tablet.png'
+        src='/assets/usa-map-desktop.png'
         alt='Mexico locations'
-        width={561}
-        height={348}
+        width={951}
+        height={589}
         className='mx-auto min-h-[170px] w-full lg:min-h-[466px] 2xl:w-4/5'
         priority
         loading='eager'
       />
-      <div className='mt-5 flex w-full justify-between'>
+      <div className='mt-5 flex w-full justify-between gap-x-4'>
         <LocationCard>
           <p className='text-sm font-black'>Northeast</p>
           <p>202 Rhode Island Ave,</p>

@@ -5,12 +5,12 @@ export default function Contact() {
     <section>
       <ContactData />
       <div
-        className='min-h-[688px] bg-cover bg-no-repeat px-4 pb-10'
+        className='bg-cover bg-no-repeat px-4 pb-4'
         style={{
           backgroundImage: `url("assets/contact-background-mobile.png")`,
         }}
       >
-        <div className='absolute -mt-8 min-h-[300px] w-[calc(100%-32px)] bg-primary shadow-2xl'>
+        <div className='w-full -translate-y-8 bg-primary shadow-2xl'>
           <ContactForm />
         </div>
       </div>

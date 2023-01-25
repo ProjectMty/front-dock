@@ -63,7 +63,7 @@ export default function ContactForm() {
         e.preventDefault();
       }}
     >
-      <div className='group form-control w-full '>
+      <div className='group form-control w-full'>
         <label className='label' htmlFor='name'>
           <span
             className={clsx(
@@ -84,7 +84,7 @@ export default function ContactForm() {
           )}
         />
       </div>
-      <div className='group form-control w-full '>
+      <div className='group form-control w-full'>
         <label className='label' htmlFor='email'>
           <span
             className={clsx(
@@ -105,7 +105,7 @@ export default function ContactForm() {
           )}
         />
       </div>
-      <div className='group form-control w-full '>
+      <div className='group form-control w-full'>
         <label className='label' htmlFor='phone'>
           <span
             className={clsx(
@@ -126,7 +126,7 @@ export default function ContactForm() {
           )}
         />
       </div>
-      <div className='group form-control w-full '>
+      <div className='group form-control w-full'>
         <label className='label' htmlFor='phone'>
           <span
             className={clsx(
@@ -154,7 +154,7 @@ export default function ContactForm() {
         </select>
       </div>
 
-      <div className='group form-control w-full '>
+      <div className='group form-control w-full'>
         <label className='label' htmlFor='subject'>
           <span
             className={clsx(

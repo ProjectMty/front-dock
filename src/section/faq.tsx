@@ -57,10 +57,8 @@ export default function Faq() {
                   open && 'bg-primary',
                 )}
               >
-                <Disclosure.Button className='flex w-full items-center justify-between py-5 px-6 text-left'>
-                  <span className='ui-open:font-extrabold ui-open:text-secondary'>
-                    {question}
-                  </span>
+                <Disclosure.Button className='flex w-full items-center justify-between py-5 px-6 text-left font-bold'>
+                  <span className='ui-open:text-secondary'>{question}</span>
                   <FontAwesomeIcon
                     icon={faChevronDown}
                     className='ui-open:rotate-180 ui-open:text-secondary'
