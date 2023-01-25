@@ -53,7 +53,7 @@ export default function Faq() {
             {({ open }) => (
               <div
                 className={clsx(
-                  'border-2 border-primary text-justify',
+                  'border-2 border-primary text-justify transition-all duration-300',
                   open && 'bg-primary',
                 )}
               >
