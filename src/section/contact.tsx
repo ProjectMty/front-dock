@@ -5,7 +5,7 @@ export default function Contact() {
     <section>
       <ContactData />
       <div
-        className='min-h-[400px] bg-cover bg-no-repeat px-4'
+        className='min-h-[688px] bg-cover bg-no-repeat px-4 pb-10'
         style={{
           backgroundImage: `url("assets/contact-background-mobile.png")`,
         }}

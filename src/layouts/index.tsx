@@ -1,4 +1,4 @@
-import { Navbar } from '@/components';
+import { Footer, Navbar } from '@/components';
 import { Lato } from '@next/font/google';
 import Head from 'next/head';
 
@@ -48,6 +48,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
       </Head>
       <Navbar />
       <main className={lato.className}>{children}</main>
+      <Footer />
     </>
   );
 }

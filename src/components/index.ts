@@ -4,3 +4,4 @@ export { default as ProductsList } from './products-list';
 export { default as LocationCard } from './location-card';
 export { default as ContactData } from './contact-data';
 export { default as ContactForm } from './contact-form';
+export { default as Footer } from './footer';

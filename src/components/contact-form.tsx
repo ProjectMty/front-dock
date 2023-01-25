@@ -143,7 +143,7 @@ export default function ContactForm() {
             false && 'input-error group-focus-within:input-error',
           )}
         >
-          <option disabled selected>
+          <option disabled id='placeholder'>
             Product category
           </option>
           {products.map(({ id, description }) => (
