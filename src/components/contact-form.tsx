@@ -71,7 +71,7 @@ export default function ContactForm() {
               false && 'text-error group-focus-within:text-error',
             )}
           >
-            Name *
+            Name
           </span>
         </label>
         <input
@@ -92,7 +92,7 @@ export default function ContactForm() {
               false && 'text-error group-focus-within:text-error',
             )}
           >
-            Email *
+            Email
           </span>
         </label>
         <input
@@ -113,7 +113,7 @@ export default function ContactForm() {
               false && 'text-error group-focus-within:text-error',
             )}
           >
-            Phone *
+            Phone
           </span>
         </label>
         <input
@@ -134,7 +134,7 @@ export default function ContactForm() {
               false && 'text-error group-focus-within:text-error',
             )}
           >
-            Phone *
+            Phone
           </span>
         </label>
         <select

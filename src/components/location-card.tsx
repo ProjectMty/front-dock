@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
 
 type LocationCardProps = {
@@ -6,8 +7,14 @@ type LocationCardProps = {
 
 export default function LocationCard({ children }: LocationCardProps) {
   return (
-    <div className='border border-slate-300 px-6 py-5 text-sm shadow-lg drop-shadow-lg'>
+    <motion.div
+      className='border border-slate-300 px-6 py-5 text-sm shadow-lg drop-shadow-lg'
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.25 }}
+    >
       {children}
-    </div>
+    </motion.div>
   );
 }

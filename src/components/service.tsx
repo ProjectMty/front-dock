@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
 
 type ServiceProps = {
@@ -25,14 +26,39 @@ export default function Service({
 }: ServiceProps) {
   return (
     <div className='mt-4 space-y-6 text-justify'>
-      <h3 className='-ml-10 bg-secondary pl-10 text-center text-xl font-semibold'>
+      <motion.h3
+        className='-ml-10 bg-secondary pl-10 text-center text-xl font-semibold'
+        initial={{ x: -150, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         What are the processing options?
-      </h3>
-      <p>{processing}</p>
-      <h3 className='-mr-10 bg-primary pr-10 text-center text-xl font-semibold text-secondary'>
+      </motion.h3>
+      <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        {processing}
+      </motion.p>
+      <motion.h3
+        className='-mr-10 bg-primary pr-10 text-center text-xl font-semibold  text-secondary'
+        initial={{ x: 150, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         What does it cost?
-      </h3>
-      <table className='w-full border-separate border-spacing-2 border border-slate-300 bg-white text-center text-sm shadow-2xl'>
+      </motion.h3>
+      <motion.table
+        className='w-full border-separate border-spacing-2 border border-slate-300 bg-white text-center text-sm shadow-2xl'
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <thead>
           <tr>
             <th>Size or Weight Limit</th>
@@ -52,15 +78,39 @@ export default function Service({
             <td>{cost.typeFee}</td>
           </tr>
         </tbody>
-      </table>
-      <p>
+      </motion.table>
+      <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <span className='font-bold'>Shipping Fee:</span> {shipping}
-      </p>
-      <p>{info}</p>
-      <h3 className='-ml-10 bg-secondary pl-10 text-center text-xl font-semibold'>
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        {info}
+      </motion.p>
+      <motion.h3
+        className='-ml-10 bg-secondary pl-10 text-center text-xl font-semibold'
+        initial={{ x: -150, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         How long does it take?
-      </h3>
-      <table className='w-full border-separate border-spacing-2 border border-slate-300 bg-white text-center text-sm shadow-2xl'>
+      </motion.h3>
+      <motion.table
+        className='w-full border-separate border-spacing-2 border border-slate-300 bg-white text-center text-sm shadow-2xl'
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <thead>
           <tr>
             <th>Check-in Time</th>
@@ -73,7 +123,7 @@ export default function Service({
             <td>{time.ship}</td>
           </tr>
         </tbody>
-      </table>
+      </motion.table>
     </div>
   );
 }

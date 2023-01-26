@@ -1,5 +1,6 @@
 import type { IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import type { ReactNode } from 'react';
+import { motion } from 'framer-motion';
+import { ReactNode } from 'react';
 import ProductIcon from './product-icon';
 
 type ProductsListProps = {
@@ -12,16 +13,23 @@ type ProductsListProps = {
 
 export default function ProductsList({ products }: ProductsListProps) {
   return (
-    <div className='grid gap-y-4'>
+    <ul className='grid w-fit gap-y-4'>
       {products.map(({ id, icon, description }, index) => (
-        <div key={id} className='flex items-center gap-x-4 text-left'>
+        <motion.li
+          key={id}
+          className='flex items-center space-x-7'
+          initial={{ y: -10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <ProductIcon
             icon={icon}
             color={index % 2 === 0 ? 'primary' : 'secondary'}
           />
-          <p>{description}</p>
-        </div>
+          <p className='text-left'>{description}</p>
+        </motion.li>
       ))}
-    </div>
+    </ul>
   );
 }

@@ -2,6 +2,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Disclosure, Transition } from '@headlessui/react';
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
 const questions = [
   {
@@ -42,20 +43,30 @@ const questions = [
 export default function Faq() {
   return (
     <section className='bg-white px-5 py-8 text-center text-base text-primary'>
-      <h2 className='pb-8 text-2xl font-black'>
+      <motion.h2
+        className='pb-8 text-2xl font-black'
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         FREQUENTLY ASKED
         <br />
         QUESTIONS
-      </h2>
+      </motion.h2>
       <div className='space-y-8'>
         {questions.map(({ question, response }) => (
           <Disclosure key={question.toLowerCase()}>
             {({ open }) => (
-              <div
+              <motion.div
                 className={clsx(
                   'border-2 border-primary text-justify transition-all duration-300',
                   open && 'bg-primary',
                 )}
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
               >
                 <Disclosure.Button className='flex w-full items-center justify-between py-5 px-6 text-left font-bold'>
                   <span className='ui-open:text-secondary'>{question}</span>
@@ -77,7 +88,7 @@ export default function Faq() {
                     {response}
                   </Disclosure.Panel>
                 </Transition>
-              </div>
+              </motion.div>
             )}
           </Disclosure>
         ))}

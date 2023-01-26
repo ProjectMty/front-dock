@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Navbar() {
   return (
-    <div
+    <nav
       className='navbar fixed top-0 z-[200] bg-primary/80 text-accent
     shadow-xl'
     >
@@ -15,6 +15,6 @@ export default function Navbar() {
       <div className='flex-none'>
         <a className='btn-ghost btn text-xl normal-case'>LOGO</a>
       </div>
-    </div>
+    </nav>
   );
 }

@@ -14,7 +14,11 @@ import {
   faTableTennisPaddleBall,
   faToiletPortable,
 } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 import { useMemo } from 'react';
+
+const initial = { opacity: 0, y: -20 };
+const animate = { opacity: 1, y: 0 };
 
 export default function Returns() {
   const products = useMemo(
@@ -95,8 +99,24 @@ export default function Returns() {
 
   return (
     <section className='bg-white px-5 py-8 text-center text-base text-primary'>
-      <h2 className='pb-8 text-2xl font-black'>RETURNS SOLUTIONS</h2>
-      <p className='mb-5 text-xl'>What products do we handle?</p>
+      <motion.h2
+        className='pb-8 text-2xl font-black'
+        initial={initial}
+        whileInView={animate}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        RETURNS SOLUTIONS
+      </motion.h2>
+      <motion.p
+        className='mb-5 text-xl'
+        initial={initial}
+        whileInView={animate}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        What products do we handle?
+      </motion.p>
       <div className='flex justify-around'>
         <ProductsList products={products} />
       </div>
