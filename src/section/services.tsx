@@ -11,14 +11,14 @@ const titles = [
 
 export default function Services() {
   return (
-    <section className='bg-accent px-10 py-8 text-primary'>
+    <section className='bg-accent px-10 py-8 text-base text-primary'>
       <Tab.Group>
         <Tab.List className='max-w-full overflow-hidden py-1'>
           <div className='flex space-x-5 overflow-x-scroll py-1'>
             {titles.map((title) => (
               <Tab
                 key={title}
-                className='inline-block select-none scroll-smooth whitespace-nowrap py-1 text-base font-black text-white ui-selected:text-primary'
+                className='inline-block select-none scroll-smooth whitespace-nowrap py-1 text-lg font-black text-white ui-selected:text-primary'
               >
                 {title}
                 <div className='hidden h-1 w-full bg-secondary ui-selected:block' />

@@ -5,7 +5,7 @@ const animate = { opacity: 1, y: 0 };
 
 export default function Company() {
   return (
-    <section className='bg-primary px-5 py-8'>
+    <section className='bg-primary px-5 py-8 text-base'>
       <motion.h1
         className='pb-8 text-center text-2xl font-black text-secondary'
         initial={initial}
@@ -16,7 +16,7 @@ export default function Company() {
         YOUR E-COMMERCE <br /> RETURNS MADE EASY!
       </motion.h1>
       <motion.div
-        className='space-y-4 bg-white p-5 text-center text-base text-primary shadow-2xl'
+        className='space-y-4 bg-white p-5 text-center text-primary shadow-2xl'
         initial={initial}
         whileInView={animate}
         viewport={{ once: true }}
@@ -44,7 +44,7 @@ export default function Company() {
           your operation.
         </p>
         <p>
-          <strong className='text-xl uppercase underline'>
+          <strong className='text-2xl uppercase underline'>
             Leave the returns to us!
           </strong>
         </p>

@@ -41,7 +41,7 @@ const questions = [
 
 export default function Faq() {
   return (
-    <section className='bg-white px-5 py-8 text-center text-primary'>
+    <section className='bg-white px-5 py-8 text-center text-base text-primary'>
       <h2 className='pb-8 text-2xl font-black'>
         FREQUENTLY ASKED
         <br />

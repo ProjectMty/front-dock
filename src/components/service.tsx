@@ -25,14 +25,14 @@ export default function Service({
 }: ServiceProps) {
   return (
     <div className='mt-4 space-y-6 text-justify'>
-      <h3 className='-ml-10 bg-secondary pl-10 text-center text-lg font-semibold'>
+      <h3 className='-ml-10 bg-secondary pl-10 text-center text-xl font-semibold'>
         What are the processing options?
       </h3>
-      <p className='text-sm'>{processing}</p>
-      <h3 className='-mr-10 bg-primary pr-10 text-center text-lg font-semibold text-secondary'>
+      <p>{processing}</p>
+      <h3 className='-mr-10 bg-primary pr-10 text-center text-xl font-semibold text-secondary'>
         What does it cost?
       </h3>
-      <table className='w-full border-separate border-spacing-2 border border-slate-300 bg-white text-center text-xs shadow-2xl'>
+      <table className='w-full border-separate border-spacing-2 border border-slate-300 bg-white text-center text-sm shadow-2xl'>
         <thead>
           <tr>
             <th>Size or Weight Limit</th>
@@ -53,14 +53,14 @@ export default function Service({
           </tr>
         </tbody>
       </table>
-      <p className='text-sm'>
+      <p>
         <span className='font-bold'>Shipping Fee:</span> {shipping}
       </p>
-      <p className='text-sm'>{info}</p>
-      <h3 className='-ml-10 bg-secondary pl-10 text-center text-lg font-semibold'>
+      <p>{info}</p>
+      <h3 className='-ml-10 bg-secondary pl-10 text-center text-xl font-semibold'>
         How long does it take?
       </h3>
-      <table className='w-full border-separate border-spacing-2 border border-slate-300 bg-white text-center text-xs shadow-2xl'>
+      <table className='w-full border-separate border-spacing-2 border border-slate-300 bg-white text-center text-sm shadow-2xl'>
         <thead>
           <tr>
             <th>Check-in Time</th>

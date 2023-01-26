@@ -16,12 +16,12 @@ export default function Locations() {
       />
       <div className='mt-5 flex w-full justify-between gap-x-4'>
         <LocationCard>
-          <p className='text-sm font-black'>Northeast</p>
+          <p className='font-black'>Northeast</p>
           <p>202 Rhode Island Ave,</p>
           <p>Buffalo, NY 14213</p>
         </LocationCard>
         <LocationCard>
-          <p className='text-sm font-black'>South</p>
+          <p className='font-black'>South</p>
           <p>1234 Main Street,</p>
           <p>San Antonio, TX 78040</p>
         </LocationCard>
