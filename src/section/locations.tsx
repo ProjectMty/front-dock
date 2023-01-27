@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Locations() {
   return (
-    <section className='bg-white px-5 py-8 text-center text-primary'>
+    <section className='bg-white px-5 py-8 text-center text-primary 2xl:py-20'>
       <motion.h2
         className='pb-8 text-2xl font-black lg:text-3xl 2xl:text-4xl'
         initial={{ x: -150, opacity: 0 }}
