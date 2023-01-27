@@ -18,32 +18,26 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
           content='width=device-width,initial-scale=1'
           key='viewport'
         />
-        <title>NextJS Basic App Landing Page</title>
-        <meta
-          name='description'
-          content='Save time and get to market faster with this free fully responsive single page html template built with TailwindCSS.'
-        />
-        <link rel='canonical' href='https://talland-basic-app.vercel.app/' />
+        <title>Front Dock</title>
+        <meta name='description' content='Your e-Commerce returns made easy!' />
+        <link rel='canonical' href='https://frontdock.luiscarrillo.mx/' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='Basic App Landing Page' />
+        <meta property='og:title' content='Front Dock' />
         <meta
           property='og:description'
-          content='Save time and get to market faster with this free fully responsive single page html template built with TailwindCSS.'
+          content='Your e-Commerce returns made easy!'
         />
         <meta property='og:image' content='LINK TO THE IMAGE FILE' />
-        <meta
-          property='og:url'
-          content='https://tailland-basic-app.vercel.app/'
-        />
-        <meta property='og:site_name' content='Basic App Landing Page' />
+        <meta property='og:url' content='https://frontdock.luiscarrillo.mx/' />
+        <meta property='og:site_name' content='Front Dock' />
         <meta name='twitter:title' content='TITLE OF POST OR PAGE' />
         <meta
           name='twitter:description'
-          content='Save time and get to market faster with this free fully responsive single page html template built with TailwindCSS.'
+          content='Your e-Commerce returns made easy!'
         />
         <meta name='twitter:image' content='LINK TO IMAGE' />
-        <meta name='twitter:site' content='@britzdm' />
-        <meta name='twitter:creator' content='@britzdm' />
+        <meta name='twitter:site' content='@front-dock' />
+        <meta name='twitter:creator' content='@front-dock' />
         <meta name='robots' content='index, follow' />
       </Head>
       <Navbar />
