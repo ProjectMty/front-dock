@@ -58,7 +58,7 @@ const products = [
 export default function ContactForm() {
   return (
     <form
-      className='space-y-2 rounded-2xl p-8 lg:w-1/2 lg:rounded-l-none'
+      className='flex w-full flex-col space-y-2 rounded-2xl p-8 lg:rounded-l-none'
       onSubmit={(e) => {
         e.preventDefault();
       }}
@@ -67,7 +67,7 @@ export default function ContactForm() {
         <label className='label' htmlFor='name'>
           <span
             className={clsx(
-              'label-text text-white focus:text-secondary group-focus-within:text-secondary',
+              'label-text text-base text-white focus:text-secondary group-focus-within:text-secondary lg:text-lg 2xl:text-xl',
               false && 'text-error group-focus-within:text-error',
             )}
           >
@@ -88,7 +88,7 @@ export default function ContactForm() {
         <label className='label' htmlFor='email'>
           <span
             className={clsx(
-              'label-text text-white focus:text-secondary group-focus-within:text-secondary',
+              'label-text text-base text-white focus:text-secondary group-focus-within:text-secondary lg:text-lg 2xl:text-xl',
               false && 'text-error group-focus-within:text-error',
             )}
           >
@@ -109,7 +109,7 @@ export default function ContactForm() {
         <label className='label' htmlFor='phone'>
           <span
             className={clsx(
-              'label-text text-white focus:text-secondary group-focus-within:text-secondary',
+              'label-text text-base text-white focus:text-secondary group-focus-within:text-secondary lg:text-lg 2xl:text-xl',
               false && 'text-error group-focus-within:text-error',
             )}
           >
@@ -130,7 +130,7 @@ export default function ContactForm() {
         <label className='label' htmlFor='phone'>
           <span
             className={clsx(
-              'label-text text-white focus:text-secondary group-focus-within:text-secondary',
+              'label-text text-base text-white focus:text-secondary group-focus-within:text-secondary lg:text-lg 2xl:text-xl',
               false && 'text-error group-focus-within:text-error',
             )}
           >
@@ -158,7 +158,7 @@ export default function ContactForm() {
         <label className='label' htmlFor='subject'>
           <span
             className={clsx(
-              'label-text rounded-none text-white focus:text-secondary group-focus-within:text-secondary',
+              'label-text rounded-none text-base text-white focus:text-secondary group-focus-within:text-secondary lg:text-lg 2xl:text-xl',
               false && 'text-error group-focus-within:text-error',
             )}
           >
@@ -178,7 +178,7 @@ export default function ContactForm() {
       <button
         type='submit'
         className={clsx(
-          'btn-secondary btn-block btn rounded-none py-0 text-primary lg:w-56',
+          'btn-secondary btn-block btn rounded-none py-0 text-base text-primary lg:w-56 lg:text-lg 2xl:text-xl',
           false && 'loading disabled:text-gray-300',
         )}
         // disabled={loading}

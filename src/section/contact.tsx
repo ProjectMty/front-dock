@@ -10,7 +10,7 @@ export default function Contact() {
           backgroundImage: `url("assets/contact-background-mobile.png")`,
         }}
       >
-        <div className='w-full -translate-y-8 bg-primary text-base shadow-2xl'>
+        <div className='mx-auto w-full -translate-y-8 bg-primary text-base shadow-2xl lg:w-1/2 lg:-translate-y-14 2xl:w-1/3 2xl:-translate-y-20'>
           <ContactForm />
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { LocationCard } from '@/components';
+import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -14,9 +15,9 @@ export default function Locations() {
       >
         LOCATIONS
       </motion.h2>
-      <div className='flex flex-col lg:flex-row lg:px-20 2xl:px-56'>
+      <div className='flex flex-col lg:flex-row lg:items-center lg:px-20 2xl:px-56'>
         <motion.div
-          className='lg:shrink-0'
+          className='lg:w-1/2'
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -27,12 +28,20 @@ export default function Locations() {
             alt='Mexico locations'
             width={951}
             height={589}
-            className='mx-auto h-[201px] w-[326px] lg:h-[348px] lg:w-[560px] 2xl:h-[589px] 2xl:w-[951px]'
+            className={clsx(
+              'mx-auto w-[326px]',
+              // 'mx-auto w-[326px] lg:w-[560px] 2xl:w-[951px]',
+              'sm:w-[390px]',
+              'md:w-[455px]',
+              'lg:w-[510px]',
+              'xl:w-[565px]',
+              '2xl:w-[650px]',
+            )}
             priority
             loading='eager'
           />
         </motion.div>
-        <div className='mt-5 flex w-full flex-row items-center justify-evenly gap-x-2 lg:flex-col'>
+        <div className='mt-5 flex w-full flex-row items-center justify-evenly gap-x-2 lg:w-1/2 lg:flex-col lg:gap-y-14 2xl:gap-y-20'>
           <LocationCard>
             <p className='font-black'>Northeast</p>
             <p>202 Rhode Island Ave,</p>

@@ -11,7 +11,7 @@ const titles = [
 
 export default function Services() {
   return (
-    <section className='bg-accent py-8 text-base text-primary lg:text-xl 2xl:text-2xl'>
+    <section className='bg-accent pb-8 pt-2 text-base text-primary lg:pb-10 lg:pt-4 lg:text-xl 2xl:pb-20 2xl:pt-14 2xl:text-2xl'>
       <Tab.Group>
         <Tab.List className='max-w-full overflow-hidden py-1'>
           <div className='mx-10 flex space-x-5 overflow-x-scroll py-1 md:justify-evenly md:space-x-0 md:overflow-x-hidden'>
