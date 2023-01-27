@@ -7,12 +7,12 @@ export default function ContactData() {
   return (
     <div
       className={clsx(
-        'flex h-24 justify-center gap-2 bg-secondary pt-5 text-base font-extrabold text-primary ',
-        'lg:h-40 lg:pt-10 lg:text-2xl',
+        'flex h-24 justify-center gap-1 bg-secondary pt-5 text-sm font-extrabold text-primary sm:gap-2',
+        'lg:h-40 lg:gap-x-14 lg:pt-10 lg:text-2xl',
         '2xl:h-56 2xl:pt-14 2xl:text-4xl',
       )}
     >
-      <div>
+      <div className=''>
         <FontAwesomeIcon icon={faEnvelope} />
         <Link
           href='mailto:sales@frontdock.com'
@@ -23,7 +23,7 @@ export default function ContactData() {
           sales@frontdock.com
         </Link>
       </div>
-      <div>
+      <div className=''>
         <FontAwesomeIcon icon={faPhone} />
         <Link
           href='telto:9564517191'

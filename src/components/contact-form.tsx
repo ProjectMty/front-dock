@@ -58,7 +58,7 @@ const products = [
 export default function ContactForm() {
   return (
     <form
-      className='flex w-full flex-col space-y-2 rounded-2xl p-8 lg:rounded-l-none'
+      className='flex w-full flex-col items-center space-y-2 rounded-2xl p-8 lg:rounded-l-none'
       onSubmit={(e) => {
         e.preventDefault();
       }}
