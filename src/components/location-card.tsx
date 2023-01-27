@@ -8,7 +8,7 @@ type LocationCardProps = {
 export default function LocationCard({ children }: LocationCardProps) {
   return (
     <motion.div
-      className='border border-slate-300 px-6 py-5 text-sm shadow-lg drop-shadow-lg'
+      className='h-fit w-[200px] border border-slate-300 px-5 py-4 text-sm shadow-lg drop-shadow-lg lg:w-[242px] lg:py-7 lg:px-5 lg:text-lg 2xl:w-[410px] 2xl:py-14 2xl:px-8 2xl:text-2xl'
       initial={{ opacity: 0, scale: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}

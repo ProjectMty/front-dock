@@ -5,18 +5,22 @@ const animate = { opacity: 1, y: 0 };
 
 export default function Company() {
   return (
-    <section className='bg-primary px-5 py-8 text-base'>
+    <section
+      id='company'
+      className='bg-primary px-5 pb-7 text-base lg:px-12 lg:text-lg 2xl:px-80 2xl:pb-20 2xl:text-xl'
+    >
       <motion.h1
-        className='pb-8 text-center text-2xl font-black text-secondary'
+        className='py-7 text-center text-2xl font-black text-secondary lg:py-10 lg:text-5xl 2xl:py-12'
         initial={initial}
         whileInView={animate}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        YOUR E-COMMERCE <br /> RETURNS MADE EASY!
+        YOUR E-COMMERCE <br className='2xl:hidden' /> RETURNS MADE EASY!
       </motion.h1>
       <motion.div
-        className='space-y-4 bg-white p-5 text-center text-primary shadow-2xl'
+        className='space-y-4 bg-white p-5 text-center
+        text-primary shadow-2xl lg:p-12 2xl:px-24'
         initial={initial}
         whileInView={animate}
         viewport={{ once: true }}

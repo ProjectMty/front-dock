@@ -98,9 +98,9 @@ export default function Returns() {
   );
 
   return (
-    <section className='bg-white px-5 py-8 text-center text-base text-primary'>
+    <section className='space-y-6 bg-white px-5 py-8 text-center text-base text-primary lg:space-y-7 lg:text-xl 2xl:space-y-8 2xl:py-32 2xl:text-2xl'>
       <motion.h2
-        className='pb-8 text-2xl font-black'
+        className='text-2xl font-black lg:text-3xl 2xl:text-4xl'
         initial={initial}
         whileInView={animate}
         viewport={{ once: true }}
@@ -109,7 +109,6 @@ export default function Returns() {
         RETURNS SOLUTIONS
       </motion.h2>
       <motion.p
-        className='mb-5 text-xl'
         initial={initial}
         whileInView={animate}
         viewport={{ once: true }}

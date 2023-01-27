@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
 
@@ -18,7 +19,7 @@ type ServiceProps = {
     ship: string;
   };
 };
-
+// text-base lg:text-xl 2xl:text-2xl
 export default function Service({
   processing,
   costs: { cost, shipping, info },
@@ -27,7 +28,12 @@ export default function Service({
   return (
     <div className='mt-4 space-y-6 text-justify'>
       <motion.h3
-        className='-ml-10 bg-secondary pl-10 text-center text-xl font-semibold'
+        className={clsx(
+          'bg-secondary text-center font-semibold lg:py-3 2xl:py-5',
+          'mr-10 pl-10 text-base',
+          'lg:mr-52 lg:pl-52 lg:text-xl',
+          '2xl:mr-96 2xl:pl-96 2xl:text-2xl',
+        )}
         initial={{ x: -150, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -36,6 +42,7 @@ export default function Service({
         What are the processing options?
       </motion.h3>
       <motion.p
+        className='px-10 lg:px-20 2xl:px-80'
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -44,7 +51,12 @@ export default function Service({
         {processing}
       </motion.p>
       <motion.h3
-        className='-mr-10 bg-primary pr-10 text-center text-xl font-semibold  text-secondary'
+        className={clsx(
+          'bg-primary text-center font-semibold text-secondary lg:py-3 2xl:py-5',
+          'ml-10 pr-10 text-base',
+          'lg:ml-52 lg:pr-52 lg:text-xl',
+          '2xl:ml-96 2xl:pr-96 2xl:text-2xl',
+        )}
         initial={{ x: 150, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -53,7 +65,7 @@ export default function Service({
         What does it cost?
       </motion.h3>
       <motion.table
-        className='w-full border-separate border-spacing-2 border border-slate-300 bg-white text-center text-sm shadow-2xl'
+        className='2xl:[660px] mx-auto w-[345px] border-separate border-spacing-2 border border-slate-300 bg-white text-center text-sm shadow-2xl lg:w-[408px] lg:p-4'
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -80,6 +92,7 @@ export default function Service({
         </tbody>
       </motion.table>
       <motion.p
+        className='px-10 lg:px-20 2xl:px-80'
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -88,6 +101,7 @@ export default function Service({
         <span className='font-bold'>Shipping Fee:</span> {shipping}
       </motion.p>
       <motion.p
+        className='px-10 lg:px-20 2xl:px-80'
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -96,7 +110,12 @@ export default function Service({
         {info}
       </motion.p>
       <motion.h3
-        className='-ml-10 bg-secondary pl-10 text-center text-xl font-semibold'
+        className={clsx(
+          'bg-secondary text-center font-semibold lg:py-3 2xl:py-5',
+          'mr-10 pl-10 text-base',
+          'lg:mr-52 lg:pl-52 lg:text-xl',
+          '2xl:mr-96 2xl:pl-96 2xl:text-2xl',
+        )}
         initial={{ x: -150, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -105,7 +124,7 @@ export default function Service({
         How long does it take?
       </motion.h3>
       <motion.table
-        className='w-full border-separate border-spacing-2 border border-slate-300 bg-white text-center text-sm shadow-2xl'
+        className='2xl:[660px] mx-auto w-[345px] border-separate border-spacing-2 border border-slate-300 bg-white text-center text-sm shadow-2xl lg:w-[408px] lg:p-4'
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

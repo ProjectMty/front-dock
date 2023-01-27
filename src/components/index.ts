@@ -5,3 +5,4 @@ export { default as LocationCard } from './location-card';
 export { default as ContactData } from './contact-data';
 export { default as ContactForm } from './contact-form';
 export { default as Footer } from './footer';
+export { default as Section } from './section';

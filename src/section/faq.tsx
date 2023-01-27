@@ -42,9 +42,9 @@ const questions = [
 
 export default function Faq() {
   return (
-    <section className='bg-white px-5 py-8 text-center text-base text-primary'>
+    <section className='bg-white px-5 py-8 text-center text-base text-primary lg:px-52'>
       <motion.h2
-        className='pb-8 text-2xl font-black'
+        className='pb-8 text-2xl font-black lg:text-3xl 2xl:text-4xl'
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -54,6 +54,7 @@ export default function Faq() {
         <br />
         QUESTIONS
       </motion.h2>
+      {/* 2xl:hidden */}
       <div className='space-y-8'>
         {questions.map(({ question, response }) => (
           <Disclosure key={question.toLowerCase()}>

@@ -31,12 +31,13 @@
   5. Improve text rendering
 */
   body {
+    overflow-x: hidden;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
   /*
   6. Improve media defaults
-*/
+ */
   img,
   picture,
   video,
