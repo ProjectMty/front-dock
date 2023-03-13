@@ -42,6 +42,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
       </Head>
       <Navbar />
       <main className={lato.className}>{children}</main>
+      <div id='recaptcha-container' className='h-[0px] w-[0px]' />
       <Footer />
     </>
   );

@@ -30,7 +30,7 @@ export default function Footer() {
         </Link>
       </div>
       <div>
-        <p>Privacy Policy - Terms of Service</p>
+        {/* <p>Privacy Policy - Terms of Service</p> */}
         <p>
           Copyright © {new Date().getUTCFullYear()}, All Rights Reserved by
           Front Dock

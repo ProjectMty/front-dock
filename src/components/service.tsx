@@ -8,7 +8,7 @@ type ServiceProps = {
     cost: {
       limit: string;
       receiving: number;
-      type: 'Consolidate' | 'Repackage' | 'Resell' | 'Processing' | 'Dispose';
+      type: 'Consolidate' | 'Repackage' | 'Resale' | 'Processing' | 'Dispose';
       typeFee: string | ReactNode | ReactNode[];
     };
     shipping: string;

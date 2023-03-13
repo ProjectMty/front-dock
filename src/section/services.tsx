@@ -4,7 +4,7 @@ import { Tab } from '@headlessui/react';
 const titles = [
   'Consolidate',
   'Repackage and ship',
-  'Resell',
+  'Resale',
   'Donate',
   'Dispose',
 ];
@@ -89,7 +89,7 @@ export default function Services() {
                 cost: {
                   limit: 'N/A',
                   receiving: 1.5,
-                  type: 'Resell',
+                  type: 'Resale',
                   typeFee: new Intl.NumberFormat('en-US', {
                     style: 'currency',
                     currency: 'USD',

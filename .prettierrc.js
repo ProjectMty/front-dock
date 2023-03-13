@@ -1,7 +1,5 @@
-const tailwind = require('prettier-plugin-tailwindcss');
 
 module.exports = {
-  plugins: [tailwind],
   bracketSameLine: false,
   bracketSpacing: true,
   endOfLine: 'lf',
