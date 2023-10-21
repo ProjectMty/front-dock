@@ -1,55 +1,108 @@
 {
-  // Configuration for JavaScript files
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2023,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx"]
+      }
+    },
+    "import/extensions": [".ts", ".tsx"]
+  },
   "extends": [
-    "airbnb-base",
-    "next/core-web-vitals", // Needed to avoid warning in next.js build: 'The Next.js plugin was not detected in your ESLint configuration'
-    "plugin:prettier/recommended"
+    "plugin:tailwindcss/recommended",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "prettier",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:security/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:promise/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "security",
+    "unicorn",
+    "promise",
+    "tailwindcss"
   ],
   "rules": {
-    "prettier/prettier": [
-      "error",
-      {},
+    "tailwindcss/no-custom-classname": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      1,
       {
-        "usePrettierrc": true
+        "extensions": [".ts", ".tsx", ".js", ".jsx"]
       }
-    ]
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "no-nested-ternary": "off",
+    "import/prefer-default-export": "off",
+    "no-empty-pattern": "warn",
+    "prettier/prettier": "error",
+    "react/require-default-props": "off",
+    "react/no-children-prop": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "unicorn/consistent-function-scoping": [
+      "error",
+      { "checkArrowFunctions": false }
+    ],
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "kebabCase": true
+        }
+      }
+    ],
+    "security/detect-object-injection": "off"
   },
   "overrides": [
-    // Configuration for TypeScript files
     {
-      "files": ["**/*.ts", "**/*.tsx"],
-      "plugins": ["@typescript-eslint", "unused-imports", "tailwindcss"],
-      "extends": [
-        "plugin:tailwindcss/recommended",
-        "airbnb-typescript",
-        "next/core-web-vitals",
-        "plugin:prettier/recommended"
-      ],
+      "files": ["*.cjs"],
       "parserOptions": {
-        "project": "./tsconfig.json"
-      },
-      "rules": {
-        "react/destructuring-assignment": "off", // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
-        "react/require-default-props": "off", // Allow non-defined react props as undefined
-        "react/jsx-props-no-spreading": "off", // _app.tsx uses spread operator and also, react-hook-form
-        "react-hooks/exhaustive-deps": "off", // Incorrectly report needed dependency with Next.js router
-        "@next/next/no-img-element": "off", // We currently not using next/image because it isn't supported with SSG mode
-        "@typescript-eslint/comma-dangle": "off", // Avoid conflict rule between Eslint and Prettier
-        "@typescript-eslint/consistent-type-imports": "off", // Ensure `import type` is used when it's necessary
-        "import/prefer-default-export": "off", // Named export is easier to refactor automatically
-        "@typescript-eslint/no-unused-vars": "off",
-        "unused-imports/no-unused-imports": "error",
-        "unused-imports/no-unused-vars": [
-          "error",
-          { "argsIgnorePattern": "^_" }
-        ],
-        "prettier/prettier": [
-          "error",
-          {},
-          {
-            "usePrettierrc": true
-          }
-        ]
+        "project": null
       }
     }
   ]
