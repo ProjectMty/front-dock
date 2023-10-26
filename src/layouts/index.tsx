@@ -1,18 +1,19 @@
-import { Footer, Navbar } from '@/components';
-import { Lato } from '@next/font/google';
+import { Footer, Header } from '@/components';
+import { Lato } from 'next/font/google';
 import Head from 'next/head';
+import React from 'react';
 
 const lato = Lato({
   subsets: ['latin'],
-  weight: ['400', '700', '900'],
+  weight: ['100', '300', '400', '700', '900'],
   variable: '--font-inter',
 });
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
-    <>
+    <main className={`${lato.className} w-full`}>
       <Head>
-        <meta charSet='UTF-8' key='charset' />
+        <meta charSet='utf8' key='charset' />
         <meta
           name='viewport'
           content='width=device-width,initial-scale=1'
@@ -40,10 +41,10 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
         <meta name='twitter:creator' content='@front-dock' />
         <meta name='robots' content='index, follow' />
       </Head>
-      <Navbar />
-      <main className={lato.className}>{children}</main>
+      <Header />
+      {children}
       <div id='recaptcha-container' className='h-[0px] w-[0px]' />
       <Footer />
-    </>
+    </main>
   );
 }

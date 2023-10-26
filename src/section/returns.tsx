@@ -106,16 +106,8 @@ export default function Returns() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        RETURNS SOLUTIONS
-      </motion.h2>
-      <motion.p
-        initial={initial}
-        whileInView={animate}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
         What products do we handle?
-      </motion.p>
+      </motion.h2>
       <div className='flex justify-around'>
         <ProductsList products={products} />
       </div>

@@ -1,23 +1,16 @@
-import {
-  Company,
-  Contact,
-  Faq,
-  Hero,
-  Locations,
-  Returns,
-  Services,
-} from '@/section';
+import { Hero } from '@/components';
+import { Company, GetStarted, Services } from '@/section';
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Hero image='assets/redesign/home-hero.png'>
+        You sell, <br />
+        we fulfill
+      </Hero>
       <Company />
-      <Returns />
       <Services />
-      <Faq />
-      <Locations />
-      <Contact />
+      <GetStarted />
     </>
   );
 }

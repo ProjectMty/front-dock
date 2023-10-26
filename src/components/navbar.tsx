@@ -1,28 +1,156 @@
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useClickOutside } from '@/hooks';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from 'next/image';
+import clsx from 'clsx';
+import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
-export default function Navbar() {
+type NavItem = {
+  link: string;
+  label: string;
+};
+
+const navItems: NavItem[] = [
+  { link: '/', label: 'Home' },
+  { link: '/ecommerce', label: 'E-commerce' },
+  { link: '/logistics', label: 'Reverse Logistics' },
+  { link: '/pricing', label: 'Princing' },
+  { link: '/contact', label: 'Contact Us' },
+];
+
+function Navbar() {
+  const [expanded, setExpanded] = useState(false);
+  const pathname = usePathname();
+
+  const ref = useClickOutside(() => {
+    setExpanded(false);
+  });
+
+  useEffect(() => {
+    setExpanded(false);
+  }, [pathname]);
+
   return (
-    <nav
-      className='navbar sticky top-0 z-[200] bg-primary/80 text-accent
-    shadow-xl'
+    <div
+      ref={ref}
+      className='min-h-20 container relative mx-auto grid grid-cols-2 p-4 text-white lg:flex lg:justify-between lg:py-6'
     >
-      <div className='flex-1'>
-        <button className='btn-ghost btn-square btn'>
-          <FontAwesomeIcon icon={faBars} className='invisible text-2xl' />
-        </button>
-      </div>
-      <div className='flex-none'>
-        <a className='btn-ghost btn text-xl normal-case'>
-          <Image
-            src='/assets/frontdock-logo.png'
-            alt='FrontDock Logo'
-            width={64}
-            height={64}
-          />
-        </a>
-      </div>
-    </nav>
+      <nav className='flex w-full items-center justify-between lg:justify-center lg:gap-24'>
+        <div className='h-12 w-12 bg-red-600' />
+        <ul className='hidden gap-12 lg:flex'>
+          {navItems.map(({ link, label }) => (
+            <li key={link}>
+              <Link
+                className='text-xs uppercase tracking-widest transition-all duration-300 hover:text-gray-300 hover:underline hover:underline-offset-4'
+                href={link}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <button
+        type='button'
+        className='inline-flex items-center justify-center justify-self-end rounded-lg p-2 focus:outline-none lg:hidden'
+        aria-controls='mobile-menu'
+        aria-expanded='false'
+        onClick={() => setExpanded((prev) => !prev)}
+      >
+        <span className='sr-only'>Open main menu</span>
+        <AnimatePresence initial={false} mode='wait'>
+          <motion.div
+            key={expanded ? 'minus' : 'plus'}
+            initial={{
+              rotate: expanded ? -90 : 90,
+            }}
+            animate={{
+              zIndex: 1,
+              rotate: 0,
+              transition: {
+                type: 'tween',
+                duration: 0.15,
+                ease: 'circOut',
+              },
+            }}
+            exit={{
+              zIndex: 0,
+              rotate: expanded ? -90 : 90,
+              transition: {
+                type: 'tween',
+                duration: 0.15,
+                ease: 'circIn',
+              },
+            }}
+          >
+            {expanded ? (
+              <FontAwesomeIcon icon={faXmark} />
+            ) : (
+              <FontAwesomeIcon icon={faBars} />
+            )}
+          </motion.div>
+        </AnimatePresence>
+      </button>
+      <AnimatePresence mode='wait'>
+        {expanded && (
+          <motion.div
+            initial={{
+              opacity: 0,
+              height: 0,
+              display: 'hidden',
+            }}
+            animate={{
+              opacity: 1,
+              height: 'auto',
+              display: 'relative',
+              transition: {
+                height: {
+                  duration: 0.4,
+                },
+                opacity: {
+                  duration: 0.25,
+                  delay: 0.15,
+                },
+              },
+            }}
+            exit={{
+              opacity: 0,
+              height: 0,
+              display: 'hidden',
+              transition: {
+                height: {
+                  duration: 0.4,
+                },
+                opacity: {
+                  duration: 0.25,
+                },
+              },
+            }}
+            key='test'
+            id='mobile-menu'
+            className={clsx(
+              'z-50 col-span-2 mt-4 rounded-lg border border-white p-2 lg:hidden',
+            )}
+          >
+            <ul className='w-full py-2'>
+              {navItems.map(({ link, label }) => (
+                <Link key={link} href={link}>
+                  <li className='rounded-lg p-2 text-gray-50 hover:bg-gray-700 hover:text-gray-50 focus:bg-gray-700 focus:text-gray-50'>
+                    <span className='text-sm uppercase tracking-widest'>
+                      {label}
+                    </span>
+                  </li>
+                </Link>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
+
+export default Navbar;

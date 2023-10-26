@@ -1,41 +1,111 @@
-import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {
+  faInstagram,
+  faLinkedin,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className='my-0 flex w-full flex-col items-center justify-center gap-4 bg-primary p-6 text-center text-sm font-extralight text-white'>
-      <div className='space-x-4'>
-        <Link
-          href='https://www.facebook.com/cargomonterrey'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='inline-block hover:underline'
-        >
-          <FontAwesomeIcon
-            icon={faFacebookF}
-            className='h-4 w-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
-          />
-        </Link>
-        <Link
-          href='https://www.instagram.com/cargomonterrey/'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='inline-block hover:underline'
-        >
-          <FontAwesomeIcon
-            icon={faInstagram}
-            className='h-4 w-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
-          />
-        </Link>
-      </div>
-      <div>
-        {/* <p>Privacy Policy - Terms of Service</p> */}
-        <p>
-          Copyright © {new Date().getUTCFullYear()}, All Rights Reserved by
-          Front Dock
-        </p>
-      </div>
-    </footer>
+    <>
+      <footer className='grid grid-cols-1 gap-4 bg-primary p-8 tracking-wide text-white md:grid-cols-2 md:gap-8 md:p-16 lg:grid-cols-[2fr_2fr_2fr]'>
+        <div className='space-y-4'>
+          <p className='text-base font-bold'>About Us</p>
+          <p className='text-sm font-light'>
+            Front Dock&apos;s mission is to empower businesses to thrive in the
+            e-commerce landscape by providing tailored, comprehensive solutions
+            that go beyond the capabilities of standard 3PL services. We are
+            dedicated to making your business look good by offering custom
+            services at competitive pricing and ensuring that our clients can
+            efficiently manage their operations whether they are based in the
+            USA, Mexico, Canada or beyond.
+          </p>
+        </div>
+        <div className='flex justify-between md:justify-around'>
+          <div className='space-y-4'>
+            <p className='text-base font-bold'>Useful Links</p>
+            <ul className='space-y-2 text-sm font-light'>
+              <li>
+                <Link className='hover:underline' href='/#'>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link className='hover:underline' href='/#'>
+                  Vision
+                </Link>
+              </li>
+              <li>
+                <Link className='hover:underline' href='/#'>
+                  Free Demo
+                </Link>
+              </li>
+              <li>
+                <Link className='hover:underline' href='/#'>
+                  Sustainability
+                </Link>
+              </li>
+              <li>
+                <Link className='hover:underline' href='/#'>
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className='space-y-4'>
+            <p className='text-base font-bold'>Help</p>
+            <ul className='space-y-2 text-sm font-light'>
+              <li>
+                <Link className='hover:underline' href='/#'>
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link className='hover:underline' href='/#'>
+                  Term & conditions
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className='flex w-full flex-col items-center gap-8'>
+          <p className='text-3xl'>Ready to get started?</p>
+          <div className='form-control'>
+            <div className='flex bg-white p-1'>
+              <input
+                type='text'
+                placeholder='Enter email address'
+                className='input rounded-none text-primary'
+              />
+              <button
+                type='button'
+                className='btn btn-secondary rounded-none capitalize text-black'
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+          <ul className='flex w-full justify-evenly lg:justify-center lg:gap-16'>
+            <li>
+              <Link target='_blank' href='https://twitter.com/'>
+                <FontAwesomeIcon icon={faTwitter} size='2x' />
+              </Link>
+            </li>
+            <li>
+              <Link target='_blank' href='https://instagram.com/'>
+                <FontAwesomeIcon icon={faInstagram} size='2x' />
+              </Link>
+            </li>
+            <li>
+              <Link target='_blank' href='https://linkedin.com/'>
+                <FontAwesomeIcon icon={faLinkedin} size='2x' />
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </footer>
+      <div className='xl:h-15 h-8 w-full bg-secondary md:h-12' />
+    </>
   );
 }
