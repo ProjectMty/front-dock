@@ -25,7 +25,7 @@ export default function Price() {
             description='The all-in-FBA package includes all costs associated with receiving, sorting, FNSKU labeling, fulfilling your FBA shipment plan, applying master carton and shipping labels. We pick, prep, and pack the order to fulfill your shipment plan'
           />
           <PricingCard
-            title='All-in-FBA Package'
+            title='All-in-FBM Package'
             price={2.25}
             description='The all-in-FBA package includes all costs associated with receiving, sorting, FNSKU labeling, fulfilling your order, pick, pack, and ship.'
           />

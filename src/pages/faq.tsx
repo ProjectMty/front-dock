@@ -44,7 +44,7 @@ const questionsReturns = [
   },
 ];
 
-export default function Faq() {
+export default function FaqPage() {
   return (
     <>
       <Hero image='bg-faq-hero'>FAQ</Hero>

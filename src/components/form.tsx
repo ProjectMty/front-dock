@@ -1,4 +1,12 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+import {
+  faArrowRight,
+  faComment,
+  faEnvelope,
+  faPhone,
+  faUser,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import { useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
@@ -87,8 +95,7 @@ export default function Form() {
 
       setLoading(true);
 
-      // TODO: Uncomment before deploy
-      /* const response = await fetch(`/api/contact-form`, {
+      const response = await fetch(`/api/contact-form`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -100,7 +107,7 @@ export default function Form() {
         errorMsg();
       }
 
-      await response.json(); */
+      await response.json();
 
       toast.success('Thank you, your message has been sent successfully.', {
         position: 'bottom-right',
@@ -125,7 +132,7 @@ export default function Form() {
   return (
     <FormProvider {...methods}>
       <form
-        className='flex w-full flex-col items-center space-y-2 rounded-2xl px-8 pb-8 lg:rounded-l-none'
+        className='flex w-full flex-col items-center space-y-2 rounded-2xl pb-8 lg:rounded-l-none'
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className='grid w-full grid-cols-1 md:grid-cols-2 md:gap-x-6'>
@@ -133,17 +140,25 @@ export default function Form() {
             id='firstName'
             label='First Name'
             placeholder='First Name'
+            icon={faUser}
           />
-          <FormInput id='lastName' label='Last Name' placeholder='Last Name' />
+          <FormInput
+            id='lastName'
+            label='Last Name'
+            placeholder='Last Name'
+            icon={faUser}
+          />
           <FormInput
             id='email'
             label='E-mail Address'
             placeholder='E-mail Address'
+            icon={faEnvelope}
           />
           <FormInput
             id='phone'
             label='Phone Number'
             placeholder='Phone Number'
+            icon={faPhone}
           />
         </div>
         <div className='group form-control w-full'>
@@ -187,27 +202,38 @@ export default function Form() {
               Message
             </span>
           </label>
-          <textarea
-            id='subject'
-            placeholder='Enter message'
-            className={clsx(
-              'textarea textarea-bordered min-h-16 h-36 max-h-48 w-full resize-y rounded-none bg-[#fafafa] text-primary group-focus-within:textarea-secondary placeholder:text-gray-400',
-              errors.subject &&
-                'textarea-error group-focus-within:textarea-error',
-            )}
-            {...register('subject', { required: true })}
-          />
+          <div className='relative'>
+            <textarea
+              id='subject'
+              placeholder='Enter message'
+              className={clsx(
+                'textarea textarea-bordered min-h-16 h-36 max-h-48 w-full resize-y rounded-none bg-[#fafafa] pr-10 text-primary group-focus-within:textarea-secondary placeholder:text-gray-400',
+                errors.subject &&
+                  'textarea-error group-focus-within:textarea-error',
+              )}
+              {...register('subject', { required: true })}
+            />
+            <FontAwesomeIcon
+              className='absolute right-4 top-4'
+              icon={faComment}
+            />
+          </div>
         </div>
         <div className='h-3' />
         <button
           type='submit'
           className={clsx(
-            'btn btn-secondary btn-block rounded-none py-0 text-base text-primary lg:w-56 lg:text-lg 2xl:text-xl',
-            loading && 'loading',
+            'btn btn-secondary btn-block flex gap-2 rounded-none py-0 text-base text-primary lg:w-56 lg:text-lg 2xl:text-xl',
           )}
+          disabled={loading}
           aria-disabled={loading}
         >
-          Send
+          <span>{loading ? 'Sending...' : 'Send'}</span>
+          {loading ? (
+            <span className='loading loading-spinner' />
+          ) : (
+            <FontAwesomeIcon icon={faArrowRight} />
+          )}
         </button>
       </form>
     </FormProvider>

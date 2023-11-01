@@ -37,7 +37,7 @@ function Navbar() {
   return (
     <div
       ref={ref}
-      className='min-h-20 container relative mx-auto grid grid-cols-2 p-4 text-white lg:flex lg:justify-between lg:py-6'
+      className='min-h-20 container relative mx-auto grid grid-cols-2 p-4 font-montserrat text-white lg:flex lg:justify-between lg:py-6'
     >
       <nav className='flex w-full items-center justify-between lg:justify-center lg:gap-16'>
         <Image src={LogoFrontDock} alt='logo' width={192} className='w-48' />
@@ -45,7 +45,7 @@ function Navbar() {
           {navItems.map(({ link, label }) => (
             <li key={link}>
               <Link
-                className='text-xs uppercase tracking-widest transition-all duration-300 hover:text-gray-300 hover:underline hover:underline-offset-4'
+                className='text-xs uppercase tracking-widest transition-all duration-300 hover:text-gray-300 link-hover link link-hover link-offset-4'
                 href={link}
               >
                 {label}

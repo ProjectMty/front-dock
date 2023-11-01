@@ -49,12 +49,12 @@ export default async function handler(
     const data = JSON.parse(req.body);
 
     if (
-      !data.name ||
+      !data.firstName ||
+      !data.lastName ||
       !data.email ||
       !data.phone ||
-      !data.product ||
-      !data.subject ||
-      !data.token
+      !data.service ||
+      !data.subject
     ) {
       return res.status(400).json({ message: 'Invalid data' });
     }
@@ -100,6 +100,8 @@ export default async function handler(
 
     return res.status(200).json({ message: 'Ok' });
   } catch (error) {
+    console.error(`API ERROR: ${(error as Error).message}`);
+
     return res
       .status(500)
       .json({ message: 'Something went wrong, please try again.' });

@@ -1,7 +1,7 @@
 import { Hero } from '@/components';
 import { Company, GetStarted, Services } from '@/section';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Hero image='bg-home-hero'>

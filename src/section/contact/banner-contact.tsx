@@ -18,7 +18,7 @@ export default function BannerContact() {
           href='mailto:sales@frontdock.com'
           target='_blank'
           rel='noopener noreferrer'
-          className='ml-1 inline-block hover:underline'
+          className='link-hover link ml-1 inline-block'
         >
           sales@frontdock.com
         </Link>
@@ -26,10 +26,10 @@ export default function BannerContact() {
       <div>
         <FontAwesomeIcon icon={faPhone} />
         <Link
-          href='telto:+19566487402'
+          href='tel:+19566487402'
           target='_blank'
           rel='noopener noreferrer'
-          className='ml-1 inline-block hover:underline'
+          className='link-hover link ml-1 inline-block'
         >
           +1 (956) 648 7402
         </Link>

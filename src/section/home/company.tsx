@@ -21,7 +21,7 @@ export default function Company() {
           </h2>
           <Link
             className='btn btn-secondary rounded-full text-primary lg:btn-lg'
-            href='/#'
+            href='/about-us'
           >
             Learn more
           </Link>

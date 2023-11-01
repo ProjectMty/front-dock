@@ -9,10 +9,10 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <>
-      <footer className='grid grid-cols-1 gap-4 bg-primary p-8 tracking-wide text-white md:grid-cols-2 md:gap-8 md:p-16 lg:grid-cols-[2fr_2fr_2fr]'>
+      <footer className='grid grid-cols-1 gap-4 bg-primary p-8 font-montserrat tracking-wide text-white md:grid-cols-2 md:gap-8 md:p-16 lg:grid-cols-[2fr_2fr_2fr]'>
         <div className='space-y-4'>
           <p className='text-base font-bold'>About Us</p>
-          <p className='text-sm font-light'>
+          <p className='text-justify text-sm font-light'>
             Front Dock&apos;s mission is to empower businesses to thrive in the
             e-commerce landscape by providing tailored, comprehensive solutions
             that go beyond the capabilities of standard 3PL services. We are
@@ -22,35 +22,35 @@ export default function Footer() {
             USA, Mexico, Canada or beyond.
           </p>
         </div>
-        <div className='flex justify-between md:justify-around'>
+        <div className='flex justify-between gap-3 md:justify-around lg:gap-4'>
           <div className='space-y-4'>
             <p className='text-base font-bold'>Useful Links</p>
             <ul className='space-y-2 text-sm font-light'>
               <li>
-                <Link className='hover:underline' href='/about-us'>
+                <Link className='link-hover link' href='/about-us'>
                   About
                 </Link>
               </li>
               <li>
-                <Link className='hover:underline' href='/about-us#mision'>
-                  Mision
+                <Link className='link-hover link' href='/about-us#mission'>
+                  Mission
                 </Link>
               </li>
               <li>
-                <Link className='hover:underline' href='/about-us#vision'>
+                <Link className='link-hover link' href='/about-us#vision'>
                   Vision
                 </Link>
               </li>
               <li>
                 <Link
-                  className='hover:underline'
+                  className='link-hover link'
                   href='/about-us#sustainability'
                 >
                   Sustainability
                 </Link>
               </li>
               <li>
-                <Link className='hover:underline' href='/contact'>
+                <Link className='link-hover link' href='/contact'>
                   Contact Us
                 </Link>
               </li>
@@ -60,12 +60,12 @@ export default function Footer() {
             <p className='text-base font-bold'>Help</p>
             <ul className='space-y-2 text-sm font-light'>
               <li>
-                <Link className='hover:underline' href='/faq'>
+                <Link className='link-hover link' href='/faq'>
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link className='hover:underline' href='/terms-conditions'>
+                <Link className='link-hover link' href='/terms-conditions'>
                   Term & conditions
                 </Link>
               </li>

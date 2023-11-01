@@ -16,14 +16,14 @@ export default function ReturnsCost() {
   return (
     <>
       <Section id='returns-cost' className='space-y-8'>
-        <div className='md:w-3/4 md:mx-auto space-y-8'>
+        <div className='space-y-8 md:mx-auto md:w-3/4'>
           <p className='text-center text-white'>
             We work with RMA,inner-border RGA forms, or any other form of
             integration to update your returns in real time.
           </p>
-          <h2 className='text-center text-secondary'>
+          <h3 className='text-center text-secondary'>
             How much do returns cost?
-          </h2>
+          </h3>
           <p className='text-center text-white'>
             While Front Dock offers several options for returns management, our
             most popular is the consolidate and return to seller model. We

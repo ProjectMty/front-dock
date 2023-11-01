@@ -24,7 +24,7 @@ export default function BannerPricing() {
         </p>
         <Link
           className='btn btn-primary btn-lg text-lg tracking-wider text-secondary md:min-w-[16rem]'
-          href='/#'
+          href='/contact'
         >
           Contact us
         </Link>

@@ -12,7 +12,7 @@ import {
   WhatWeCanDo,
 } from '@/section';
 
-export default function Ecommerce() {
+export default function EcommercePage() {
   return (
     <>
       <Hero image='bg-ecommerce-hero'>E-commerce 3PL</Hero>

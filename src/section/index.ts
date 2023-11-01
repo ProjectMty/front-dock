@@ -27,11 +27,14 @@ export { default as BannerPricing } from './pricing/banner-pricing';
 export { default as Price } from './pricing/price';
 
 // Contact
-export { default as Locations } from './contact/locations';
 export { default as BannerContact } from './contact/banner-contact';
 export { default as ContactForm } from './contact/contact-form';
+export { default as Locations } from './contact/locations';
 
 // About us
+export { default as CoreValues } from './about-us/core-values';
+export { default as MissionVision } from './about-us/mission-vision';
+export { default as Sustainability } from './about-us/sustainability';
 
 // FAQ
 export { default as Questions3PL } from './faq/questions-3pl';

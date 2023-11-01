@@ -1,6 +1,6 @@
 import { Hero, Section } from '@/components';
 
-export default function TermsConditions() {
+export default function TermsConditionsPage() {
   return (
     <>
       <Hero image='bg-home-hero'>Terms & Conditions</Hero>

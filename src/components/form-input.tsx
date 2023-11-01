@@ -1,3 +1,5 @@
+import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import { useFormContext } from 'react-hook-form';
 
@@ -5,9 +7,15 @@ type FormInputProps = {
   id: string;
   label: string;
   placeholder: string;
+  icon: IconDefinition;
 };
 
-export default function FormInput({ id, label, placeholder }: FormInputProps) {
+export default function FormInput({
+  id,
+  label,
+  placeholder,
+  icon,
+}: FormInputProps) {
   const {
     register,
     formState: { errors },
@@ -25,16 +33,22 @@ export default function FormInput({ id, label, placeholder }: FormInputProps) {
           {label}
         </span>
       </label>
-      <input
-        id={id}
-        type='text'
-        placeholder={placeholder}
-        className={clsx(
-          'input input-bordered w-full rounded-none bg-[#fafafa]  group-focus-within:input-secondary placeholder:text-gray-400',
-          errors[id] && 'input-error group-focus-within:input-error',
-        )}
-        {...register(id, { required: true })}
-      />
+      <div className='relative'>
+        <input
+          id={id}
+          type='text'
+          placeholder={placeholder}
+          className={clsx(
+            'input input-bordered w-full rounded-none bg-[#fafafa] pr-10  group-focus-within:input-secondary placeholder:text-gray-400',
+            errors[id] && 'input-error group-focus-within:input-error',
+          )}
+          {...register(id, { required: true })}
+        />
+        <FontAwesomeIcon
+          className='absolute right-0 top-1/2 m-0 -translate-x-full -translate-y-1/2'
+          icon={icon}
+        />
+      </div>
     </div>
   );
 }
