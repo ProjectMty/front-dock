@@ -81,8 +81,6 @@ export default function Form() {
   } = methods;
 
   const onSubmit: SubmitHandler<ContactFormFields> = async (data) => {
-    console.log({ data });
-
     if (!executeRecaptcha) {
       return;
     }

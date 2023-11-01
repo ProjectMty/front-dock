@@ -100,6 +100,7 @@ export default async function handler(
 
     return res.status(200).json({ message: 'Ok' });
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error(`API ERROR: ${(error as Error).message}`);
 
     return res

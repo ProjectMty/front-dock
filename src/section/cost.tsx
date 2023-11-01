@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import Service from '@/components/service';
 import { Tab } from '@headlessui/react';
 
@@ -82,9 +83,7 @@ export default function Cost() {
           </Tab.Panel>
           <Tab.Panel>
             <Service
-              processing={
-                'Forget the hassle of the returns all together. We receive the returns, check the merchandise into inventory, and consolidate the merchandise into pallets for sale to sellers in Mexico and Canada. Our buyers team will work with you to coordinate liquidation prices.'
-              }
+              processing='Forget the hassle of the returns all together. We receive the returns, check the merchandise into inventory, and consolidate the merchandise into pallets for sale to sellers in Mexico and Canada. Our buyers team will work with you to coordinate liquidation prices.'
               costs={{
                 cost: {
                   limit: 'N/A',
@@ -106,9 +105,7 @@ export default function Cost() {
           </Tab.Panel>
           <Tab.Panel>
             <Service
-              processing={
-                'Make your returns tax deductible by donating your merchandise to your charity of choice. We handle the logistics!'
-              }
+              processing='Make your returns tax deductible by donating your merchandise to your charity of choice. We handle the logistics!'
               costs={{
                 cost: {
                   limit: 'N/A',

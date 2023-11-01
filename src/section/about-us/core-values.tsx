@@ -9,7 +9,7 @@ export default function CoreValues() {
     <Section id='core-values' className='space-y-8 bg-primary text-white'>
       <h2>Core Values</h2>
       <div className='flex flex-col justify-between gap-16 text-center md:flex-row'>
-        <div className='flex flex-col items-center justify-baseline'>
+        <div className='flex flex-col items-center justify-start'>
           <Image
             src={CoreValueIcon1}
             width={192}
@@ -23,7 +23,7 @@ export default function CoreValues() {
             accountability.
           </p>
         </div>
-        <div className='flex flex-col items-center justify-baseline'>
+        <div className='flex flex-col items-center justify-start'>
           <Image
             src={CoreValueIcon2}
             width={192}
@@ -36,7 +36,7 @@ export default function CoreValues() {
             client and providing the support required for their success.
           </p>
         </div>
-        <div className='flex flex-col items-center justify-baseline'>
+        <div className='flex flex-col items-center justify-start'>
           <Image
             src={CoreValueIcon3}
             width={192}

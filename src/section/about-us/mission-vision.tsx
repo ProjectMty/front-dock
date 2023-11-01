@@ -8,8 +8,8 @@ export default function MissionVision() {
     <>
       <Section id='mission' className='space-y-8 bg-primary text-white'>
         <h2>Mission</h2>
-        <div className='flex flex-wrap items-center justify-center gap-y-8 lg:justify-between'>
-          <div className='flex flex-col gap-y-8 text-lg md:text-xl lg:w-1/2'>
+        <div className='flex flex-wrap items-center justify-center gap-y-8 lg:justify-evenly'>
+          <div className='flex flex-col gap-y-8 text-lg md:text-2xl lg:w-1/2'>
             <p>
               Front Dock&apos;s mission is to empower businesses to thrive in
               the e-commerce landscape by providing tailored, comprehensive
@@ -34,9 +34,9 @@ export default function MissionVision() {
           </div>
         </div>
       </Section>
-      <Section id='vision' className='space-y-8 bg-secondary  text-primary'>
+      <Section id='vision' className='space-y-8 bg-secondary text-primary'>
         <h2>Vision</h2>
-        <div className='flex flex-wrap items-center justify-center gap-y-8 lg:justify-between'>
+        <div className='flex flex-wrap items-center justify-center gap-y-8 lg:justify-evenly'>
           <div className='flex items-center justify-center lg:w-1/2'>
             <Image
               src={visionImage}
@@ -45,7 +45,7 @@ export default function MissionVision() {
               className='w-80'
             />
           </div>
-          <div className='flex flex-col gap-y-8 text-lg md:text-xl lg:w-1/2'>
+          <div className='flex flex-col gap-y-8 text-lg md:text-2xl lg:w-1/2'>
             <p>
               Front Dock&apos;s mission is to empower businesses to thrive in
               the e-commerce landscape by providing tailored, comprehensive

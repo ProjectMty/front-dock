@@ -45,7 +45,7 @@ function Navbar() {
           {navItems.map(({ link, label }) => (
             <li key={link}>
               <Link
-                className='text-xs uppercase tracking-widest transition-all duration-300 hover:text-gray-300 link-hover link link-hover link-offset-4'
+                className='link-offset-4 link-hover link text-xs uppercase tracking-widest transition-all duration-300 hover:text-gray-300'
                 href={link}
               >
                 {label}
