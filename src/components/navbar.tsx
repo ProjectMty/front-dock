@@ -3,9 +3,11 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import LogoFrontDock from '@/public/assets/logo-frontdock.png';
 
 type NavItem = {
   link: string;
@@ -38,7 +40,14 @@ function Navbar() {
       className='min-h-20 container relative mx-auto grid grid-cols-2 p-4 text-white lg:flex lg:justify-between lg:py-6'
     >
       <nav className='flex w-full items-center justify-between lg:justify-center lg:gap-24'>
-        <div className='h-12 w-12 bg-red-600' />
+        <div className='relative h-12 w-12 bg-red-500'>
+          {/* <Image
+            src={LogoFrontDock}
+            alt='logo'
+            width={192}
+            className='w-48 z-10 absolute top-0 left-0'
+          /> */}
+        </div>
         <ul className='hidden gap-12 lg:flex'>
           {navItems.map(({ link, label }) => (
             <li key={link}>

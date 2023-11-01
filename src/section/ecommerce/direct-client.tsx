@@ -43,8 +43,7 @@ export default function DirectClient() {
               alt='Direct to Client Icon 1'
               width={112}
               height={112}
-              objectFit='cover'
-              className='h-28 w-28'
+              className='h-28 w-28 object-cover'
             />
             <span>Business to client</span>
           </li>
@@ -54,8 +53,7 @@ export default function DirectClient() {
               alt='Direct to Client Icon 2'
               width={112}
               height={112}
-              objectFit='cover'
-              className='h-28 w-28'
+              className='h-28 w-28 object-cover'
             />
             <span>Direct to consumer</span>
           </li>
@@ -65,8 +63,7 @@ export default function DirectClient() {
               alt='Direct to Client Icon 3'
               width={112}
               height={112}
-              objectFit='cover'
-              className='h-28 w-28'
+              className='h-28 w-28 object-cover'
             />
             <span>Dropshipping</span>
           </li>
@@ -76,8 +73,7 @@ export default function DirectClient() {
               alt='Direct to Client Icon 4'
               width={112}
               height={112}
-              objectFit='cover'
-              className='h-28 w-28'
+              className='h-28 w-28 object-cover'
             />
             <span>FBM</span>
           </li>

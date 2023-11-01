@@ -94,4 +94,28 @@
     height: 2rem;
     background-color: #687386;
   }
+
+  .table-center-content {
+    @apply text-center align-middle;
+  }
+
+  .table-break-headings {
+    word-break: break-word;
+    min-width: 8rem; /* Equivalent to w-32 */
+  }
+  .inner-border {
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    border-color: currentColor;
+  }
+
+  /* Reset borders for the last child */
+  .inner-border:last-child {
+    border-right: 0;
+  }
+
+  /* Reset borders for the last row */
+  .table-row:last-child .inner-border {
+    border-bottom: 0;
+  }
 }

@@ -34,8 +34,7 @@ export default function AmazonFba() {
               alt='Market Icon 1'
               width={112}
               height={112}
-              objectFit='cover'
-              className='h-28 w-28'
+              className='h-28 w-28 object-cover'
             />
             <span>FBA</span>
           </li>
@@ -45,8 +44,7 @@ export default function AmazonFba() {
               alt='Market Icon 2'
               width={112}
               height={112}
-              objectFit='cover'
-              className='h-28 w-28'
+              className='h-28 w-28 object-cover'
             />
             <span>ONLINE</span>
           </li>
@@ -56,8 +54,7 @@ export default function AmazonFba() {
               alt='Market Icon 3'
               width={112}
               height={112}
-              objectFit='cover'
-              className='h-28 w-28'
+              className='h-28 w-28 object-cover'
             />
             <span>RETAIL</span>
           </li>
@@ -67,8 +64,7 @@ export default function AmazonFba() {
               alt='Market Icon 4'
               width={112}
               height={112}
-              objectFit='cover'
-              className='h-28 w-28'
+              className='h-28 w-28 object-cover'
             />
             <span>WHOLESALE</span>
           </li>
@@ -78,8 +74,7 @@ export default function AmazonFba() {
               alt='Market Icon 5'
               width={112}
               height={112}
-              objectFit='cover'
-              className='h-28 w-28'
+              className='h-28 w-28 object-cover'
             />
             <span>PRIVATE</span>
           </li>
