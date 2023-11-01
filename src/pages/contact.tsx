@@ -5,7 +5,7 @@ import BannerContact from '@/section/contact/banner-contact';
 export default function Contact() {
   return (
     <>
-      <Hero image='assets/redesign/home-hero.png'>Contact</Hero>
+      <Hero image='bg-contact-hero'>Contact</Hero>
       <Locations />
       <BannerContact />
       <ContactForm />

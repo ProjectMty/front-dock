@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function BannerPricing() {
   return (
-    <Section id='banner-pricing' className='bg-slate-500'>
+    <Section id='banner-pricing' className='bg-pricing-banner'>
       <div
         className={clsx(
           'mx-auto flex flex-col gap-4 bg-secondary md:flex-row md:items-center md:justify-between xl:max-w-4xl 2xl:max-w-6xl',

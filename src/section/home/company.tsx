@@ -27,7 +27,7 @@ export default function Company() {
           </Link>
           <div className='flex flex-wrap items-center justify-center gap-8'>
             <div>
-              <p className='text-2xl font-bold uppercase text-white lg:text-4xl'>
+              <p className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'>
                 20
               </p>
               <p className='text-base font-bold leading-none text-secondary lg:text-xl'>
@@ -36,7 +36,7 @@ export default function Company() {
               </p>
             </div>
             <div>
-              <p className='text-2xl font-bold uppercase text-white lg:text-4xl'>
+              <p className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'>
                 99%
               </p>
               <p className='text-base font-bold leading-none text-secondary lg:text-xl'>
@@ -45,7 +45,7 @@ export default function Company() {
               </p>
             </div>
             <div>
-              <p className='text-2xl font-bold uppercase text-white lg:text-4xl'>
+              <p className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'>
                 60,000
               </p>
               <p className='text-base font-bold leading-none text-secondary lg:text-xl'>

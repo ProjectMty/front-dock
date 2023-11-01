@@ -15,9 +15,7 @@ import {
 export default function Ecommerce() {
   return (
     <>
-      <Hero image='assets/redesign/ecommerce/ecommerce-hero.png'>
-        E-commerce 3PL
-      </Hero>
+      <Hero image='bg-ecommerce-hero'>E-commerce 3PL</Hero>
       <WhatWeCanDo />
       <DirectClient />
       <Options />
@@ -26,7 +24,7 @@ export default function Ecommerce() {
       <AmazonFba />
       <ShipServices />
       <MarketProcess />
-      <GetStarted />
+      <GetStarted image='bg-ecommerce-banner' />
     </>
   );
 }

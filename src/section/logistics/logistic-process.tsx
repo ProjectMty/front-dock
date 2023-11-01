@@ -1,46 +1,42 @@
 import { Diagram, Section } from '@/components';
-import diagram1step1 from '@/public/assets/redesign/ecommerce/diagram-1-step-1.png';
-import diagram1step2 from '@/public/assets/redesign/ecommerce/diagram-1-step-2.png';
-import diagram1step3 from '@/public/assets/redesign/ecommerce/diagram-1-step-3.png';
-import diagram1step4 from '@/public/assets/redesign/ecommerce/diagram-1-step-4.png';
-import diagram1step5 from '@/public/assets/redesign/ecommerce/diagram-1-step-5.png';
+import diagram3step1 from '@/public/assets/redesign/logistics/diagram-3-step-1.png';
+import diagram3step2 from '@/public/assets/redesign/logistics/diagram-3-step-2.png';
+import diagram3step3 from '@/public/assets/redesign/logistics/diagram-3-step-3.png';
+import diagram3step4 from '@/public/assets/redesign/logistics/diagram-3-step-4.png';
+import diagram3step5 from '@/public/assets/redesign/logistics/diagram-3-step-5.png';
 
 const steps = [
   {
-    id: 'diagram1step1',
-    image: diagram1step1,
-    description:
-      'A buyer in Vermont purchases an item from your online store or your marketplace store.',
+    id: 'diagram3step1',
+    image: diagram3step1,
+    description: 'We receive your merchandise.',
   },
   {
-    id: 'diagram1step2',
-    image: diagram1step2,
-    description:
-      'Our team receives the order, picks the product, packs the order.',
+    id: 'diagram3step2',
+    image: diagram3step2,
+    description: 'We receive your return instructions.',
   },
   {
-    id: 'diagram1step3',
-    image: diagram1step3,
-    description:
-      'Inserts packing slip or marketing materials, applies a shipping label.',
+    id: 'diagram3step3',
+    image: diagram3step3,
+    description: 'We label and register your products.',
   },
   {
-    id: 'diagram1step4',
-    image: diagram1step4,
-    description: 'Routes the package with the last mile carrier.',
+    id: 'diagram3step4',
+    image: diagram3step4,
+    description: 'We ship the returns with the select carrier.',
   },
   {
-    id: 'diagram1step5',
-    image: diagram1step5,
-    description:
-      'The last mile carrier delivers packages to the buyer in Vermont.',
+    id: 'diagram3step5',
+    image: diagram3step5,
+    description: 'We send information that your goods are ready for pickup.',
   },
 ];
 export default function LogisticProcess() {
   return (
     <Section id='logistic-process' className='bg-white text-primary'>
       <h2>Operational Process</h2>
-      <Diagram section='operational-process' steps={steps} />
+      <Diagram section='logistics-process' steps={steps} />
     </Section>
   );
 }

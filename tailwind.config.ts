@@ -10,7 +10,27 @@ import type { Config } from 'tailwindcss';
 const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'home-hero': "url('/assets/redesign/home/hero.png')",
+        'home-banner': "url('/assets/redesign/home/banner.png')",
+        'ecommerce-hero': "url('/assets/redesign/ecommerce/hero.png')",
+        'ecommerce-banner': "url('/assets/redesign/ecommerce/banner.png')",
+        'logistics-hero': "url('/assets/redesign/logistics/hero.png')",
+        'logistics-banner': "url('/assets/redesign/logistics/banner.png')",
+        'pricing-hero': "url('/assets/redesign/pricing/hero.png')",
+        'pricing-banner': "url('/assets/redesign/pricing/banner.png')",
+        'contact-hero': "url('/assets/redesign/contact/hero.png')",
+        'contact-banner': "url('/assets/redesign/contact/banner.png')",
+        'about-hero': "url('/assets/redesign/about/hero.png')",
+        'about-banner': "url('/assets/redesign/about/banner.png')",
+        'faq-hero': "url('/assets/redesign/faq/hero.png')",
+      },
+      fontFamily: {
+        sans: ['var(--font-lato)'],
+        montserrat: ['var(--font-montserrat)'],
+      },
+    },
   },
   plugins: [
     headlessui,

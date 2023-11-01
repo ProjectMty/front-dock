@@ -47,7 +47,7 @@ const questionsReturns = [
 export default function Faq() {
   return (
     <>
-      <Hero image='assets/redesign/home-hero.png'>FAQ</Hero>
+      <Hero image='bg-faq-hero'>FAQ</Hero>
       <Questions3PL questions={questions3pl} />
       <QuestionsReturns questions={questionsReturns} />
     </>

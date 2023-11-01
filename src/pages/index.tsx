@@ -4,13 +4,13 @@ import { Company, GetStarted, Services } from '@/section';
 export default function Home() {
   return (
     <>
-      <Hero image='assets/redesign/home-hero.png'>
+      <Hero image='bg-home-hero'>
         You sell, <br />
         we fulfill
       </Hero>
       <Company />
       <Services />
-      <GetStarted />
+      <GetStarted image='bg-home-banner' />
     </>
   );
 }

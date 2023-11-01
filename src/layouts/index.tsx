@@ -1,17 +1,23 @@
 import { Footer, Header } from '@/components';
-import { Lato } from 'next/font/google';
+import { Lato, Montserrat } from 'next/font/google';
 import Head from 'next/head';
 import React from 'react';
 
 const lato = Lato({
   subsets: ['latin'],
   weight: ['100', '300', '400', '700', '900'],
-  variable: '--font-inter',
+  variable: '--font-lato',
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['500', '600', '700', '800', '900'],
+  variable: '--font-montserrat',
 });
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
-    <main className={`${lato.className} w-full`}>
+    <>
       <Head>
         <meta charSet='utf8' key='charset' />
         <meta
@@ -21,7 +27,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
         />
         <title>Front Dock</title>
         <meta name='description' content='Your e-Commerce returns made easy!' />
-        <link rel='canonical' href='https://frontdock.luiscarrillo.mx/' />
+        <link rel='canonical' href='https://www.frontdock.com/' />
         <meta property='og:type' content='website' />
         <meta property='og:title' content='Front Dock' />
         <meta
@@ -29,7 +35,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
           content='Your e-Commerce returns made easy!'
         />
         <meta property='og:image' content='LINK TO THE IMAGE FILE' />
-        <meta property='og:url' content='https://frontdock.luiscarrillo.mx/' />
+        <meta property='og:url' content='https://www.frontdock.com/' />
         <meta property='og:site_name' content='Front Dock' />
         <meta name='twitter:title' content='TITLE OF POST OR PAGE' />
         <meta
@@ -41,10 +47,14 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
         <meta name='twitter:creator' content='@front-dock' />
         <meta name='robots' content='index, follow' />
       </Head>
-      <Header />
-      {children}
-      <div id='recaptcha-container' className='h-[0px] w-[0px]' />
-      <Footer />
-    </main>
+      <main
+        className={`${lato.variable} ${montserrat.variable} w-full font-sans`}
+      >
+        <Header />
+        {children}
+        <div id='recaptcha-container' className='h-[0px] w-[0px]' />
+        <Footer />
+      </main>
+    </>
   );
 }

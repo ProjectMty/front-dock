@@ -4,7 +4,7 @@ import { LogisticProcess, Returns, ReturnsCost, SalesGrowing } from '@/section';
 export default function Home() {
   return (
     <>
-      <Hero image='assets/redesign/home-hero.png' right>
+      <Hero image='bg-logistics-hero' right>
         Reverse <br />
         Logistics
       </Hero>

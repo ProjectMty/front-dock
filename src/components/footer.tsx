@@ -27,27 +27,30 @@ export default function Footer() {
             <p className='text-base font-bold'>Useful Links</p>
             <ul className='space-y-2 text-sm font-light'>
               <li>
-                <Link className='hover:underline' href='/#'>
+                <Link className='hover:underline' href='/about-us'>
                   About
                 </Link>
               </li>
               <li>
-                <Link className='hover:underline' href='/#'>
+                <Link className='hover:underline' href='/about-us#mision'>
+                  Mision
+                </Link>
+              </li>
+              <li>
+                <Link className='hover:underline' href='/about-us#vision'>
                   Vision
                 </Link>
               </li>
               <li>
-                <Link className='hover:underline' href='/#'>
-                  Free Demo
-                </Link>
-              </li>
-              <li>
-                <Link className='hover:underline' href='/#'>
+                <Link
+                  className='hover:underline'
+                  href='/about-us#sustainability'
+                >
                   Sustainability
                 </Link>
               </li>
               <li>
-                <Link className='hover:underline' href='/#'>
+                <Link className='hover:underline' href='/contact'>
                   Contact Us
                 </Link>
               </li>
@@ -57,12 +60,12 @@ export default function Footer() {
             <p className='text-base font-bold'>Help</p>
             <ul className='space-y-2 text-sm font-light'>
               <li>
-                <Link className='hover:underline' href='/#'>
+                <Link className='hover:underline' href='/faq'>
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link className='hover:underline' href='/#'>
+                <Link className='hover:underline' href='/terms-conditions'>
                   Term & conditions
                 </Link>
               </li>

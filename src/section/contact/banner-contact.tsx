@@ -7,9 +7,9 @@ export default function BannerContact() {
   return (
     <div
       className={clsx(
-        'flex items-center justify-center gap-1 bg-secondary py-10 text-sm font-extrabold text-primary sm:gap-2',
+        'flex items-center justify-center gap-1 bg-secondary py-14 text-sm font-extrabold text-primary sm:gap-2',
         'lg:gap-x-14 lg:text-2xl',
-        '2xl:text-4xl',
+        '2xl:text-3xl',
       )}
     >
       <div>

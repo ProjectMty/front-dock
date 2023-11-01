@@ -2,28 +2,29 @@ import { Section } from '@/components';
 
 export default function Options() {
   return (
-    <Section id='options' className='bg-primary'>
-      <ul className='grid w-full grid-cols-3 grid-rows-3 gap-4 text-center text-white'>
-        <li className='flex items-center justify-center'>
-          LTL and FTL freight pick up
-        </li>
-        <li className='flex items-center justify-center'>
-          Container unloading
-        </li>
-        <li className='flex items-center justify-center'>Receiving</li>
-        <li className='flex items-center justify-center'>Return processing</li>
-        <li className='flex items-center justify-center'>Sorting</li>
-        <li className='flex items-center justify-center'>
-          Picking and packing
-        </li>
-        <li className='flex items-center justify-center'>Shipping</li>
-        <li className='flex items-center justify-center'>
-          Inventory management and reporting
-        </li>
-        <li className='flex items-center justify-center'>
-          Value added services
-        </li>
+    <Section id='options' className='space-y-8 bg-primary'>
+      <ul className='grid w-full list-outside list-disc grid-cols-4 grid-rows-2 gap-x-16 gap-y-4 text-left text-white'>
+        <li>LTL and FTL freight pick up</li>
+        <li>Container unloading</li>
+        <li>Receiving</li>
+        <li>Return processing</li>
+        <li>Sorting</li>
+        <li>Picking and packing</li>
+        <li>Shipping</li>
+        <li>Inventory management and reporting</li>
       </ul>
+      <div className='space-y-8'>
+        <p className='text-center font-bold uppercase text-white'>
+          Value added services
+        </p>
+        <ul className='grid w-full list-outside list-disc grid-cols-5 gap-8 text-left text-white'>
+          <li>Kitting</li>
+          <li>Labeling</li>
+          <li>Marketing materials</li>
+          <li>Gift wrapping</li>
+          <li>Special messages</li>
+        </ul>
+      </div>
     </Section>
   );
 }

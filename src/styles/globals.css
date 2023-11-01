@@ -51,13 +51,21 @@
     isolation: isolate;
   }
 
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-montserrat font-black uppercase;
+  }
+
   h2 {
-    @apply text-center font-black uppercase;
-    @apply text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl;
+    @apply text-center text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl;
   }
   h3 {
-    @apply text-center font-black uppercase;
-    @apply text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl;
+    @apply text-center text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl;
+  }
+  h4 {
+    @apply text-center text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl;
   }
 }
 @layer components {
@@ -80,8 +88,8 @@
   }
 
   .text-hero {
-    @apply font-black uppercase text-white relative z-40 drop-shadow;
-    @apply text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl;
+    @apply font-montserrat font-black uppercase text-white relative z-40 drop-shadow break-words;
+    @apply text-5xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-9xl 2xl:text-9xl;
     text-shadow: -10px 0 rgba(255, 255, 255, 0.2);
   }
 

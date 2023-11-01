@@ -1,6 +1,10 @@
 import { Hero, InfoCard, Section } from '@/components';
 import FbaPrepIcon from '@/icons/fba-prep-icon';
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
+
+const initial = { opacity: 0, y: -20 };
+const animate = { opacity: 1, y: 0 };
 
 const services = [
   {
@@ -44,8 +48,8 @@ const services = [
 export default function AboutUs() {
   return (
     <>
-      <Hero image='assets/redesign/home-hero.png'>About Us</Hero>
-      <Section id='missions' className='space-y-8 bg-primary text-white'>
+      <Hero image='bg-about-hero'>About Us</Hero>
+      <Section id='mision' className='space-y-8 bg-primary text-white'>
         <h2>Mision</h2>
         <div className='flex flex-wrap justify-between'>
           <div className='flex flex-col gap-y-8 lg:w-1/2'>
@@ -89,7 +93,7 @@ export default function AboutUs() {
       </Section>
       <Section id='core-values' className='space-y-8 bg-primary text-white'>
         <h2>Core Values</h2>
-        <div className='flex justify-between gap-x-16 text-center'>
+        <div className='flex flex-col justify-between gap-16 text-center md:flex-row'>
           <div>
             <p>
               We are dedicated to excellence in all aspects of our services. We
@@ -115,9 +119,28 @@ export default function AboutUs() {
           </div>
         </div>
       </Section>
-      <Hero image='assets/redesign/home-hero.png' banner={false}>
-        Sustainability
-      </Hero>
+      <div className='w-full' id='sustainability'>
+        <div
+          className={clsx(
+            'bg-about-banner',
+            'flex w-full items-end bg-cover bg-fixed bg-center',
+            'before:pointer-events-none before:absolute before:left-0 before:top-0 before:w-full before:bg-primary/20 before:content-["*"]',
+            'px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32',
+            'py-8',
+            'min-h-[240px] before:min-h-[240px] lg:min-h-[256px] before:lg:min-h-[256px] 2xl:min-h-[288px] before:2xl:min-h-[288px]',
+          )}
+        >
+          <motion.h2
+            className='text-white drop-shadow-2xl'
+            initial={initial}
+            whileInView={animate}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            Sustainability
+          </motion.h2>
+        </div>
+      </div>
       <Section id='main-services' className='bg-white'>
         <div className='grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 xl:grid-cols-3 xl:justify-between xl:gap-x-24 xl:gap-y-8'>
           {services.map((service) => (

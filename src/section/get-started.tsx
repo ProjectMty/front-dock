@@ -2,9 +2,12 @@ import { Section } from '@/components';
 import clsx from 'clsx';
 import Link from 'next/link';
 
-export default function GetStarted() {
+export default function GetStarted({ image }: { image: string }) {
   return (
-    <Section id='get-started' className='bg-slate-500'>
+    <Section
+      id='get-started'
+      className={`bg-slate-500 !py-4 md:!py-8 xl:!py-12 ${image}`}
+    >
       <div
         className={clsx(
           'mx-auto flex flex-col gap-4 bg-secondary md:flex-row md:items-center md:justify-between xl:max-w-4xl 2xl:max-w-6xl',
@@ -14,15 +17,14 @@ export default function GetStarted() {
         <p
           className={clsx(
             'text-center font-black text-primary',
-            'text-3xl md:text-4xl xl:text-5xl',
+            'text-2xl md:text-3xl xl:text-4xl',
           )}
-          // style={{ fontSize: 'clamp(1.5rem, 8vw - 2rem, 3rem' }}
         >
           Ready to get started?
         </p>
         <Link
           className='btn btn-primary btn-lg text-lg tracking-wider text-white md:min-w-[16rem]'
-          href='/#'
+          href='/contact'
         >
           Let&apos;s go
         </Link>

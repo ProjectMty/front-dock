@@ -29,7 +29,7 @@ export default function Diagram({ section, steps }: DiagramProps) {
             {i + 1}
           </div>
           <div className='flex flex-col items-center'>
-            <Image src={image} alt={description} width={250} />
+            <Image src={image} alt={description} width={192} className='w-48' />
             <span className='text-sm font-black text-gray-500'>
               {description}
             </span>

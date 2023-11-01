@@ -3,7 +3,7 @@ import { Hero, Section } from '@/components';
 export default function TermsConditions() {
   return (
     <>
-      <Hero image='assets/redesign/home-hero.png'>Terms & Conditions</Hero>
+      <Hero image='bg-home-hero'>Terms & Conditions</Hero>
       <Section
         id='terms-conditions'
         className='space-y-8 bg-white text-primary'

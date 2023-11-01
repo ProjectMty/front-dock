@@ -4,7 +4,7 @@ import { BannerPricing, Price } from '@/section';
 export default function Pricing() {
   return (
     <>
-      <Hero image='assets/redesign/home-hero.png'>Pricing</Hero>
+      <Hero image='bg-pricing-hero'>Pricing</Hero>
       <Price />
       <BannerPricing />
     </>

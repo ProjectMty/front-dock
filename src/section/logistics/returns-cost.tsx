@@ -16,21 +16,23 @@ export default function ReturnsCost() {
   return (
     <>
       <Section id='returns-cost' className='space-y-8'>
-        <p className='text-center text-white'>
-          We work with RMA,inner-border RGA forms, or any other form of
-          integration to update your returns in real time.
-        </p>
-        <h2 className='text-center text-secondary'>
-          How much do returns cost?
-        </h2>
-        <p className='text-center text-white'>
-          While Front Dock offers several options for returns management, our
-          most popular is the consolidate and return to seller model. We receive
-          your returns on a daily basis, inform you of the inventory status, and
-          consolidate. We ship back to you when you&apos;re ready!
-        </p>
+        <div className='md:w-3/4 md:mx-auto space-y-8'>
+          <p className='text-center text-white'>
+            We work with RMA,inner-border RGA forms, or any other form of
+            integration to update your returns in real time.
+          </p>
+          <h2 className='text-center text-secondary'>
+            How much do returns cost?
+          </h2>
+          <p className='text-center text-white'>
+            While Front Dock offers several options for returns management, our
+            most popular is the consolidate and return to seller model. We
+            receive your returns on a daily basis, inform you of the inventory
+            status, and consolidate. We ship back to you when you&apos;re ready!
+          </p>
+        </div>
       </Section>
-      <div className='bg-red-500 overflow-x-auto px-4 py-6 sm:px-8 sm:py-10 md:px-12 md:py-14 lg:px-16 lg:py-[4.5rem] xl:px-20 xl:py-[5.5rem] 2xl:px-24 2xl:py-[6.5rem]'>
+      <div className='overflow-x-auto bg-logistics-banner bg-cover bg-fixed bg-center px-4 py-6 sm:px-8 sm:py-10 md:px-12 md:py-14 lg:px-16 lg:py-[4.5rem] xl:px-20 xl:py-[5.5rem] 2xl:px-24 2xl:py-[6.5rem]'>
         <table className='table bg-white text-primary shadow'>
           <thead className='text-sm uppercase text-primary lg:text-base'>
             <tr>
@@ -52,7 +54,7 @@ export default function ReturnsCost() {
             </tr>
           </thead>
           <tbody className='text-sm text-primary lg:text-base'>
-            <tr className='border-none table-row'>
+            <tr className='table-row border-none'>
               <td className='inner-border table-center-content w-1/5 p-4'>
                 <select
                   className='select select-ghost w-full max-w-xs'
