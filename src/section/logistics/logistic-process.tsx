@@ -1,9 +1,9 @@
 import { Diagram, Section } from '@/components';
-import diagram3step1 from '@/public/assets/redesign/logistics/diagram-3-step-1.png';
-import diagram3step2 from '@/public/assets/redesign/logistics/diagram-3-step-2.png';
-import diagram3step3 from '@/public/assets/redesign/logistics/diagram-3-step-3.png';
-import diagram3step4 from '@/public/assets/redesign/logistics/diagram-3-step-4.png';
-import diagram3step5 from '@/public/assets/redesign/logistics/diagram-3-step-5.png';
+import diagram3step1 from '@/public/assets/redesign/logistics/diagram-3-step-1.webp';
+import diagram3step2 from '@/public/assets/redesign/logistics/diagram-3-step-2.webp';
+import diagram3step3 from '@/public/assets/redesign/logistics/diagram-3-step-3.webp';
+import diagram3step4 from '@/public/assets/redesign/logistics/diagram-3-step-4.webp';
+import diagram3step5 from '@/public/assets/redesign/logistics/diagram-3-step-5.webp';
 
 const steps = [
   {

@@ -7,9 +7,9 @@ export default function Marketplace() {
       className='flex flex-wrap bg-primary text-base lg:text-lg 2xl:text-xl'
     >
       <div
-        className='flex w-full items-center bg-red-400 bg-cover bg-center p-14 lg:w-1/2'
+        className='flex w-full items-center bg-cover bg-center p-14 lg:w-1/2'
         style={{
-          backgroundImage: `url("assets/redesign/ecommerce/bg-ecommerce-market.png")`,
+          backgroundImage: `url("assets/redesign/ecommerce/bg-ecommerce-market.webp")`,
         }}
       >
         <h3 className='text-white drop-shadow'>

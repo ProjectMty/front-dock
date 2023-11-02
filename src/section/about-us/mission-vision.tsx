@@ -1,6 +1,6 @@
 import { Section } from '@/components';
-import missionImage from '@/public/assets/redesign/about/mission.png';
-import visionImage from '@/public/assets/redesign/about/vision.png';
+import missionImage from '@/public/assets/redesign/about/mission.webp';
+import visionImage from '@/public/assets/redesign/about/vision.webp';
 import Image from 'next/image';
 
 export default function MissionVision() {

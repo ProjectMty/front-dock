@@ -1,9 +1,9 @@
 import { Diagram, Section } from '@/components';
-import diagram2step1 from '@/public/assets/redesign/ecommerce/diagram-2-step-1.png';
-import diagram2step2 from '@/public/assets/redesign/ecommerce/diagram-2-step-2.png';
-import diagram2step3 from '@/public/assets/redesign/ecommerce/diagram-2-step-3.png';
-import diagram2step4 from '@/public/assets/redesign/ecommerce/diagram-2-step-4.png';
-import diagram2step5 from '@/public/assets/redesign/ecommerce/diagram-2-step-5.png';
+import diagram2step1 from '@/public/assets/redesign/ecommerce/diagram-2-step-1.webp';
+import diagram2step2 from '@/public/assets/redesign/ecommerce/diagram-2-step-2.webp';
+import diagram2step3 from '@/public/assets/redesign/ecommerce/diagram-2-step-3.webp';
+import diagram2step4 from '@/public/assets/redesign/ecommerce/diagram-2-step-4.webp';
+import diagram2step5 from '@/public/assets/redesign/ecommerce/diagram-2-step-5.webp';
 
 const steps = [
   {

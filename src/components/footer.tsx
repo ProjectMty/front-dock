@@ -28,7 +28,7 @@ export default function Footer() {
             <ul className='space-y-2 text-sm font-light'>
               <li>
                 <Link className='link-hover link' href='/about-us'>
-                  About
+                  About Us
                 </Link>
               </li>
               <li>
