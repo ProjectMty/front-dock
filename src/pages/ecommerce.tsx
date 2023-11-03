@@ -11,10 +11,12 @@ import {
   ShipServices,
   WhatWeCanDo,
 } from '@/section';
+import { NextSeo } from 'next-seo';
 
 export default function EcommercePage() {
   return (
     <>
+      <NextSeo title='E-commerce 3PL | Front Dock' />
       <Hero image='bg-ecommerce-hero'>E-commerce 3PL</Hero>
       <WhatWeCanDo />
       <DirectClient />

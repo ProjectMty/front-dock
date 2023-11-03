@@ -1,8 +1,10 @@
 import { Hero, Section } from '@/components';
+import { NextSeo } from 'next-seo';
 
 export default function TermsConditionsPage() {
   return (
     <>
+      <NextSeo title='Terms and Conditions | Front Dock' />
       <Hero image='bg-home-hero'>Terms & Conditions</Hero>
       <Section
         id='terms-conditions'

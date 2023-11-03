@@ -1,6 +1,7 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 import { Hero } from '@/components';
 import { Questions3PL, QuestionsReturns } from '@/section';
+import { NextSeo } from 'next-seo';
 
 const questions3pl = [
   {
@@ -47,6 +48,7 @@ const questionsReturns = [
 export default function FaqPage() {
   return (
     <>
+      <NextSeo title='FAQ | Front Dock' />
       <Hero image='bg-faq-hero'>FAQ</Hero>
       <Questions3PL questions={questions3pl} />
       <QuestionsReturns questions={questionsReturns} />

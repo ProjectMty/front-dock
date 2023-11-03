@@ -11,7 +11,14 @@ type Body = {
   token: string;
 };
 
-const verifyRecaptcha = async (token: string) => {
+type CaptchaValidation = {
+  success: boolean;
+  score: number;
+  challenge_ts: string;
+  hostname: string;
+};
+
+const verifyRecaptcha = async (token: string): Promise<CaptchaValidation> => {
   const secretKey = process.env.RECAPTCHA_SECRET_KEY as string;
 
   const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
@@ -25,12 +32,7 @@ const verifyRecaptcha = async (token: string) => {
 
   const captchaValidation = await response.json();
 
-  return captchaValidation as {
-    success: boolean;
-    score: number;
-    challenge_ts: string;
-    hostname: string;
-  };
+  return captchaValidation satisfies CaptchaValidation;
 };
 
 export default async function handler(
