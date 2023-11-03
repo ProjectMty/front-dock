@@ -14,8 +14,7 @@ config.autoAddCss = false;
 const frontDockSiteName = 'Front Dock';
 
 export default function App({ Component, pageProps }: AppProps) {
-  const element =
-    process.env.NODE_ENV === 'production' ? 'recaptcha-container' : undefined;
+  const element = process.env.NODE_ENV === 'production' ? 'recaptcha-container' : undefined;
 
   return (
     <>

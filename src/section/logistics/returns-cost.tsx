@@ -2,33 +2,25 @@ import { Section } from '@/components';
 import { useState } from 'react';
 import returnCostsData from './return-cost-data';
 
-type ReturnCostKeys =
-  | 'consolidate'
-  | 'repackageShip'
-  | 'resale'
-  | 'donate'
-  | 'dispose';
+type ReturnCostKeys = 'consolidate' | 'repackageShip' | 'resale' | 'donate' | 'dispose';
 
 export default function ReturnsCost() {
-  const [selectedData, setSelectedData] =
-    useState<ReturnCostKeys>('consolidate');
+  const [selectedData, setSelectedData] = useState<ReturnCostKeys>('consolidate');
 
   return (
     <>
       <Section id='returns-cost' className='space-y-8'>
         <div className='space-y-8 md:mx-auto md:w-3/4'>
           <p className='text-center text-white'>
-            We work with RMA,inner-border RGA forms, or any other form of
-            integration to update your returns in real time.
+            We work with RMA,inner-border RGA forms, or any other form of integration to update your
+            returns in real time.
           </p>
-          <h3 className='text-center text-secondary'>
-            How much do returns cost?
-          </h3>
+          <h3 className='text-center text-secondary'>How much do returns cost?</h3>
           <p className='text-center text-white'>
-            While Front Dock offers several options for returns management, our
-            most popular is the consolidate and return to seller model. We
-            receive your returns on a daily basis, inform you of the inventory
-            status, and consolidate. We ship back to you when you&apos;re ready!
+            While Front Dock offers several options for returns management, our most popular is the
+            consolidate and return to seller model. We receive your returns on a daily basis, inform
+            you of the inventory status, and consolidate. We ship back to you when you&apos;re
+            ready!
           </p>
         </div>
       </Section>
@@ -58,9 +50,7 @@ export default function ReturnsCost() {
               <td className='inner-border table-center-content w-1/5 p-4'>
                 <select
                   className='select select-ghost w-full max-w-xs'
-                  onChange={(e) =>
-                    setSelectedData(e.target.value as ReturnCostKeys)
-                  }
+                  onChange={(e) => setSelectedData(e.target.value as ReturnCostKeys)}
                 >
                   {Object.keys(returnCostsData).map((key) => {
                     return (

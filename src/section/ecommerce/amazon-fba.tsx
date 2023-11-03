@@ -8,23 +8,17 @@ import Image from 'next/image';
 
 export default function AmazonFba() {
   return (
-    <Section
-      id='amazon-fba'
-      className='flex flex-col gap-8 bg-white text-primary'
-    >
+    <Section id='amazon-fba' className='flex flex-col gap-8 bg-white text-primary'>
       <p className='text-center text-base lg:text-2xl'>
-        If you sell on <span className='font-bold'>Amazon FBA</span> and are
-        shipping from China or directly from your supplier&apos;s warehouse,{' '}
-        <span className='font-bold'>Front Dock</span> will complete all of your
-        prep and fulfillment operations. Our work stops only once the
+        If you sell on <span className='font-bold'>Amazon FBA</span> and are shipping from China or
+        directly from your supplier&apos;s warehouse, <span className='font-bold'>Front Dock</span>{' '}
+        will complete all of your prep and fulfillment operations. Our work stops only once the
         merchandise is delivered at the designated Amazon FC. Our{' '}
         <span className='font-bold'>FBA</span> teams in Texas and New York{' '}
         <span className='font-bold'>
-          can receive, store, sort, fill, label, and ship your FBA replenishment
-          shipments to Amazon
+          can receive, store, sort, fill, label, and ship your FBA replenishment shipments to Amazon
         </span>
-        . We have vast experience with Amazon Seller Central and Carrier
-        Central.
+        . We have vast experience with Amazon Seller Central and Carrier Central.
       </p>
       <div>
         <ul className='flex w-full flex-col flex-wrap justify-evenly gap-8 text-center font-black uppercase md:flex-row'>

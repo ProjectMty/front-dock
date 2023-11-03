@@ -10,12 +10,7 @@ type FormInputProps = {
   icon: IconDefinition;
 };
 
-export default function FormInput({
-  id,
-  label,
-  placeholder,
-  icon,
-}: FormInputProps) {
+export default function FormInput({ id, label, placeholder, icon }: FormInputProps) {
   const {
     register,
     formState: { errors },

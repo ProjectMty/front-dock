@@ -4,10 +4,7 @@ import Link from 'next/link';
 
 export default function GetStarted({ image }: { image: string }) {
   return (
-    <Section
-      id='get-started'
-      className={`bg-slate-500 !py-4 md:!py-8 xl:!py-12 ${image}`}
-    >
+    <Section id='get-started' className={`bg-slate-500 !py-4 md:!py-8 xl:!py-12 ${image}`}>
       <div
         className={clsx(
           'mx-auto flex flex-col gap-4 bg-secondary md:flex-row md:items-center md:justify-between xl:max-w-4xl 2xl:max-w-6xl',

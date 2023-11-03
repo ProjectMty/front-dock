@@ -12,9 +12,7 @@ export default function Marketplace() {
           backgroundImage: `url("assets/redesign/ecommerce/bg-ecommerce-market.webp")`,
         }}
       >
-        <h3 className='text-white drop-shadow'>
-          E-commerce Marketplace Prep and Ship Services
-        </h3>
+        <h3 className='text-white drop-shadow'>E-commerce Marketplace Prep and Ship Services</h3>
       </div>
       <div
         className={clsx(
@@ -24,9 +22,8 @@ export default function Marketplace() {
       >
         <p>Ideal Solution For Amazon FBA Sellers</p>
         <p>
-          Domestic And International Marketplace Prep And Fulfillment Services
-          (Shipping To Amazon Fulfillment Centers In The United States, Canada,
-          Or Mexico)
+          Domestic And International Marketplace Prep And Fulfillment Services (Shipping To Amazon
+          Fulfillment Centers In The United States, Canada, Or Mexico)
         </p>
       </div>
     </section>

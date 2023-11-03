@@ -17,12 +17,7 @@ export default function ReturnSellerIcon({
         <clipPath id='a'>
           <path d='M0 0h24v23H0z' />
         </clipPath>
-        <pattern
-          id='d'
-          width={size}
-          height={size}
-          patternUnits='userSpaceOnUse'
-        >
+        <pattern id='d' width={size} height={size} patternUnits='userSpaceOnUse'>
           <use xlinkHref='#c' />
         </pattern>
         <image

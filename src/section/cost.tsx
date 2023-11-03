@@ -2,13 +2,7 @@
 import Service from '@/components/service';
 import { Tab } from '@headlessui/react';
 
-const titles = [
-  'Consolidate',
-  'Repackage and ship',
-  'Resale',
-  'Donate',
-  'Dispose',
-];
+const titles = ['Consolidate', 'Repackage and ship', 'Resale', 'Donate', 'Dispose'];
 
 export default function Cost() {
   return (

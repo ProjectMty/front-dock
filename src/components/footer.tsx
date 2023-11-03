@@ -1,8 +1,4 @@
-import {
-  faInstagram,
-  faLinkedin,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 
@@ -13,13 +9,11 @@ export default function Footer() {
         <div className='space-y-4'>
           <p className='text-base font-bold'>About Us</p>
           <p className='text-justify text-sm font-light'>
-            Front Dock&apos;s mission is to empower businesses to thrive in the
-            e-commerce landscape by providing tailored, comprehensive solutions
-            that go beyond the capabilities of standard 3PL services. We are
-            dedicated to making your business look good by offering custom
-            services at competitive pricing and ensuring that our clients can
-            efficiently manage their operations whether they are based in the
-            USA, Mexico, Canada or beyond.
+            Front Dock&apos;s mission is to empower businesses to thrive in the e-commerce landscape
+            by providing tailored, comprehensive solutions that go beyond the capabilities of
+            standard 3PL services. We are dedicated to making your business look good by offering
+            custom services at competitive pricing and ensuring that our clients can efficiently
+            manage their operations whether they are based in the USA, Mexico, Canada or beyond.
           </p>
         </div>
         <div className='flex justify-between gap-3 md:justify-around lg:gap-4'>
@@ -42,10 +36,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  className='link-hover link'
-                  href='/about-us#sustainability'
-                >
+                <Link className='link-hover link' href='/about-us#sustainability'>
                   Sustainability
                 </Link>
               </li>
@@ -91,29 +82,17 @@ export default function Footer() {
           </div>
           <ul className='flex w-full justify-evenly lg:justify-center lg:gap-16'>
             <li>
-              <Link
-                target='_blank'
-                href='https://twitter.com/'
-                aria-label='Twitter'
-              >
+              <Link target='_blank' href='https://twitter.com/' aria-label='Twitter'>
                 <FontAwesomeIcon icon={faTwitter} size='2x' />
               </Link>
             </li>
             <li>
-              <Link
-                target='_blank'
-                href='https://instagram.com/'
-                aria-label='Instagram'
-              >
+              <Link target='_blank' href='https://instagram.com/' aria-label='Instagram'>
                 <FontAwesomeIcon icon={faInstagram} size='2x' />
               </Link>
             </li>
             <li>
-              <Link
-                target='_blank'
-                href='https://linkedin.com/'
-                aria-label='Linkedin'
-              >
+              <Link target='_blank' href='https://linkedin.com/' aria-label='Linkedin'>
                 <FontAwesomeIcon icon={faLinkedin} size='2x' />
               </Link>
             </li>

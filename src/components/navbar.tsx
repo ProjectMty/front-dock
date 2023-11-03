@@ -88,11 +88,7 @@ function Navbar() {
               },
             }}
           >
-            {expanded ? (
-              <FontAwesomeIcon icon={faXmark} />
-            ) : (
-              <FontAwesomeIcon icon={faBars} />
-            )}
+            {expanded ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
           </motion.div>
         </AnimatePresence>
       </button>
@@ -133,17 +129,13 @@ function Navbar() {
             }}
             key='test'
             id='mobile-menu'
-            className={clsx(
-              'z-50 col-span-2 mt-4 rounded-lg border border-white p-2 lg:hidden',
-            )}
+            className={clsx('z-50 col-span-2 mt-4 rounded-lg border border-white p-2 lg:hidden')}
           >
             <ul className='w-full py-2'>
               {navItems.map(({ link, label }) => (
                 <Link key={link} href={link}>
                   <li className='rounded-lg p-2 text-gray-50 hover:bg-gray-700 hover:text-gray-50 focus:bg-gray-700 focus:text-gray-50'>
-                    <span className='text-sm uppercase tracking-widest'>
-                      {label}
-                    </span>
+                    <span className='text-sm uppercase tracking-widest'>{label}</span>
                   </li>
                 </Link>
               ))}

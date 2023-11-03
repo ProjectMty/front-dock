@@ -21,18 +21,13 @@ export default function Diagram({ section, steps }: DiagramProps) {
       )}
     >
       {steps.map(({ id, image, description }, i) => (
-        <div
-          key={`${section}-${id}`}
-          className='relative max-w-[250px] text-center'
-        >
+        <div key={`${section}-${id}`} className='relative max-w-[250px] text-center'>
           <div className='absolute right-6 top-4 flex h-7 w-7 items-center justify-center rounded-full bg-secondary text-center font-black text-white drop-shadow'>
             {i + 1}
           </div>
           <div className='flex flex-col items-center'>
             <Image src={image} alt={description} width={192} className='w-48' />
-            <span className='font-montserrat text-sm font-medium text-gray-500'>
-              {description}
-            </span>
+            <span className='font-montserrat text-sm font-medium text-gray-500'>{description}</span>
           </div>
         </div>
       ))}

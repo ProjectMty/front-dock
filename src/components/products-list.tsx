@@ -23,10 +23,7 @@ export default function ProductsList({ products }: ProductsListProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <ProductIcon
-            icon={icon}
-            color={index % 2 === 0 ? 'primary' : 'secondary'}
-          />
+          <ProductIcon icon={icon} color={index % 2 === 0 ? 'primary' : 'secondary'} />
           <p className='w-fit text-left'>{description}</p>
         </motion.li>
       ))}

@@ -12,9 +12,8 @@ export default function Price() {
       >
         <div className='flex justify-center'>
           <p className='max-w-[80%]'>
-            <span className='text-secondary'>Front Dock</span> is the ideal
-            solution for your custom 3PL needs. We can tailor a package to fit
-            your fulfillment and shipping objectives.
+            <span className='text-secondary'>Front Dock</span> is the ideal solution for your custom
+            3PL needs. We can tailor a package to fit your fulfillment and shipping objectives.
           </p>
         </div>
         <p>Take a look at our most popular packages:</p>

@@ -24,17 +24,9 @@ export default function FbaPrepIcon({
           <rect x='0' y='0' width='24' height='24' />
         </clipPath>
         <g id='surface7' clipPath='url(#clip1)'>
-          <use
-            xlinkHref='#image6'
-            transform='matrix(0.0618557,0,0,0.0633245,0,0)'
-          />
+          <use xlinkHref='#image6' transform='matrix(0.0618557,0,0,0.0633245,0,0)' />
         </g>
-        <pattern
-          id='pattern0'
-          patternUnits='userSpaceOnUse'
-          width='24'
-          height='24'
-        >
+        <pattern id='pattern0' patternUnits='userSpaceOnUse' width='24' height='24'>
           <use xlinkHref='#surface7' />
         </pattern>
       </defs>

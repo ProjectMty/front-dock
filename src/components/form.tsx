@@ -134,30 +134,15 @@ export default function Form() {
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className='grid w-full grid-cols-1 md:grid-cols-2 md:gap-x-6'>
-          <FormInput
-            id='firstName'
-            label='First Name'
-            placeholder='First Name'
-            icon={faUser}
-          />
-          <FormInput
-            id='lastName'
-            label='Last Name'
-            placeholder='Last Name'
-            icon={faUser}
-          />
+          <FormInput id='firstName' label='First Name' placeholder='First Name' icon={faUser} />
+          <FormInput id='lastName' label='Last Name' placeholder='Last Name' icon={faUser} />
           <FormInput
             id='email'
             label='E-mail Address'
             placeholder='E-mail Address'
             icon={faEnvelope}
           />
-          <FormInput
-            id='phone'
-            label='Phone Number'
-            placeholder='Phone Number'
-            icon={faPhone}
-          />
+          <FormInput id='phone' label='Phone Number' placeholder='Phone Number' icon={faPhone} />
         </div>
         <div className='group form-control w-full'>
           <label className='label text-primary' htmlFor='service'>
@@ -206,15 +191,11 @@ export default function Form() {
               placeholder='Enter message'
               className={clsx(
                 'textarea textarea-bordered min-h-16 h-36 max-h-48 w-full resize-y rounded-none bg-[#fafafa] pr-10 text-primary group-focus-within:textarea-secondary placeholder:text-gray-400',
-                errors.subject &&
-                  'textarea-error group-focus-within:textarea-error',
+                errors.subject && 'textarea-error group-focus-within:textarea-error',
               )}
               {...register('subject', { required: true })}
             />
-            <FontAwesomeIcon
-              className='absolute right-4 top-4'
-              icon={faComment}
-            />
+            <FontAwesomeIcon className='absolute right-4 top-4' icon={faComment} />
           </div>
         </div>
         <div className='h-3' />

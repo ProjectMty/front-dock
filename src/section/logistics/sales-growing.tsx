@@ -24,9 +24,8 @@ export default function SalesGrowing() {
         className='space-y-4 bg-primary px-5 text-center text-white lg:col-span-4 lg:max-w-5xl lg:px-16 2xl:px-28'
       >
         <p>
-          Returns can be overwhelming and burdensome to your business. Front
-          Dock saves you time, increases your bottom line and your client&apos;s
-          satisfaction.
+          Returns can be overwhelming and burdensome to your business. Front Dock saves you time,
+          increases your bottom line and your client&apos;s satisfaction.
         </p>
       </motion.div>
     </Section>

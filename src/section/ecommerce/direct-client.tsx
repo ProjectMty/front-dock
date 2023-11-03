@@ -17,23 +17,20 @@ export default function DirectClient() {
           to client
         </h2>
         <div className='flex flex-col gap-6 bg-secondary p-12 text-center uppercase md:w-2/3 xl:w-1/3'>
+          <p>Ideal solution for online retail, small businesses, and fbm models</p>
           <p>
-            Ideal solution for online retail, small businesses, and fbm models
-          </p>
-          <p>
-            Domestic and international direct to client services (final client
-            is receiving in the United States, Canada, or Mexico)
+            Domestic and international direct to client services (final client is receiving in the
+            United States, Canada, or Mexico)
           </p>
         </div>
       </div>
       <p className='w-full text-center text-base md:text-xl xl:mx-auto xl:w-3/4 xl:text-2xl'>
-        Do you have an online store or sell on e-commerce platforms but
-        don&apos;t have the warehouse space or simply want to outsource your
-        logistics? <span className='font-bold'>Front Dock</span> offers a
-        complete direct to client logistics solution. Our warehouses in{' '}
-        <span className='font-bold'>Texas</span> and{' '}
-        <span className='font-bold'>New York</span> can receive, sort, fill, and
-        ship orders directly to your buyer&apos;s front door.
+        Do you have an online store or sell on e-commerce platforms but don&apos;t have the
+        warehouse space or simply want to outsource your logistics?{' '}
+        <span className='font-bold'>Front Dock</span> offers a complete direct to client logistics
+        solution. Our warehouses in <span className='font-bold'>Texas</span> and{' '}
+        <span className='font-bold'>New York</span> can receive, sort, fill, and ship orders
+        directly to your buyer&apos;s front door.
       </p>
       <div>
         <ul className='flex w-full flex-col flex-wrap justify-evenly gap-8 text-center font-black uppercase md:flex-row'>

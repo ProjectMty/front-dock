@@ -35,10 +35,7 @@ const verifyRecaptcha = async (token: string): Promise<CaptchaValidation> => {
   return captchaValidation satisfies CaptchaValidation;
 };
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method !== 'POST') {
       return res.status(400).json({ message: 'Invalid method' });
@@ -105,8 +102,6 @@ export default async function handler(
     // eslint-disable-next-line no-console
     console.error(`API ERROR: ${(error as Error).message}`);
 
-    return res
-      .status(500)
-      .json({ message: 'Something went wrong, please try again.' });
+    return res.status(500).json({ message: 'Something went wrong, please try again.' });
   }
 }

@@ -32,14 +32,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    headlessui,
-    twAspectRatio,
-    twContainerQueries,
-    twForms,
-    twTypography,
-    daisyui,
-  ],
+  plugins: [headlessui, twAspectRatio, twContainerQueries, twForms, twTypography, daisyui],
   daisyui: {
     theme: true,
     themes: [

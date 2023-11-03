@@ -9,8 +9,7 @@ const steps = [
   {
     id: 'diagram2step1',
     image: diagram2step1,
-    description:
-      'You ship 2 pallets of headphones from your supplier to our ware- house in Texas.',
+    description: 'You ship 2 pallets of headphones from your supplier to our ware- house in Texas.',
   },
   {
     id: 'diagram2step2',

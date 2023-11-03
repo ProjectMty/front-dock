@@ -18,9 +18,7 @@ const montserrat = Montserrat({
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
-    <main
-      className={`${lato.variable} ${montserrat.variable} w-full font-sans`}
-    >
+    <main className={`${lato.variable} ${montserrat.variable} w-full font-sans`}>
       <Header />
       {children}
       <div id='recaptcha-container' className='h-[0px] w-[0px]' />

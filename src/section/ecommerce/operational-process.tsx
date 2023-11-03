@@ -15,14 +15,12 @@ const steps = [
   {
     id: 'diagram1step2',
     image: diagram1step2,
-    description:
-      'Our team receives the order, picks the product, packs the order.',
+    description: 'Our team receives the order, picks the product, packs the order.',
   },
   {
     id: 'diagram1step3',
     image: diagram1step3,
-    description:
-      'Inserts packing slip or marketing materials, applies a shipping label.',
+    description: 'Inserts packing slip or marketing materials, applies a shipping label.',
   },
   {
     id: 'diagram1step4',
@@ -32,8 +30,7 @@ const steps = [
   {
     id: 'diagram1step5',
     image: diagram1step5,
-    description:
-      'The last mile carrier delivers packages to the buyer in Vermont.',
+    description: 'The last mile carrier delivers packages to the buyer in Vermont.',
   },
 ];
 

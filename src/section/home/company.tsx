@@ -19,26 +19,19 @@ export default function Company() {
           <h2 className='text-white'>
             Who <span className='block'>we are</span>
           </h2>
-          <Link
-            className='btn btn-secondary rounded-full text-primary lg:btn-lg'
-            href='/about-us'
-          >
+          <Link className='btn btn-secondary rounded-full text-primary lg:btn-lg' href='/about-us'>
             Learn more about us
           </Link>
           <div className='flex flex-wrap items-center justify-center gap-8'>
             <div>
-              <p className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'>
-                20
-              </p>
+              <p className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'>20</p>
               <p className='text-base font-bold leading-none text-secondary lg:text-xl'>
                 Year of <br />
                 experience
               </p>
             </div>
             <div>
-              <p className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'>
-                99%
-              </p>
+              <p className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'>99%</p>
               <p className='text-base font-bold leading-none text-secondary lg:text-xl'>
                 Client <br />
                 satisfaction
@@ -57,13 +50,11 @@ export default function Company() {
         </div>
         <div className='space-y-4 bg-white p-5 text-center text-primary shadow-2xl lg:col-span-4 lg:p-12 2xl:px-24'>
           <p>
-            <span className='font-bold'>Front Dock is a 3PL</span> and
-            e-commerce service provider in Houston, Texas. More than{' '}
-            <span className='font-bold'>20 years</span> of domestic and
+            <span className='font-bold'>Front Dock is a 3PL</span> and e-commerce service provider
+            in Houston, Texas. More than <span className='font-bold'>20 years</span> of domestic and
             international marketplace fulfillment experience make us{' '}
             <span className='font-bold'>
-              the industry leader for all of your e-commerce logistics and
-              returns management.
+              the industry leader for all of your e-commerce logistics and returns management.
             </span>
           </p>
 
@@ -73,27 +64,20 @@ export default function Company() {
             <span className='font-bold'>B2C</span> (business-to-consumer),{' '}
             <span className='font-bold'>B2B</span> (business-to-business),{' '}
             <span className='font-bold'>FBM</span> (Fulfillment by Merchant),{' '}
-            <span className='font-bold'>
-              wholesale, dropshipping, and private label
-            </span>
-            .
+            <span className='font-bold'>wholesale, dropshipping, and private label</span>.
           </p>
           <p>
             <span className='font-bold'>
-              Front Dock is your complete solutions for any combination of the
-              acronyms!
+              Front Dock is your complete solutions for any combination of the acronyms!
             </span>
           </p>
           <p>
-            Our <span className='font-bold'>60,000</span> square foot warehouse
-            provides ample space for all of your items - large or small.
-            We&apos;re confident our trained team is equipped to handle the
-            logistics required for your business{' '}
-            <span className='font-bold'>
-              to sell more and improve your profitability
-            </span>
-            . If we don&apos;t already offer the service, we can create a
-            solution tailored to your project&apos;s requirements.
+            Our <span className='font-bold'>60,000</span> square foot warehouse provides ample space
+            for all of your items - large or small. We&apos;re confident our trained team is
+            equipped to handle the logistics required for your business{' '}
+            <span className='font-bold'>to sell more and improve your profitability</span>. If we
+            don&apos;t already offer the service, we can create a solution tailored to your
+            project&apos;s requirements.
           </p>
         </div>
       </motion.div>
