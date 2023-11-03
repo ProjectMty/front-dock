@@ -17,7 +17,7 @@ const services = [
   {
     key: 'fbm',
     icon: <Image src={IconService2} alt='IconService2' width={128} />,
-    title: 'FBM- Fulfilled by Merchant Cross-Dockin',
+    title: 'FBM-Fulfilled by Merchant Cross-Dockin',
     content: `Our service provides worldwide fulfillment solutions for e-commerce sellers across various online marketplaces such as Amazon, Walmart, Etsy, eBay. We partner with all major carriers for last mile shipping. We pick, pack, and ship!`,
   },
   {

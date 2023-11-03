@@ -91,17 +91,29 @@ export default function Footer() {
           </div>
           <ul className='flex w-full justify-evenly lg:justify-center lg:gap-16'>
             <li>
-              <Link target='_blank' href='https://twitter.com/'>
+              <Link
+                target='_blank'
+                href='https://twitter.com/'
+                aria-label='Twitter'
+              >
                 <FontAwesomeIcon icon={faTwitter} size='2x' />
               </Link>
             </li>
             <li>
-              <Link target='_blank' href='https://instagram.com/'>
+              <Link
+                target='_blank'
+                href='https://instagram.com/'
+                aria-label='Instagram'
+              >
                 <FontAwesomeIcon icon={faInstagram} size='2x' />
               </Link>
             </li>
             <li>
-              <Link target='_blank' href='https://linkedin.com/'>
+              <Link
+                target='_blank'
+                href='https://linkedin.com/'
+                aria-label='Linkedin'
+              >
                 <FontAwesomeIcon icon={faLinkedin} size='2x' />
               </Link>
             </li>

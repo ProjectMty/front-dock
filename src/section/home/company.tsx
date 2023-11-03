@@ -23,7 +23,7 @@ export default function Company() {
             className='btn btn-secondary rounded-full text-primary lg:btn-lg'
             href='/about-us'
           >
-            Learn more
+            Learn more about us
           </Link>
           <div className='flex flex-wrap items-center justify-center gap-8'>
             <div>
