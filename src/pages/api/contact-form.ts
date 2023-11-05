@@ -1,13 +1,9 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { type ContactFormFields } from '@/types';
 import sendgrid from '@sendgrid/mail';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-type Body = {
-  name: string;
-  email: string;
-  phone: string;
-  product: string;
-  subject: string;
+type Body = ContactFormFields & {
   token: string;
 };
 
@@ -52,13 +48,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       !data.lastName ||
       !data.email ||
       !data.phone ||
+      !data.company ||
       !data.service ||
       !data.subject
     ) {
       return res.status(400).json({ message: 'Invalid data' });
     }
 
-    const { name, email, phone, product, subject, token } = data as Body;
+    const { firstName, lastName, email, phone, company, service, subject, token } = data as Body;
 
     const recaptchaResponse = await verifyRecaptcha(token);
 
@@ -87,10 +84,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       </thead>
       <tbody>
         <tr>
-          <td>${name}</td>
+          <td>${firstName}</td>
+          <td>${lastName}</td>
           <td>${email}</td>
           <td>${phone}</td>
-          <td>${product}</td>
+          <td>${company}</td>
+          <td>${service}</td>
           <td>${subject}</td>
         </tr>
       </tbody>

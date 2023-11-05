@@ -38,14 +38,7 @@
     "plugin:promise/recommended",
     "plugin:react-hooks/recommended"
   ],
-  "plugins": [
-    "@typescript-eslint",
-    "prettier",
-    "security",
-    "unicorn",
-    "promise",
-    "tailwindcss"
-  ],
+  "plugins": ["@typescript-eslint", "prettier", "security", "unicorn", "promise", "tailwindcss"],
   "rules": {
     "tailwindcss/no-custom-classname": "off",
     "@typescript-eslint/no-unused-vars": "error",
@@ -83,10 +76,7 @@
     "react/require-default-props": "off",
     "react/no-children-prop": "off",
     "react-hooks/exhaustive-deps": "warn",
-    "unicorn/consistent-function-scoping": [
-      "error",
-      { "checkArrowFunctions": false }
-    ],
+    "unicorn/consistent-function-scoping": ["error", { "checkArrowFunctions": false }],
     "unicorn/prevent-abbreviations": "off",
     "unicorn/filename-case": [
       "error",
@@ -100,10 +90,11 @@
   },
   "overrides": [
     {
-      "files": ["*.cjs"],
+      "files": ["*.js"],
       "parserOptions": {
         "project": null
-      }
+      },
+      "rules": { "unicorn/prefer-module": "off" }
     }
   ]
 }

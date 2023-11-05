@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+import { type ContactFormFields } from '@/types';
 import {
   faArrowRight,
+  faBuilding,
   faComment,
   faEnvelope,
   faPhone,
@@ -14,35 +16,22 @@ import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import FormInput from './form-input';
 
-type ContactFormFields = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  service: string;
-  subject: string;
-};
-
 const services = [
   {
-    id: 'consolidate',
-    description: 'Consolidate',
+    id: 'fba',
+    description: 'FBA',
   },
   {
-    id: 'repackage-and-ship',
-    description: 'Repackage and ship',
+    id: 'mercado-libre',
+    description: 'Mercado Libre',
   },
   {
-    id: 'resale',
-    description: 'Resale',
+    id: 'walmart',
+    description: 'Walmart',
   },
   {
-    id: 'donate',
-    description: 'Donate',
-  },
-  {
-    id: 'dispose',
-    description: 'Dispose',
+    id: 'returns',
+    description: 'Returns',
   },
 ];
 
@@ -68,6 +57,7 @@ export default function Form() {
       lastName: '',
       email: '',
       phone: '',
+      company: '',
       service: '',
       subject: '',
     },
@@ -143,37 +133,42 @@ export default function Form() {
             icon={faEnvelope}
           />
           <FormInput id='phone' label='Phone Number' placeholder='Phone Number' icon={faPhone} />
-        </div>
-        <div className='group form-control w-full'>
-          <label className='label text-primary' htmlFor='service'>
-            <span
+          <FormInput
+            id='company'
+            label='Company Name'
+            placeholder='Company Name'
+            icon={faBuilding}
+          />
+          <div className='group form-control w-full'>
+            <label className='label text-primary' htmlFor='service'>
+              <span
+                className={clsx(
+                  'label-text text-base focus:text-secondary group-focus-within:text-secondary lg:text-lg 2xl:text-xl',
+                  errors.service && 'text-error group-focus-within:text-error',
+                )}
+              >
+                Service
+              </span>
+            </label>
+            <select
+              id='service'
               className={clsx(
-                'label-text text-base focus:text-secondary group-focus-within:text-secondary lg:text-lg 2xl:text-xl',
-                errors.service && 'text-error group-focus-within:text-error',
+                'input input-bordered w-full rounded-none bg-[#fafafa] text-primary  group-focus-within:input-secondary placeholder:text-gray-400',
+                errors.service && 'input-error group-focus-within:input-error',
               )}
+              {...register('service', { required: true })}
             >
-              Service
-            </span>
-          </label>
-          <select
-            id='service'
-            className={clsx(
-              'input input-bordered w-full rounded-none bg-[#fafafa] text-primary  group-focus-within:input-secondary placeholder:text-gray-400',
-              errors.service && 'input-error group-focus-within:input-error',
-            )}
-            {...register('service', { required: true })}
-          >
-            <option value='' id='unknown' disabled>
-              Select a service
-            </option>
-            {services.map(({ id, description }) => (
-              <option key={id} id={id} value={id}>
-                {description}
+              <option value='' id='unknown' disabled>
+                Select a service
               </option>
-            ))}
-          </select>
+              {services.map(({ id, description }) => (
+                <option key={id} id={id} value={id}>
+                  {description}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
-
         <div className='group form-control w-full'>
           <label className='label text-primary' htmlFor='subject'>
             <span

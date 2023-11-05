@@ -18,7 +18,7 @@ const navItems: NavItem[] = [
   { link: '/', label: 'Home' },
   { link: '/ecommerce', label: 'E-commerce' },
   { link: '/logistics', label: 'Reverse Logistics' },
-  { link: '/pricing', label: 'Princing' },
+  { link: '/pricing', label: 'Pricing' },
   { link: '/contact', label: 'Contact Us' },
 ];
 

@@ -1,4 +1,4 @@
-import { faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 
@@ -82,20 +82,33 @@ export default function Footer() {
           </div>
           <ul className='flex w-full justify-evenly lg:justify-center lg:gap-16'>
             <li>
-              <Link target='_blank' href='https://twitter.com/' aria-label='Twitter'>
-                <FontAwesomeIcon icon={faTwitter} size='2x' />
+              <Link
+                target='_blank'
+                href='https://www.facebook.com/frontdock/'
+                aria-label='Linkedin'
+              >
+                <FontAwesomeIcon icon={faFacebook} size='2x' />
               </Link>
             </li>
             <li>
-              <Link target='_blank' href='https://instagram.com/' aria-label='Instagram'>
+              <Link
+                target='_blank'
+                href='https://www.instagram.com/frontdock/'
+                aria-label='Instagram'
+              >
                 <FontAwesomeIcon icon={faInstagram} size='2x' />
+              </Link>
+            </li>
+            {/* <li>
+              <Link target='_blank' href='https://twitter.com/' aria-label='Twitter'>
+                <FontAwesomeIcon icon={faTwitter} size='2x' />
               </Link>
             </li>
             <li>
               <Link target='_blank' href='https://linkedin.com/' aria-label='Linkedin'>
                 <FontAwesomeIcon icon={faLinkedin} size='2x' />
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </footer>

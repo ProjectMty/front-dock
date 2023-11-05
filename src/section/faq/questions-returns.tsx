@@ -10,7 +10,7 @@ export default function QuestionsReturns({ questions }: QuestionsReturnsProps) {
   return (
     <Section id='questions-returns' className='bg-white'>
       <motion.h2
-        className='pb-8 text-2xl font-black lg:text-3xl 2xl:text-4xl'
+        className='pb-8 text-2xl font-black text-primary lg:text-3xl 2xl:text-4xl'
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

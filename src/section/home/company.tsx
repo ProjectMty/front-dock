@@ -68,7 +68,7 @@ export default function Company() {
           </p>
           <p>
             <span className='font-bold'>
-              Front Dock is your complete solutions for any combination of the acronyms!
+              Front Dock is your complete solution for any combination of the acronyms!
             </span>
           </p>
           <p>
