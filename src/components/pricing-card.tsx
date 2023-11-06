@@ -12,7 +12,7 @@ export default function PricingCard({ title, price, description, link }: Pricing
   return (
     <div className='flex w-11/12 flex-col justify-between gap-y-6 rounded-3xl bg-white p-12 text-primary md:w-96'>
       <div className='flex flex-col gap-y-6'>
-        <h4 className='text-sm font-black uppercase tracking-widest'>{title}</h4>
+        <p className='text-sm font-black uppercase tracking-widest'>{title}</p>
         <div>
           <p className='text-7xl font-bold'>{getCurrencyFormat(price)}</p>
           <p className='text-sm text-[#5d5d5d]'>Per Unit</p>

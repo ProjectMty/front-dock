@@ -49,6 +49,10 @@ export default function App({ Component, pageProps }: AppProps) {
             badge: 'bottomleft', // optional, default undefined
           },
         }}
+        scriptProps={{
+          defer: true,
+          async: true,
+        }}
       >
         <RootLayout>
           <Component {...pageProps} />

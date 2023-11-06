@@ -93,6 +93,7 @@ export default function Form() {
 
       if (!response.ok) {
         errorMsg();
+        return;
       }
 
       await response.json();

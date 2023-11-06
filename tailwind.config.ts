@@ -27,8 +27,14 @@ const config: Config = {
         'faq-hero': "url('/assets/redesign/faq/hero.png')",
       },
       fontFamily: {
-        sans: ['var(--font-lato)'],
-        montserrat: ['var(--font-montserrat)'],
+        sans: ['var(--font-lato)', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+        montserrat: [
+          'var(--font-montserrat)',
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'sans-serif',
+        ],
       },
     },
   },

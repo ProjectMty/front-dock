@@ -57,7 +57,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link className='link-hover link' href='/terms-conditions'>
-                  Term & conditions
+                  Terms & conditions
                 </Link>
               </li>
             </ul>

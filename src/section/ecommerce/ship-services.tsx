@@ -3,7 +3,7 @@ import { Section } from '@/components';
 export default function ShipServices() {
   return (
     <Section id='ship-services' className='bg-primary text-white'>
-      <ul className='grid w-full list-inside list-disc grid-cols-2 gap-x-24 gap-y-4 text-center text-white md:list-outside md:grid-cols-3 md:text-left'>
+      <ul className='grid w-full list-inside list-disc grid-cols-2 items-center gap-x-24 gap-y-4 text-center text-white md:list-outside md:grid-cols-3 md:text-left'>
         <li>LTL and FTL freight pick up</li>
         <li>Container unloading</li>
         <li>Receiving</li>
