@@ -2,5 +2,6 @@
 module.exports = {
   siteUrl: 'https://frontdock.com/',
   generateRobotsTxt: true, // (optional)
+  changefreq: 'yearly',
   // ...other options
 };
