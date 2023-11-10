@@ -1,11 +1,10 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { type ContactFormFields } from '@/types';
 import sendgrid from '@sendgrid/mail';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { readFile } from 'node:fs/promises';
 import { verifyRecaptcha } from './utils';
 
-type Body = ContactFormFields & {
+type Body = {
+  email: string;
   token: string;
 };
 
@@ -21,19 +20,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const data = JSON.parse(req.body);
 
-    if (
-      !data.firstName ||
-      !data.lastName ||
-      !data.email ||
-      !data.phone ||
-      !data.company ||
-      !data.service ||
-      !data.subject
-    ) {
+    if (!data.email) {
       return res.status(400).json({ message: 'Invalid data' });
     }
 
-    const { firstName, lastName, email, phone, company, service, subject, token } = data as Body;
+    const { email, token } = data as Body;
 
     const recaptchaResponse = await verifyRecaptcha(token);
 
@@ -41,46 +32,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ message: 'Invalid token' });
     }
 
-    const html = await readFile(`${process.cwd()}/src/pages/api/contact-email.html`, 'utf8');
     const apiKey = process.env.SENDGRID_API_KEY as string;
 
     sendgrid.setApiKey(apiKey);
     await sendgrid.send({
-      from: process.env.SENDGRID_FROM_EMAIL as string,
-      to: email,
-      subject: 'Thank you for contacting | FrontDock',
-      text: 'Thank you for contacting | FrontDock',
-      html,
-    });
-
-    await sendgrid.send({
       to: process.env.SENDGRID_TO_EMAIL as string,
       from: process.env.SENDGRID_FROM_EMAIL as string,
-      subject: 'Nuevo prospecto desde frontodock.com',
-      text: 'Se ha registrado un prospecto a través de frontodock.com',
+      subject: 'Nueva suscripción desde frontodock.com',
+      text: 'Se ha registrado una suscripción a través de frontodock.com',
       html: `
-      <p>Se ha registrado un prospecto a través de frontodock.com</p>
+      <p>Se ha registrado una suscripción a través de frontodock.com</p>
       <table>
       <thead>
         <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
           <th>E-mail</th>
-          <th>Phone</th>
-          <th>Company</th>
-          <th>Service</th>
-          <th>Subject</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>${firstName}</td>
-          <td>${lastName}</td>
           <td>${email}</td>
-          <td>${phone}</td>
-          <td>${company}</td>
-          <td>${service}</td>
-          <td>${subject}</td>
         </tr>
       </tbody>
       </table>`,

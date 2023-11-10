@@ -1,6 +1,7 @@
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
+import SubscriptionForm from './subscription-form';
 
 export default function Footer() {
   return (
@@ -66,19 +67,7 @@ export default function Footer() {
         <div className='flex w-full flex-col items-center gap-8'>
           <p className='text-3xl'>Ready to get started?</p>
           <div className='form-control'>
-            <div className='flex bg-white p-1'>
-              <input
-                type='text'
-                placeholder='Enter email address'
-                className='input rounded-none text-primary'
-              />
-              <button
-                type='button'
-                className='btn btn-secondary rounded-none capitalize text-black'
-              >
-                Subscribe
-              </button>
-            </div>
+            <SubscriptionForm />
           </div>
           <ul className='flex w-full justify-evenly lg:justify-center lg:gap-16'>
             <li>

@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <>
       <NextSeo title='Pricing | Front Dock' />
-      <Hero image='bg-contact-hero'>Contact</Hero>
+      <Hero image='bg-contact-hero'>Contact Us</Hero>
       <Locations />
       <BannerContact />
       <ContactForm />

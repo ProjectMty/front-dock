@@ -119,4 +119,8 @@
   .table-row:last-child .inner-border {
     border-bottom: 0;
   }
+
+  .btn {
+    @apply rounded-none;
+  }
 }
