@@ -1,8 +1,12 @@
-export { default as Navbar } from './navbar';
+export { default as Diagram } from './diagram';
+export { default as Footer } from './footer';
+export { default as Form } from './form';
+export { default as Header } from './header';
+export { default as Hero } from './hero';
+export { default as InfoCard } from './info-card';
+export { default as LocationCard } from './location-card';
+export { default as PricingCard } from './pricing-card';
 export { default as ProductIcon } from './product-icon';
 export { default as ProductsList } from './products-list';
-export { default as LocationCard } from './location-card';
-export { default as ContactData } from './contact-data';
-export { default as ContactForm } from './contact-form';
-export { default as Footer } from './footer';
+export { default as Questions } from './questions';
 export { default as Section } from './section';

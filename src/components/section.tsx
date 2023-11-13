@@ -1,12 +1,21 @@
-import { ReactNode } from 'react';
+import clsx from 'clsx';
+import React, { HTMLAttributes } from 'react';
 
-type SectionProps = { id: string; children: ReactNode | ReactNode[] };
+type SectionProps = React.PropsWithChildren<{
+  id: string;
+  className?: HTMLAttributes<HTMLElement>['className'];
+}>;
 
-export default function Section({ id, children }: SectionProps) {
+export default function Section({ id, className, children }: SectionProps) {
   return (
     <section
       id={id}
-      className='bg-primary px-5 pb-7 text-base lg:px-12 lg:text-lg 2xl:px-80 2xl:pb-20 2xl:text-xl'
+      className={clsx(
+        'bg-primary text-base lg:text-lg 2xl:text-xl',
+        'px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24',
+        'py-6 sm:py-10 md:py-14 lg:py-[4.5rem] xl:py-[5.5rem] 2xl:py-[6.5rem]',
+        className,
+      )}
     >
       {children}
     </section>

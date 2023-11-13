@@ -2,43 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --transition-duration: 0ms;
+  --top-offset: 0rem;
+  --extended-by: 100px;
+  --cutoff: calc(100% - var(--extended-by));
+}
+
 @layer base {
-  /*
-  1. Use a more-intuitive box-sizing model.
-*/
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
-  /*
-  2. Remove default margin
-*/
   * {
     margin: 0;
   }
-  /*
-  3. Allow percentage-based heights in the application
-*/
-  html,
   body {
-    height: 100%;
-    overflow-x: hidden;
-  }
-  /*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
-*/
-  body {
-    @apply bg-primary;
-    overflow-x: hidden;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
-  /*
-  6. Improve media defaults
- */
   img,
   picture,
   video,
@@ -47,18 +30,12 @@
     display: block;
     max-width: 100%;
   }
-  /*
-  7. Remove built-in form typography styles
-*/
   input,
   button,
   textarea,
   select {
     font: inherit;
   }
-  /*
-  8. Avoid text overflows
-*/
   p,
   h1,
   h2,
@@ -68,11 +45,82 @@
   h6 {
     overflow-wrap: break-word;
   }
-  /*
-  9. Create a root stacking context
-*/
   #root,
   #__next {
     isolation: isolate;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-montserrat font-black uppercase;
+  }
+
+  h2 {
+    @apply text-center text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl;
+  }
+  h3 {
+    @apply text-center text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl;
+  }
+  h4 {
+    @apply text-center text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl;
+  }
+}
+@layer components {
+  .navbar-blur {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: calc(var(--extended-by) * -1);
+    background: rgba(21, 17, 24, 0.965);
+    mask-image: linear-gradient(to bottom, black 0, black var(--cutoff), transparent var(--cutoff));
+    pointer-events: none;
+    background: rgba(21, 17, 24, 0.5);
+    backdrop-filter: blur(16px);
+  }
+
+  .text-hero {
+    @apply font-montserrat font-black uppercase text-white relative z-40 drop-shadow break-words;
+    @apply text-5xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-9xl 2xl:text-9xl;
+    text-shadow: -10px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .info-card-square::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    background-color: #687386;
+  }
+
+  .table-center-content {
+    @apply text-center align-middle;
+  }
+
+  .table-break-headings {
+    word-break: break-word;
+    min-width: 8rem; /* Equivalent to w-32 */
+  }
+  .inner-border {
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    border-color: currentColor;
+  }
+
+  /* Reset borders for the last child */
+  .inner-border:last-child {
+    border-right: 0;
+  }
+
+  /* Reset borders for the last row */
+  .table-row:last-child .inner-border {
+    border-bottom: 0;
+  }
+
+  .btn {
+    @apply rounded-none;
   }
 }

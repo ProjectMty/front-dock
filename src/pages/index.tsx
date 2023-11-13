@@ -1,23 +1,18 @@
-import {
-  Company,
-  Contact,
-  Faq,
-  Hero,
-  Locations,
-  Returns,
-  Services,
-} from '@/section';
+import { Hero } from '@/components';
+import { Company, GetStarted, Services } from '@/section';
+import { NextSeo } from 'next-seo';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
-      <Hero />
+      <NextSeo />
+      <Hero image='bg-home-hero'>
+        You sell, <br />
+        we fulfill
+      </Hero>
       <Company />
-      <Returns />
       <Services />
-      <Faq />
-      <Locations />
-      <Contact />
+      <GetStarted image='bg-home-banner' />
     </>
   );
 }
