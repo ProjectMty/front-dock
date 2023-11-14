@@ -10,6 +10,8 @@ type Body = ContactFormFields & {
   token: string;
 };
 
+const SENDGRID_FROM_EMAIL = 'sales@frontdock.com';
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method !== 'POST') {
@@ -48,7 +50,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     sendgrid.setApiKey(apiKey);
     await sendgrid.send({
-      from: process.env.SENDGRID_FROM_EMAIL as string,
+      from: SENDGRID_FROM_EMAIL,
       to: email,
       subject: 'Thank you for contacting | FrontDock',
       text: 'Thank you for contacting | FrontDock',
@@ -56,8 +58,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
     await sendgrid.send({
+      from: SENDGRID_FROM_EMAIL,
       to: process.env.SENDGRID_TO_EMAIL as string,
-      from: process.env.SENDGRID_FROM_EMAIL as string,
       subject: 'Nuevo prospecto desde frontodock.com',
       text: 'Se ha registrado un prospecto a través de frontodock.com',
       html: `
