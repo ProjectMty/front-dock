@@ -61,6 +61,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // eslint-disable-next-line no-console
     console.error(`API ERROR: ${(error as Error).message}`);
 
-    return res.status(500).json({ message: 'Something went wrong, please try again.' });
+    return res.status(500).json({
+      message: 'Something went wrong, please try again.',
+      error: { message: (error as Error)?.message || 'No message', details: JSON.stringify(error) },
+    });
   }
 }

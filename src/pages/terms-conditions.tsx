@@ -14,20 +14,19 @@ export default function TermsConditionsPage() {
           <p>
             This page, in conjunction with the referenced documents, delineates the terms under
             which you are granted permission to access and utilize our website, available at
-            https://frontdock.com/(&quot;our site&quot;). Your use of our site encompasses
+            https://frontdock.com/ (&quot;our site&quot;). Your use of our site encompasses
             activities such as browsing, accessing, or registering for site usage. Prior to
             commencing your use of our site, we kindly request that you thoroughly review and
             consider these terms of use. They will govern your interactions with our site. By
-            proceeding to use our site, you affirmatively acknowledge your acceptance of these terms
+            proceeding to use our site, you affirmatively acknowledge your acceptance Of these terms
             of use, demonstrating your commitment to adhere to them. Should you not concur with
             these terms of use, we regretfully inform you that you should refrain from using our
             site.
           </p>
         </div>
-
         <div>
           <h2 className='text-left text-lg capitalize sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl'>
-            Cognizance and Agreement to Terms
+            Cognizance and Agreement to Terms:
           </h2>
           <p>
             By utilizing the services provided by Front Dock or visiting our website, users
@@ -36,10 +35,9 @@ export default function TermsConditionsPage() {
             to the established guidelines and regulations.
           </p>
         </div>
-
         <div>
           <h2 className='text-left text-lg capitalize sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl'>
-            Intellectual Property Ownership and Usage
+            Intellectual Property Ownership and Usage:
           </h2>
           <p>
             Within this website, you will find content that is either owned by us or licensed to us.
@@ -53,26 +51,36 @@ export default function TermsConditionsPage() {
 
         <div>
           <h2 className='text-left text-lg capitalize sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl'>
-            Accessibility to Our Website
+            Terms & Conditions:
           </h2>
           <p>
-            Our website is offered to you without any associated charges. We cannot ensure
-            uninterrupted availability or constant accessibility of our website, along with its
-            content. Access to our website is granted on a temporary basis. We reserve the right to
-            suspend, withdraw, discontinue, or modify any part or the entirety of our website
-            without prior notice. We shall not be held liable if, for any reason, our website
-            becomes unavailable temporarily or for an extended period. Moreover, it is your
-            responsibility to ensure that all individuals accessing our website through your
-            internet connection are well-informed about these terms of use, as well as any other
-            relevant terms and conditions, and that they adhere to them diligently. Our expertise
-            lies in maintaining the website&apos;s availability and functionality to the best of our
-            ability, and we appreciate your understanding in this regard.
+            Accessibility to Our Website: Our website is offered to you without any associated
+            charges. We cannot ensure uninterrupted availability or constant accessibility of our
+            website, along with its content. Access to our website is granted on a temporary basis.
+            We reserve the right to suspend, withdraw, discontinue, or modify any part or the
+            entirety of our website without prior notice. We shall not be held liable if, for any
+            reason, our website becomes unavailable temporarily or for an extended period. Moreover,
+            it is your responsibility to ensure that all individuals accessing our website through
+            your internet connection are well-informed about these terms of use, as well as any
+            other relevant terms and conditions, and that they adhere to them diligently. Our
+            expertise lies in maintaining the website&apos;s availability and functionality to the
+            best of our ability, and we appreciate your understanding in this regard.
           </p>
         </div>
 
         <div>
           <h2 className='text-left text-lg capitalize sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl'>
-            Exercising Caution in Information Utilization
+            Responsibility and Liability Terms for Merchandise Ownership:
+          </h2>
+          <p>
+            The responsibility for the merchandise remains with its owner. We disclaim any liability
+            associated with illegal merchandise or the condition of the goods. Levering our
+            expertise, we ensure a clear delineation of responsibilities in these matters.
+          </p>
+        </div>
+        <div>
+          <h2 className='text-left text-lg capitalize sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl'>
+            Exercising Caution in Information Utilization:
           </h2>
           <p>
             We want to emphasize that your utilization of any information or materials found on this
@@ -80,10 +88,9 @@ export default function TermsConditionsPage() {
             liability for the consequences of such usage.
           </p>
         </div>
-
         <div>
           <h2 className='text-left text-lg capitalize sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl'>
-            Viruses
+            Viruses:
           </h2>
           <p>
             It&apos;s important to note that we cannot provide an absolute guarantee regarding the

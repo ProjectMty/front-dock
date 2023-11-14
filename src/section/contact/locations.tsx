@@ -7,15 +7,15 @@ export default function Locations() {
   return (
     <section className='bg-white px-5 py-8 text-center text-primary 2xl:py-20'>
       <motion.h2
-        className='pb-8 text-2xl font-black lg:text-3xl 2xl:text-4xl'
+        className='pb-8 text-2xl font-black uppercase lg:text-3xl 2xl:text-4xl'
         initial={{ x: -150, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        LOCATIONS
+        Locations
       </motion.h2>
-      <div className='flex flex-col lg:flex-row lg:items-center lg:px-20 2xl:px-56'>
+      <div className='flex flex-col-reverse lg:flex-row lg:items-center lg:px-20 2xl:px-56'>
         <motion.div
           className='lg:w-1/2'
           initial={{ opacity: 0, scale: 0 }}
@@ -24,7 +24,7 @@ export default function Locations() {
           transition={{ duration: 0.25 }}
         >
           <Image
-            src='/assets/usa-map-desktop.png'
+            src='/assets/usa-map.webp'
             alt='Mexico locations'
             width={951}
             height={589}
@@ -43,14 +43,9 @@ export default function Locations() {
         </motion.div>
         <div className='mt-5 flex w-full flex-row items-center justify-evenly gap-x-2 lg:w-1/2 lg:flex-col lg:gap-y-14 2xl:gap-y-20'>
           <LocationCard>
-            <p className='font-black'>Northeast</p>
-            <p>202 Rhode Island Ave,</p>
-            <p>Buffalo, NY 14213</p>
-          </LocationCard>
-          <LocationCard>
             <p className='font-black'>South</p>
-            <p>1234 Main Street,</p>
-            <p>San Antonio, TX 78040</p>
+            <p>E. Cedar-Suite G 517,</p>
+            <p>McAllen, TX 78501</p>
           </LocationCard>
         </div>
       </div>
