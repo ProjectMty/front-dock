@@ -3,6 +3,7 @@ import { type ContactFormFields } from '@/types';
 import sendgrid from '@sendgrid/mail';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readFile } from 'node:fs/promises';
+import path from 'node:path';
 import { verifyRecaptcha } from './utils';
 
 type Body = ContactFormFields & {
@@ -40,8 +41,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!recaptchaResponse?.success || recaptchaResponse?.score < 0.5) {
       return res.status(400).json({ message: 'Invalid token' });
     }
+    const filePath = path.join(process.cwd(), 'public', 'contact-email.html');
+    const html = await readFile(filePath, 'utf8');
 
-    const html = await readFile(`${process.cwd()}/src/pages/api/contact-email.html`, 'utf8');
     const apiKey = process.env.SENDGRID_API_KEY as string;
 
     sendgrid.setApiKey(apiKey);
