@@ -6,7 +6,7 @@ import SubscriptionForm from './subscription-form';
 export default function Footer() {
   return (
     <>
-      <footer className='grid grid-cols-1 gap-4 bg-primary p-8 font-montserrat tracking-wide text-white md:grid-cols-2 md:gap-8 md:p-16 lg:grid-cols-[2fr_2fr_2fr]'>
+      <footer className='grid grid-cols-1 gap-4 space-y-4 bg-primary p-8 font-montserrat tracking-wide text-white md:grid-cols-2 md:gap-8 md:p-14 lg:grid-cols-[2fr_2fr_2fr]'>
         <div className='space-y-4'>
           <p className='text-base font-bold'>About Us</p>
           <p className='text-justify text-sm font-light'>
@@ -65,7 +65,7 @@ export default function Footer() {
           </div>
         </div>
         <div className='flex w-full flex-col items-center gap-8'>
-          <p className='text-3xl'>Ready to get started?</p>
+          <p className='text-center text-3xl'>Ready to get started?</p>
           <div className='form-control'>
             <SubscriptionForm />
           </div>

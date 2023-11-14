@@ -7,12 +7,12 @@ export default function BannerContact() {
   return (
     <div
       className={clsx(
-        'flex items-center justify-center gap-1 bg-secondary py-14 text-sm font-extrabold text-primary sm:gap-2',
-        'lg:gap-x-14 lg:text-2xl',
+        'flex flex-col items-center justify-center gap-1 gap-y-8 bg-secondary py-8 text-xl font-extrabold text-primary sm:gap-2',
+        'lg:flex-row lg:gap-x-14 lg:py-12 lg:text-2xl',
         '2xl:text-3xl',
       )}
     >
-      <div>
+      <div className='flex items-center gap-x-2'>
         <FontAwesomeIcon icon={faEnvelope} />
         <Link
           href='mailto:sales@frontdock.com'
@@ -23,7 +23,7 @@ export default function BannerContact() {
           sales@frontdock.com
         </Link>
       </div>
-      <div>
+      <div className='flex items-center gap-x-2'>
         <FontAwesomeIcon icon={faPhone} />
         <Link
           href='tel:+19566487402'
