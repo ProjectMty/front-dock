@@ -4,12 +4,12 @@ import { NextSeo } from 'next-seo';
 export default function TermsConditionsPage() {
   return (
     <>
-      <NextSeo title='Terms and Conditions | Front Dock' />
+      <NextSeo title='Terms & Conditions | Front Dock' />
       <Hero image='bg-home-hero'>Terms & Conditions</Hero>
       <Section id='terms-conditions' className='space-y-8 bg-white text-primary'>
         <div>
           <h2 className='text-left text-lg capitalize sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl'>
-            Terms of website use
+            Terms of website use:
           </h2>
           <p>
             This page, in conjunction with the referenced documents, delineates the terms under

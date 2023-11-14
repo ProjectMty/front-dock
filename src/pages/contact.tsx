@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo';
 export default function ContactPage() {
   return (
     <>
-      <NextSeo title='Pricing | Front Dock' />
+      <NextSeo title='Contact | Front Dock' />
       <Hero image='bg-contact-hero'>Contact Us</Hero>
       <Locations />
       <BannerContact />
