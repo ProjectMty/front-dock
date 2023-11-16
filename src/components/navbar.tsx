@@ -19,7 +19,7 @@ const navItems: NavItem[] = [
   { link: '/ecommerce', label: 'E-commerce' },
   { link: '/logistics', label: 'Reverse Logistics' },
   { link: '/pricing', label: 'Pricing' },
-  { link: '/contact', label: 'Contact Us' },
+  { link: '/contact-us', label: 'Contact Us' },
 ];
 
 function Navbar() {
