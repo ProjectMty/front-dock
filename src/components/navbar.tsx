@@ -138,14 +138,14 @@ function Navbar() {
           >
             <ul className='w-full py-2'>
               {navItems.map(({ link, label }) => (
-                <li
-                  key={link}
-                  className={clsx(
-                    'rounded-none p-2 text-gray-50 hover:bg-gray-700 hover:text-gray-50 focus:bg-gray-700 focus:text-gray-50',
-                    pathname === link && 'border border-white',
-                  )}
-                >
-                  <Link href={link}>
+                <li key={link} className='w-full p-1'>
+                  <Link
+                    href={link}
+                    className={clsx(
+                      'inline-block w-full rounded-none p-2 text-gray-50 transition-all delay-1000 hover:bg-gray-700 hover:text-gray-50 focus:bg-gray-700 focus:text-gray-50',
+                      pathname === link && 'border border-white',
+                    )}
+                  >
                     <span className='text-sm uppercase tracking-widest'>{label}</span>
                   </Link>
                 </li>
