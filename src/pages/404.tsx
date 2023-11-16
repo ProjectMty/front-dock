@@ -8,7 +8,7 @@ export default function NotFound() {
       <div className='flex h-screen flex-col text-primary'>
         <div className='flex grow-[1] items-center justify-center bg-secondary'>
           <div className='flex w-9/12 items-center justify-center pb-2 pt-16'>
-            <div className='overflow-hidden rounded-lg bg-white pb-8 shadow'>
+            <div className='overflow-hidden rounded-none bg-white pb-8 shadow'>
               <div className='border-t border-gray-200 pt-8 text-center'>
                 <h1 className='text-6xl font-bold lg:text-8xl'>404</h1>
                 <h2 className='py-8 text-2xl font-medium lg:text-4xl'>Page Not Found</h2>

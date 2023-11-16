@@ -49,11 +49,6 @@ export default function Locations() {
           </LocationCard>
           <LocationCard>
             <p className='font-black'>South</p>
-            <p>1234 Main Street</p>
-            <p>San Antonio, TX 78040</p>
-          </LocationCard>
-          <LocationCard>
-            <p className='font-black'>South</p>
             <p>E. Cedar-Suite G 517</p>
             <p>McAllen, TX 78501</p>
           </LocationCard>

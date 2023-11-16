@@ -25,7 +25,7 @@ export default function ReturnsCost() {
         </div>
       </Section>
       <div className='overflow-x-auto bg-logistics-banner bg-cover bg-fixed bg-center px-4 py-6 sm:px-8 sm:py-10 md:px-12 md:py-14 lg:px-16 lg:py-[4.5rem] xl:px-20 xl:py-[5.5rem] 2xl:px-24 2xl:py-[6.5rem]'>
-        <table className='table bg-white text-primary shadow'>
+        <table className='table rounded-none bg-white text-primary shadow'>
           <thead className='text-sm uppercase text-primary lg:text-base'>
             <tr>
               <th className='inner-border table-break-headings table-center-content w-1/5 p-4'>
@@ -49,7 +49,7 @@ export default function ReturnsCost() {
             <tr className='table-row border-none'>
               <td className='inner-border table-center-content w-1/5 p-4'>
                 <select
-                  className='select select-ghost w-full max-w-xs'
+                  className='select select-ghost w-full max-w-xs uppercase font-black'
                   onChange={(e) => setSelectedData(e.target.value as ReturnCostKeys)}
                 >
                   {Object.keys(returnCostsData).map((key) => {

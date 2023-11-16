@@ -19,14 +19,14 @@ export default function Company() {
           <h2 className='text-white'>
             Who <span className='block'>we are</span>
           </h2>
-          <Link className='btn btn-secondary rounded-full text-primary lg:btn-lg' href='/about-us'>
+          <Link className='btn btn-secondary rounded-none text-primary lg:btn-lg' href='/about-us'>
             Learn more about us
           </Link>
           <div className='flex flex-wrap items-center justify-center gap-8'>
             <div>
               <p className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'>20</p>
               <p className='text-base font-bold leading-none text-secondary lg:text-xl'>
-                Year of <br />
+                Years of <br />
                 experience
               </p>
             </div>
@@ -51,8 +51,8 @@ export default function Company() {
         <div className='space-y-4 bg-white p-5 text-center text-primary shadow-2xl lg:col-span-4 lg:p-12 2xl:px-24'>
           <p>
             <span className='font-bold'>Front Dock is a 3PL</span> and e-commerce service provider
-            in Houston, Texas. More than <span className='font-bold'>20 years</span> of domestic and
-            international marketplace fulfillment experience make us{' '}
+            in Texas and New York. More than <span className='font-bold'>20 years</span> of domestic
+            and international marketplace fulfillment experience make us{' '}
             <span className='font-bold'>
               the industry leader for all of your e-commerce logistics and returns management.
             </span>

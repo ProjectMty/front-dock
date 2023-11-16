@@ -42,7 +42,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link className='link-hover link' href='/contact'>
+                <Link className='link-hover link' href='/contact-us#form'>
                   Contact Us
                 </Link>
               </li>

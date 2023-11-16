@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import sendgrid from '@sendgrid/mail';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { verifyRecaptcha } from './utils';
+import { SENDGRID_MAIN_EMAIL, verifyRecaptcha } from './api-utils';
 
 type Body = {
   email: string;
@@ -36,8 +36,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     sendgrid.setApiKey(apiKey);
     await sendgrid.send({
-      to: process.env.SENDGRID_TO_EMAIL as string,
-      from: process.env.SENDGRID_FROM_EMAIL as string,
+      to: SENDGRID_MAIN_EMAIL,
+      from: SENDGRID_MAIN_EMAIL,
       subject: 'Nueva suscripción desde frontodock.com',
       text: 'Se ha registrado una suscripción a través de frontodock.com',
       html: `

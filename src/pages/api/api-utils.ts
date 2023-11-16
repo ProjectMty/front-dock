@@ -21,3 +21,5 @@ export const verifyRecaptcha = async (token: string): Promise<CaptchaValidation>
 
   return captchaValidation satisfies CaptchaValidation;
 };
+
+export const SENDGRID_MAIN_EMAIL = process?.env?.SENDGRID_MAIN_EMAIL || 'sales@frontdock.com';

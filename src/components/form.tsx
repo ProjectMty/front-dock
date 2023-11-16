@@ -121,7 +121,7 @@ export default function Form() {
   return (
     <FormProvider {...methods}>
       <form
-        className='flex w-full flex-col items-center space-y-2 rounded-2xl pb-8 lg:rounded-l-none'
+        className='flex w-full flex-col items-center space-y-2 rounded-none pb-8'
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className='grid w-full grid-cols-1 md:grid-cols-2 md:gap-x-6'>

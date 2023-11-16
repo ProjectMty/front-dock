@@ -10,7 +10,7 @@ type PricingCardProps = {
 
 export default function PricingCard({ title, price, description, link }: PricingCardProps) {
   return (
-    <div className='flex w-11/12 flex-col justify-between gap-y-6 rounded-3xl bg-white p-12 text-primary md:w-96'>
+    <div className='flex w-11/12 flex-col justify-between gap-y-6 rounded-none bg-white p-12 text-primary md:w-96'>
       <div className='flex flex-col gap-y-6'>
         <p className='text-sm font-black uppercase tracking-widest'>{title}</p>
         <div>

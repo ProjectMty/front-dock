@@ -4,13 +4,11 @@ import sendgrid from '@sendgrid/mail';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { verifyRecaptcha } from './utils';
+import { SENDGRID_MAIN_EMAIL, verifyRecaptcha } from './api-utils';
 
 type Body = ContactFormFields & {
   token: string;
 };
-
-const SENDGRID_FROM_EMAIL = 'sales@frontdock.com';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -43,23 +41,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!recaptchaResponse?.success || recaptchaResponse?.score < 0.5) {
       return res.status(400).json({ message: 'Invalid token' });
     }
+
     const filePath = path.join(process.cwd(), 'public', 'contact-email.html');
     const html = await readFile(filePath, 'utf8');
-
     const apiKey = process.env.SENDGRID_API_KEY as string;
 
     sendgrid.setApiKey(apiKey);
+
+    // Client email
     await sendgrid.send({
-      from: SENDGRID_FROM_EMAIL,
+      from: SENDGRID_MAIN_EMAIL,
       to: email,
       subject: 'Thank you for contacting | FrontDock',
       text: 'Thank you for contacting | FrontDock',
       html,
     });
 
+    // Internal email
     await sendgrid.send({
-      from: SENDGRID_FROM_EMAIL,
-      to: process.env.SENDGRID_TO_EMAIL as string,
+      from: SENDGRID_MAIN_EMAIL,
+      to: SENDGRID_MAIN_EMAIL,
       subject: 'Nuevo prospecto desde frontodock.com',
       text: 'Se ha registrado un prospecto a través de frontodock.com',
       html: `

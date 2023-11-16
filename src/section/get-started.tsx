@@ -21,7 +21,7 @@ export default function GetStarted({ image }: { image: string }) {
         </p>
         <Link
           className='btn btn-primary btn-lg text-lg tracking-wider text-white md:min-w-[16rem]'
-          href='/contact'
+          href='/contact-us#form'
         >
           Let&apos;s go
         </Link>
