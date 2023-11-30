@@ -1,15 +1,13 @@
+import { animateFadeIn } from '@/utils';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import React from 'react';
-
-const initial = { opacity: 0, y: -20 };
-const animate = { opacity: 1, y: 0 };
+import { type PropsWithChildren } from 'react';
 
 export default function Hero({
   children,
   image,
   right = false,
-}: React.PropsWithChildren<{
+}: PropsWithChildren<{
   image: string;
   right?: boolean;
 }>) {
@@ -25,13 +23,7 @@ export default function Hero({
         right && 'justify-end text-right',
       )}
     >
-      <motion.h1
-        className='text-hero'
-        initial={initial}
-        whileInView={animate}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
+      <motion.h1 className='text-hero' {...animateFadeIn}>
         {children}
       </motion.h1>
     </div>

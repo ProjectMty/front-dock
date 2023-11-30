@@ -3,7 +3,6 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Disclosure, Transition } from '@headlessui/react';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
 
 type QuestionsProps = Question;
 
@@ -11,15 +10,11 @@ export default function Questions({ id, question, response }: QuestionsProps) {
   return (
     <Disclosure key={id}>
       {({ open }) => (
-        <motion.div
+        <div
           className={clsx(
             'border-2 border-primary text-justify transition-all duration-300',
             open && 'bg-primary',
           )}
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
         >
           <Disclosure.Button className='flex w-full items-center justify-between px-6 py-5 text-left font-bold text-primary'>
             <span className='ui-open:text-secondary'>{question}</span>
@@ -41,7 +36,7 @@ export default function Questions({ id, question, response }: QuestionsProps) {
               {response}
             </Disclosure.Panel>
           </Transition>
-        </motion.div>
+        </div>
       )}
     </Disclosure>
   );
