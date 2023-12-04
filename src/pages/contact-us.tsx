@@ -1,6 +1,5 @@
 import { Hero } from '@/components';
-import { ContactForm, Locations } from '@/section';
-import BannerContact from '@/section/contact/banner-contact';
+import { BannerContact, ContactForm, Locations } from '@/section';
 import { NextSeo } from 'next-seo';
 
 export default function ContactPage() {

@@ -1,4 +1,6 @@
+import { animateFadeIn } from '@/utils';
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
 export default function Marketplace() {
   return (
@@ -12,7 +14,9 @@ export default function Marketplace() {
           backgroundImage: `url("assets/redesign/ecommerce/bg-ecommerce-market.webp")`,
         }}
       >
-        <h3 className='text-white drop-shadow'>E-commerce Marketplace Prep and Ship Services</h3>
+        <motion.h3 {...animateFadeIn} className='text-white drop-shadow'>
+          E-commerce Marketplace Prep and Ship Services
+        </motion.h3>
       </div>
       <div
         className={clsx(
@@ -20,11 +24,11 @@ export default function Marketplace() {
           'text-xl lg:text-2xl',
         )}
       >
-        <p>Ideal Solution For Amazon FBA Sellers</p>
-        <p>
+        <motion.p {...animateFadeIn}>Ideal Solution For Amazon FBA Sellers</motion.p>
+        <motion.p {...animateFadeIn}>
           Domestic And International Marketplace Prep And Fulfillment Services (Shipping To Amazon
           Fulfillment Centers In The United States, Canada, Or Mexico)
-        </p>
+        </motion.p>
       </div>
     </section>
   );

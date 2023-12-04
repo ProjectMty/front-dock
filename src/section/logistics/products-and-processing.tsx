@@ -23,6 +23,8 @@ import processingOtion6 from '@/public/assets/redesign/logistics/processing-opti
 import processingOtion7 from '@/public/assets/redesign/logistics/processing-options-7.svg';
 import Image from 'next/image';
 import clsx from 'clsx';
+import { animateFadeIn, animateIconsChild, animateIconsParent } from '@/utils';
+import { motion } from 'framer-motion';
 
 const products = [
   {
@@ -145,17 +147,22 @@ const process = [
 export default function ProductsAndProcessing() {
   return (
     <section className='space-y-6 bg-white px-5 py-8 text-center text-base text-primary lg:space-y-7 lg:text-xl 2xl:space-y-8 2xl:py-32 2xl:text-2xl'>
-      <h3 className='text-2xl font-black lg:text-3xl 2xl:text-4xl'>What products do we handle?</h3>
+      <motion.h3 {...animateFadeIn} className='text-2xl font-black lg:text-3xl 2xl:text-4xl'>
+        What products do we handle?
+      </motion.h3>
       <div className='flex justify-around'>
         <ProductsList products={products} />
       </div>
-      <h3 className='text-2xl font-black lg:text-3xl 2xl:text-4xl'>
+      <motion.h3 {...animateFadeIn} className='text-2xl font-black lg:text-3xl 2xl:text-4xl'>
         What are the processing options?
-      </h3>
+      </motion.h3>
       <div className='flex justify-around'>
-        <ul className='grid w-2/3 gap-x-0 gap-y-4 lg:grid-cols-2 lg:gap-x-20 lg:text-xl 2xl:grid-cols-3 2xl:gap-x-32 2xl:gap-y-14 2xl:text-2xl'>
+        <motion.ul
+          {...animateIconsParent}
+          className='grid w-2/3 gap-x-0 gap-y-4 lg:grid-cols-2 lg:gap-x-20 lg:text-xl 2xl:grid-cols-3 2xl:gap-x-32 2xl:gap-y-14 2xl:text-2xl'
+        >
           {process.map(({ id, icon, description, color }) => (
-            <li key={id} className='flex items-center gap-x-7'>
+            <motion.li {...animateIconsChild} key={id} className='flex items-center gap-x-7'>
               <Image
                 src={icon}
                 alt={description}
@@ -166,9 +173,9 @@ export default function ProductsAndProcessing() {
                 )}
               />
               <p className='w-fit text-left'>{description}</p>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </div>
     </section>
   );

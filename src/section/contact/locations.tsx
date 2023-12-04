@@ -1,14 +1,21 @@
 import { LocationCard } from '@/components';
+import { animateFadeIn, animateZoomIn } from '@/utils';
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
+
+const MotionImage = motion(Image);
 
 export default function Locations() {
   return (
     <section className='bg-white px-6 py-16 text-center text-primary 2xl:py-20'>
-      <h2 className='pb-8 font-black uppercase'>Locations</h2>
+      <motion.h2 {...animateFadeIn} className='pb-8 font-black uppercase'>
+        Locations
+      </motion.h2>
       <div className='flex flex-col-reverse gap-y-8 lg:flex-row lg:items-center lg:justify-center lg:px-20 2xl:px-56'>
         <div className='lg:w-1/2'>
-          <Image
+          <MotionImage
+            {...animateZoomIn}
             src='/assets/usa-map.webp'
             alt='Mexico locations'
             width={951}

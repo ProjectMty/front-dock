@@ -4,6 +4,8 @@ import diagram2step2 from '@/public/assets/redesign/ecommerce/diagram-2-step-2.w
 import diagram2step3 from '@/public/assets/redesign/ecommerce/diagram-2-step-3.webp';
 import diagram2step4 from '@/public/assets/redesign/ecommerce/diagram-2-step-4.webp';
 import diagram2step5 from '@/public/assets/redesign/ecommerce/diagram-2-step-5.webp';
+import { animateFadeIn } from '@/utils';
+import { motion } from 'framer-motion';
 
 const steps = [
   {
@@ -40,7 +42,7 @@ const steps = [
 export default function MarketProcess() {
   return (
     <Section id='market-process' className='bg-white text-primary'>
-      <h2>Operational Process</h2>
+      <motion.h2 {...animateFadeIn}>Operational Process</motion.h2>
       <Diagram section='market' steps={steps} />
     </Section>
   );

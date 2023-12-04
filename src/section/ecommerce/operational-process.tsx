@@ -1,9 +1,11 @@
-import { Section, Diagram } from '@/components';
+import { Diagram, Section } from '@/components';
 import diagram1step1 from '@/public/assets/redesign/ecommerce/diagram-1-step-1.webp';
 import diagram1step2 from '@/public/assets/redesign/ecommerce/diagram-1-step-2.webp';
 import diagram1step3 from '@/public/assets/redesign/ecommerce/diagram-1-step-3.webp';
 import diagram1step4 from '@/public/assets/redesign/ecommerce/diagram-1-step-4.webp';
 import diagram1step5 from '@/public/assets/redesign/ecommerce/diagram-1-step-5.webp';
+import { animateFadeIn } from '@/utils';
+import { motion } from 'framer-motion';
 
 const steps = [
   {
@@ -37,7 +39,7 @@ const steps = [
 export default function OperationalProcess() {
   return (
     <Section id='operational-process' className='bg-white text-primary'>
-      <h2>Operational Process</h2>
+      <motion.h2 {...animateFadeIn}>Operational Process</motion.h2>
       <Diagram section='operational-process' steps={steps} />
     </Section>
   );

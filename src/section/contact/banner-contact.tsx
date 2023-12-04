@@ -1,6 +1,8 @@
+import { animateFadeIn } from '@/utils';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function BannerContact() {
@@ -12,7 +14,7 @@ export default function BannerContact() {
         '2xl:text-3xl',
       )}
     >
-      <div className='flex items-center gap-x-2'>
+      <motion.div {...animateFadeIn} className='flex items-center gap-x-2'>
         <FontAwesomeIcon icon={faEnvelope} />
         <Link
           href='mailto:sales@frontdock.com'
@@ -22,8 +24,8 @@ export default function BannerContact() {
         >
           sales@frontdock.com
         </Link>
-      </div>
-      <div className='flex items-center gap-x-2'>
+      </motion.div>
+      <motion.div {...animateFadeIn} className='flex items-center gap-x-2'>
         <FontAwesomeIcon icon={faPhone} />
         <Link
           href='tel:+19566487402'
@@ -33,7 +35,7 @@ export default function BannerContact() {
         >
           +1 (956) 648 7402
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 }

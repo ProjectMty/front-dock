@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 
 const COUNTERS_DURATION = 3; // Seconds;
 
+const MotionLink = motion(Link);
+
 export default function Company() {
   const yearsCount = useMotionValue(0);
   const years = useTransform(yearsCount, Math.round);
@@ -41,9 +43,13 @@ export default function Company() {
           <motion.h2 className='text-white' {...animateFadeIn}>
             Who <span className='block'>we are</span>
           </motion.h2>
-          <Link className='btn btn-secondary rounded-none text-primary lg:btn-lg' href='/about-us'>
+          <MotionLink
+            {...animateZoomIn}
+            className='btn btn-secondary rounded-none text-primary lg:btn-lg'
+            href='/about-us'
+          >
             <motion.span {...animateFadeIn}>Learn more about us</motion.span>
-          </Link>
+          </MotionLink>
           <div className='flex flex-wrap items-center justify-center gap-8'>
             <div>
               <motion.p className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'>
