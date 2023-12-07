@@ -7,14 +7,14 @@ export const getCurrencyFormat = (cost: number) =>
 export const animateFadeIn = {
   initial: { y: 20, opacity: 0 },
   whileInView: { y: 0, opacity: 1 },
-  transition: { type: 'tween', ease: 'easeIn', duration: 0.5, delay: 0.35 },
+  transition: { type: 'tween', ease: 'easeIn', duration: 0.4, delay: 0.25 },
   viewport: { once: true },
 };
 
 export const animateZoomIn = {
   initial: { scale: 0.5 },
   whileInView: { scale: 1 },
-  transition: { type: 'tween', ease: 'circIn', duration: 0.25 },
+  transition: { type: 'tween', ease: 'circIn', duration: 0.2 },
   viewport: { once: true },
 };
 

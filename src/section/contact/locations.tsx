@@ -41,7 +41,7 @@ export default function Locations() {
           </LocationCard>
           <LocationCard>
             <p className='font-black'>South</p>
-            <p>E. Cedar-Suite G 517</p>
+            <p>517 East Cedar Avenue Suite G</p>
             <p>McAllen, TX 78501</p>
           </LocationCard>
         </div>
