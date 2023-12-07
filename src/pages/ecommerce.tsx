@@ -1,10 +1,9 @@
 import { Hero } from '@/components';
-
 import {
   AmazonFba,
   DirectClient,
-  MarketProcess,
   GetStarted,
+  MarketProcess,
   Marketplace,
   OperationalProcess,
   Options,

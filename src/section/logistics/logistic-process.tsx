@@ -4,6 +4,8 @@ import diagram3step2 from '@/public/assets/redesign/logistics/diagram-3-step-2.w
 import diagram3step3 from '@/public/assets/redesign/logistics/diagram-3-step-3.webp';
 import diagram3step4 from '@/public/assets/redesign/logistics/diagram-3-step-4.webp';
 import diagram3step5 from '@/public/assets/redesign/logistics/diagram-3-step-5.webp';
+import { animateFadeIn } from '@/utils';
+import { motion } from 'framer-motion';
 
 const steps = [
   {
@@ -35,7 +37,7 @@ const steps = [
 export default function LogisticProcess() {
   return (
     <Section id='logistic-process' className='bg-white text-primary'>
-      <h2>Operational Process</h2>
+      <motion.h2 {...animateFadeIn}>Operational Process</motion.h2>
       <Diagram section='logistics-process' steps={steps} />
     </Section>
   );

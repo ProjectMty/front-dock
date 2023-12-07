@@ -6,11 +6,7 @@ import IconSustainability4 from '@/public/assets/redesign/about/sustainability-i
 import IconSustainability5 from '@/public/assets/redesign/about/sustainability-icon-5.svg';
 import IconSustainability6 from '@/public/assets/redesign/about/sustainability-icon-6.svg';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
-
-const initial = { opacity: 0, y: -20 };
-const animate = { opacity: 1, y: 0 };
 
 const services = [
   {
@@ -65,15 +61,7 @@ export default function Sustainability() {
             'min-h-[240px] before:min-h-[240px] lg:min-h-[256px] before:lg:min-h-[256px] 2xl:min-h-[288px] before:2xl:min-h-[288px]',
           )}
         >
-          <motion.h2
-            className='text-white drop-shadow-2xl'
-            initial={initial}
-            whileInView={animate}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            Sustainability
-          </motion.h2>
+          <h2 className='text-white drop-shadow-2xl'>Sustainability</h2>
         </div>
       </section>
       <Section id='sustainability-services' className='bg-white'>

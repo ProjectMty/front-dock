@@ -1,4 +1,5 @@
-import { getCurrencyFormat } from '@/utils';
+import { animateFadeIn, animateZoomIn, getCurrencyFormat } from '@/utils';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 type PricingCardProps = {
@@ -8,25 +9,41 @@ type PricingCardProps = {
   link?: string;
 };
 
+const MotionLink = motion(Link);
+
 export default function PricingCard({ title, price, description, link }: PricingCardProps) {
   return (
-    <div className='flex w-11/12 flex-col justify-between gap-y-6 rounded-none bg-white p-12 text-primary md:w-96'>
+    <motion.div
+      {...animateZoomIn}
+      className='flex w-11/12 flex-col justify-between gap-y-6 rounded-none bg-white p-12 text-primary md:w-96'
+    >
       <div className='flex flex-col gap-y-6'>
-        <p className='text-sm font-black uppercase tracking-widest'>{title}</p>
+        <motion.p {...animateFadeIn} className='text-sm font-black uppercase tracking-widest'>
+          {title}
+        </motion.p>
         <div>
-          <p className='text-7xl font-bold'>{getCurrencyFormat(price)}</p>
-          <p className='text-sm text-[#5d5d5d]'>Per Unit</p>
+          <motion.p {...animateFadeIn} className='text-7xl font-bold'>
+            {getCurrencyFormat(price)}
+          </motion.p>
+          <motion.p {...animateFadeIn} className='text-sm text-[#5d5d5d]'>
+            Per Unit
+          </motion.p>
         </div>
-        <p className='text-sm font-black uppercase tracking-widest'>Description</p>
-        <p className='text-lg text-[#5d5d5d]'>{description}</p>
+        <motion.p {...animateFadeIn} className='text-sm font-black uppercase tracking-widest'>
+          Description
+        </motion.p>
+        <motion.p {...animateFadeIn} className='text-lg text-[#5d5d5d]'>
+          {description}
+        </motion.p>
       </div>
-      <Link
+      <MotionLink
+        {...animateZoomIn}
         className='btn btn-secondary btn-lg text-lg tracking-wider text-primary'
         href={`/${link}`}
       >
-        Started
-      </Link>
-    </div>
+        <motion.span {...animateFadeIn}>Get Started</motion.span>
+      </MotionLink>
+    </motion.div>
   );
 }
 

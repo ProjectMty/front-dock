@@ -1,13 +1,13 @@
 import RootLayout from '@/layouts';
 import { config } from '@fortawesome/fontawesome-svg-core';
-import type { AppProps } from 'next/app';
+import { DefaultSeo } from 'next-seo';
+import { type AppProps } from 'next/app';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+import { ToastContainer } from 'react-toastify';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import '../styles/globals.css';
 import 'react-toastify/dist/ReactToastify.min.css';
-import { ToastContainer } from 'react-toastify';
-import { DefaultSeo } from 'next-seo';
+import '../styles/globals.css';
 
 config.autoAddCss = false;
 

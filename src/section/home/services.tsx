@@ -1,10 +1,12 @@
-import { Section, InfoCard } from '@/components';
+import { InfoCard, Section } from '@/components';
 import IconService1 from '@/public/assets/redesign/home/service-1.svg';
 import IconService2 from '@/public/assets/redesign/home/service-2.svg';
 import IconService3 from '@/public/assets/redesign/home/service-3.svg';
 import IconService4 from '@/public/assets/redesign/home/service-4.svg';
 import IconService5 from '@/public/assets/redesign/home/service-5.svg';
 import IconService6 from '@/public/assets/redesign/home/service-6.svg';
+import { animateFadeIn } from '@/utils';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const services = [
@@ -46,15 +48,38 @@ const services = [
   },
 ];
 
+const parent = {
+  animate: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const child = {
+  initial: { opacity: 0, scale: 0.5 },
+  animate: { opacity: 1, scale: 1 },
+};
+
 export default function Services() {
   return (
     <Section id='main-services' className='bg-white'>
-      <h2 className='mb-8 text-primary'>Our Services</h2>
-      <div className='grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 xl:grid-cols-3 xl:justify-between xl:gap-x-24 xl:gap-y-8'>
-        {services.map((service) => (
-          <InfoCard {...service} />
+      <motion.h2 className='mb-8 text-primary' {...animateFadeIn}>
+        Our Services
+      </motion.h2>
+      <motion.div
+        variants={parent}
+        initial='initial'
+        whileInView='animate'
+        viewport={{ once: true }}
+        className='grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 xl:grid-cols-3 xl:justify-between xl:gap-12'
+      >
+        {services.map(({ key, ...service }) => (
+          <motion.div key={key} variants={child}>
+            <InfoCard {...service} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </Section>
   );
 }
