@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-sync-scripts */
 /* eslint-disable react/no-danger */
 import { Partytown } from '@builder.io/partytown/react';
 import { Head, Html, Main, NextScript } from 'next/document';
-import Script from 'next/script';
 
 const GA4_KEY = 'AW-11436772431';
 
@@ -28,12 +28,12 @@ export default function Document() {
         <meta name='theme-color' content='#041535' />
         {/* Partytown scripts */}
         <Partytown debug forward={['dataLayer.push']} />
-        <Script
+        <script
           id='party-ga4-script'
           type='text/partytown'
           src={`https://www.googletagmanager.com/gtag/js?id=${GA4_KEY}`}
         />
-        <Script
+        <script
           id='party-ga4'
           type='text/partytown'
           dangerouslySetInnerHTML={{
