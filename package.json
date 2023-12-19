@@ -4,16 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
-    "build": "yarn partytown && next build",
+    "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "clean": "rimraf .next out",
-    "format": "next lint --fix && prettier '**/*.{js,jsx,ts,tsx,json,yaml}' --write --ignore-path .gitignore",
-    "partytown": "partytown copylib public/~partytown"
+    "format": "next lint --fix && prettier '**/*.{js,jsx,ts,tsx,json,yaml}' --write --ignore-path .gitignore"
   },
   "dependencies": {
-    "@builder.io/partytown": "^0.8.1",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
