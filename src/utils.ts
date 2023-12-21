@@ -41,3 +41,5 @@ export const animateIconsChild = {
     animate: { x: 0, opacity: 1 },
   },
 };
+
+export const GTM_KEY = 'GTM-TFNJPGKD';
