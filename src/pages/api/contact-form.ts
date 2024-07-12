@@ -1,10 +1,9 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { type ContactFormFields } from '@/types';
-import sendgrid from '@sendgrid/mail';
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { SENDGRID_MAIN_EMAIL, verifyRecaptcha } from './api-utils';
+import { emails, sendEmail, verifyRecaptcha } from './api-utils';
 
 type Body = ContactFormFields & {
   token: string;
@@ -44,13 +43,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const filePath = path.join(process.cwd(), 'public', 'contact-email.html');
     const html = await readFile(filePath, 'utf8');
-    const apiKey = process.env.SENDGRID_API_KEY as string;
-
-    sendgrid.setApiKey(apiKey);
 
     // Client email
-    await sendgrid.send({
-      from: SENDGRID_MAIN_EMAIL,
+    await sendEmail({
+      from: emails.from,
       to: email,
       subject: 'Thank you for contacting | FrontDock',
       text: 'Thank you for contacting | FrontDock',
@@ -58,9 +54,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
     // Internal email
-    await sendgrid.send({
-      from: SENDGRID_MAIN_EMAIL,
-      to: SENDGRID_MAIN_EMAIL,
+    await sendEmail({
+      from: emails.from,
+      to: emails.to,
       subject: 'Nuevo prospecto desde frontodock.com',
       text: 'Se ha registrado un prospecto a través de frontodock.com',
       html: `

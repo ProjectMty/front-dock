@@ -1,7 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import sendgrid from '@sendgrid/mail';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { SENDGRID_MAIN_EMAIL, verifyRecaptcha } from './api-utils';
+import { emails, sendEmail, verifyRecaptcha } from './api-utils';
 
 type Body = {
   email: string;
@@ -32,12 +31,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ message: 'Invalid token' });
     }
 
-    const apiKey = process.env.SENDGRID_API_KEY as string;
-
-    sendgrid.setApiKey(apiKey);
-    await sendgrid.send({
-      to: SENDGRID_MAIN_EMAIL,
-      from: SENDGRID_MAIN_EMAIL,
+    await sendEmail({
+      from: emails.from,
+      to: emails.to,
       subject: 'Nueva suscripción desde frontodock.com',
       text: 'Se ha registrado una suscripción a través de frontodock.com',
       html: `
