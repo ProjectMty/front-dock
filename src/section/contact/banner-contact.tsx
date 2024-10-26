@@ -33,7 +33,7 @@ export default function BannerContact() {
           rel='noopener noreferrer'
           className='link-hover link ml-1 inline-block'
         >
-          +1 (956) 648 7402
+          +1 (210) 416 3054
         </Link>
       </motion.div>
     </div>
