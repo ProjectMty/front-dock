@@ -5,10 +5,10 @@ import { NextSeo } from 'next-seo';
 export default function LogisticsPage() {
   return (
     <>
-      <NextSeo title='Reverse Logistics | Front Dock' />
+      <NextSeo title='Returns Management | Front Dock' />
       <Hero image='bg-logistics-hero' right>
-        Reverse <br />
-        Logistics
+        Returns <br />
+        Management
       </Hero>
       <SalesGrowing />
       <Returns />

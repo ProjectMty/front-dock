@@ -17,7 +17,7 @@ type NavItem = {
 const navItems: NavItem[] = [
   { link: '/', label: 'Home' },
   { link: '/ecommerce', label: 'E-commerce' },
-  { link: '/logistics', label: 'Reverse Logistics' },
+  { link: '/returns-management', label: 'Returns Management' },
   { link: '/pricing', label: 'Pricing' },
   { link: '/contact-us', label: 'Contact Us' },
 ];

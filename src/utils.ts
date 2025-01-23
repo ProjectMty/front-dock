@@ -42,4 +42,4 @@ export const animateIconsChild = {
   },
 };
 
-export const GTM_KEY = 'GTM-TFNJPGKD';
+export const GTM_KEY = 'AW-11436772431';

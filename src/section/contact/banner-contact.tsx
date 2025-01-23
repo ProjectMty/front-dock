@@ -28,12 +28,12 @@ export default function BannerContact() {
       <motion.div {...animateFadeIn} className='flex items-center gap-x-2'>
         <FontAwesomeIcon icon={faPhone} />
         <Link
-          href='tel:+19566487402'
+          href='tel:+12104309802'
           target='_blank'
           rel='noopener noreferrer'
           className='link-hover link ml-1 inline-block'
         >
-          +1 (210) 416 3054
+          +1 (210) 430 9802
         </Link>
       </motion.div>
     </div>

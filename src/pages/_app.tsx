@@ -3,7 +3,7 @@ import { GTM_KEY } from '@/utils';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import { DefaultSeo } from 'next-seo';
 import { type AppProps } from 'next/app';
-import Script from 'next/script';
+import { GoogleTagManager } from '@next/third-parties/google';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { ToastContainer } from 'react-toastify';
 
@@ -42,9 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
           { name: 'author', content: frontDockSiteName },
         ]}
       />
-      <Script id='google-tag-manager' strategy='afterInteractive'>
-        {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','${GTM_KEY}');`}
-      </Script>
+      <GoogleTagManager gtmId={GTM_KEY} />
       <GoogleReCaptchaProvider
         reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
         language='en'
