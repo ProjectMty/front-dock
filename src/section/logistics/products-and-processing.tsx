@@ -28,17 +28,17 @@ import { motion } from 'framer-motion';
 
 const products = [
   {
-    id: 'faPlug',
+    id: 'products1',
     icon: faPlug,
     description: 'Consumer electronics',
   },
   {
-    id: 'faPuzzlePiece',
+    id: 'products2',
     icon: faPuzzlePiece,
     description: 'Toys',
   },
   {
-    id: 'faShirt',
+    id: 'products3',
     icon: faShirt,
     description: (
       <>
@@ -48,52 +48,52 @@ const products = [
     ),
   },
   {
-    id: 'faGem',
+    id: 'products4',
     icon: faGem,
     description: 'Fashion jewelry',
   },
   {
-    id: 'faTableTennisPaddleBall',
+    id: 'products5',
     icon: faTableTennisPaddleBall,
     description: 'Sporting goods',
   },
   {
-    id: 'faMugSaucer',
+    id: 'products6',
     icon: faMugSaucer,
     description: 'Housewares',
   },
   {
-    id: 'faBabyCarriage',
+    id: 'products7',
     icon: faBabyCarriage,
     description: 'Baby items',
   },
   {
-    id: 'faCookieBite',
+    id: 'products8',
     icon: faCookieBite,
     description: 'Food',
   },
   {
-    id: 'faScrewdriverWrench',
+    id: 'products9',
     icon: faScrewdriverWrench,
     description: 'Tools',
   },
   {
-    id: 'faCarBattery',
+    id: 'products10',
     icon: faCarBattery,
     description: 'Small machinery',
   },
   {
-    id: 'faBlender',
+    id: 'products11',
     icon: faBlender,
     description: 'Small appliances',
   },
   {
-    id: 'faCouch',
+    id: 'products12',
     icon: faCouch,
     description: 'Furniture',
   },
   {
-    id: 'faToiletPortable',
+    id: 'products13',
     icon: faToiletPortable,
     description: 'Appliances',
   },
@@ -101,43 +101,43 @@ const products = [
 
 const process = [
   {
-    id: 'processingOtion1',
+    id: 'process1',
     icon: processingOtion1,
     description: 'Return to seller upon arrival',
     color: 'primary',
   },
   {
-    id: 'processingOtion5',
+    id: 'process2',
     icon: processingOtion5,
     description: 'Resell to wholesalers',
     color: 'secondary',
   },
   {
-    id: 'processingOtion2',
+    id: 'process3',
     icon: processingOtion2,
     description: 'Consolidate and return to seller',
     color: 'primary',
   },
   {
-    id: 'processingOtion6',
+    id: 'process4',
     icon: processingOtion6,
     description: 'Donate',
     color: 'secondary',
   },
   {
-    id: 'processingOtion3',
+    id: 'process5',
     icon: processingOtion3,
     description: 'Repackage and ship to 3rd party',
     color: 'primary',
   },
   {
-    id: 'processingOtion7',
+    id: 'process6',
     icon: processingOtion7,
     description: 'Dispose',
     color: 'secondary',
   },
   {
-    id: 'processingOtion4',
+    id: 'process7',
     icon: processingOtion4,
     description: 'Repackage, create new SKU, and send to FBA',
     color: 'primary',
@@ -162,7 +162,7 @@ export default function ProductsAndProcessing() {
           className='grid w-2/3 gap-x-0 gap-y-4 lg:grid-cols-2 lg:gap-x-20 lg:text-xl 2xl:grid-cols-3 2xl:gap-x-32 2xl:gap-y-14 2xl:text-2xl'
         >
           {process.map(({ id, icon, description, color }) => (
-            <motion.li {...animateIconsChild} key={id} className='flex items-center gap-x-7'>
+            <motion.li id={id} className='flex items-center gap-x-7' {...animateIconsChild}>
               <Image
                 src={icon}
                 alt={description}

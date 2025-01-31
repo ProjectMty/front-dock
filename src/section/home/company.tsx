@@ -1,41 +1,19 @@
 import { Section } from '@/components';
+import CountUp from '@/components/count-up';
 import { animateFadeIn, animateZoomIn } from '@/utils';
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { useEffect } from 'react';
 
-const COUNTERS_DURATION = 3; // Seconds;
+const counterVariants = {
+  duration: 3,
+  years: 20,
+  clients: 99,
+  warehouse: 60_000,
+};
 
 const MotionLink = motion(Link);
 
 export default function Company() {
-  const yearsCount = useMotionValue(0);
-  const years = useTransform(yearsCount, Math.round);
-
-  const clientsCount = useMotionValue(0);
-  const clients = useTransform(clientsCount, Math.round);
-
-  const squaresCount = useMotionValue(0);
-  const squares = useTransform(squaresCount, Math.round);
-
-  useEffect(() => {
-    const yearsAnimation = animate(yearsCount, 20, { duration: COUNTERS_DURATION });
-
-    return yearsAnimation.stop;
-  }, [yearsCount]);
-
-  useEffect(() => {
-    const clientsAnimation = animate(clientsCount, 99, { duration: COUNTERS_DURATION });
-
-    return clientsAnimation.stop;
-  }, [clientsCount]);
-
-  useEffect(() => {
-    const squaresAnimation = animate(squaresCount, 60_000, { duration: COUNTERS_DURATION });
-
-    return squaresAnimation.stop;
-  }, [squaresCount]);
-
   return (
     <Section id='company'>
       <div className='grid grid-cols-1 items-center gap-8 lg:grid-cols-6'>
@@ -52,9 +30,11 @@ export default function Company() {
           </MotionLink>
           <div className='flex flex-wrap items-center justify-center gap-8'>
             <div>
-              <motion.p className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'>
-                {years}
-              </motion.p>
+              <CountUp
+                duration={counterVariants.duration}
+                to={counterVariants.years}
+                className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'
+              />
               <motion.p
                 className='text-base font-bold leading-none text-secondary lg:text-xl'
                 {...animateFadeIn}
@@ -65,7 +45,11 @@ export default function Company() {
             </div>
             <div>
               <div className='font-lato flex justify-center text-2xl font-bold uppercase text-white lg:text-4xl'>
-                <motion.p>{clients}</motion.p>
+                <CountUp
+                  duration={counterVariants.duration}
+                  to={counterVariants.clients}
+                  className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'
+                />
                 <span>%</span>
               </div>
               <motion.p
@@ -77,9 +61,11 @@ export default function Company() {
               </motion.p>
             </div>
             <div>
-              <motion.p className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'>
-                {squares}
-              </motion.p>
+              <CountUp
+                duration={counterVariants.duration}
+                to={counterVariants.warehouse}
+                className='font-lato text-2xl font-bold uppercase text-white lg:text-4xl'
+              />
               <motion.p
                 className='text-base font-bold leading-none text-secondary lg:text-xl'
                 {...animateFadeIn}

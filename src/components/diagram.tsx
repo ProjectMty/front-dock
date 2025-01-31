@@ -61,7 +61,13 @@ export default function Diagram({ section, steps }: DiagramProps) {
           </motion.div>
           <motion.div className='flex flex-col items-center'>
             <motion.div variants={animateImage}>
-              <Image src={image} alt={description} width={192} className='w-48' />
+              <Image
+                src={image}
+                alt={description}
+                width={512}
+                className='h-64 w-64'
+                style={{ aspectRatio: '1/1' }}
+              />
             </motion.div>
             <motion.span
               className='font-montserrat text-sm font-medium text-gray-500'

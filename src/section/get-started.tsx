@@ -28,7 +28,7 @@ export default function GetStarted({ image }: { image: string }) {
           Ready to get started?
         </motion.p>
         <Link
-          className='btn btn-primary btn-lg text-lg tracking-wider text-white md:min-w-[16rem]'
+          className='btn btn-primary btn-lg rounded-none text-lg tracking-wider text-white md:min-w-[16rem]'
           href='/contact-us#form'
         >
           <motion.span {...animateFadeIn} transition={{ delay: 0.5 }}>

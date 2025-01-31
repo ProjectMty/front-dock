@@ -1,14 +1,18 @@
 import { Section } from '@/components';
-import { animateFadeIn, animateZoomIn } from '@/utils';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/carousel';
+import returnCostsData from '@/section/logistics/return-cost-data';
+import { animateFadeIn } from '@/utils';
+import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import returnCostsData from './return-cost-data';
-
-type ReturnCostKeys = 'consolidate' | 'repackageShip' | 'resale' | 'donate' | 'dispose';
+import Link from 'next/link';
 
 export default function ReturnsCost() {
-  const [selectedData, setSelectedData] = useState<ReturnCostKeys>('consolidate');
-
   return (
     <>
       <Section id='returns-cost' className='space-y-8'>
@@ -27,8 +31,44 @@ export default function ReturnsCost() {
             ready!
           </motion.p>
         </div>
+        <div className='px-8'>
+          <Carousel
+            className='w-full'
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+          >
+            <CarouselContent>
+              {returnCostsData.map(({ id, top, content }) => (
+                <CarouselItem key={id} className='basis-1/1 md:basis-1/2 xl:basis-1/4'>
+                  <div className='bg-white'>
+                    <div className='space-y-4 bg-secondary py-6 text-center text-primary'>
+                      <div className='text-2xl font-black uppercase'>{top.title}</div>
+                      <div className='text-6xl font-bold'>{top.cost}</div>
+                      <div className='text-xl font-bold'>{top.type}</div>
+                    </div>
+                    <div className='flex min-h-[32rem] flex-col items-center justify-between pb-6'>
+                      <div>{content}</div>
+                      <Link
+                        href='/contact-us#form'
+                        className={clsx(
+                          'btn btn-secondary btn-block flex gap-2 rounded-none py-0 text-base uppercase text-primary lg:w-56 lg:text-lg 2xl:text-xl',
+                        )}
+                      >
+                        Started
+                      </Link>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
       </Section>
-      <div className='overflow-x-auto bg-logistics-banner bg-cover bg-fixed bg-center px-4 py-6 sm:px-8 sm:py-10 md:px-12 md:py-14 lg:px-16 lg:py-[4.5rem] xl:px-20 xl:py-[5.5rem] 2xl:px-24 2xl:py-[6.5rem]'>
+      {/* <div className='overflow-x-auto bg-logistics-banner bg-cover bg-fixed bg-center px-4 py-6 sm:px-8 sm:py-10 md:px-12 md:py-14 lg:px-16 lg:py-[4.5rem] xl:px-20 xl:py-[5.5rem] 2xl:px-24 2xl:py-[6.5rem]'>
         <motion.table
           {...animateZoomIn}
           className='table rounded-none bg-white text-primary shadow'
@@ -83,7 +123,7 @@ export default function ReturnsCost() {
             </tr>
           </tbody>
         </motion.table>
-      </div>
+      </div> */}
     </>
   );
 }

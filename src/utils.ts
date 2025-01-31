@@ -1,3 +1,6 @@
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
 export const getCurrencyFormat = (cost: number) =>
   new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -43,3 +46,7 @@ export const animateIconsChild = {
 };
 
 export const GTM_KEY = 'AW-11436772431';
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}

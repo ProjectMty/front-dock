@@ -1,37 +1,33 @@
 import { Diagram, Section } from '@/components';
-import diagram3step1 from '@/public/assets/redesign/logistics/diagram-3-step-1.webp';
-import diagram3step2 from '@/public/assets/redesign/logistics/diagram-3-step-2.webp';
-import diagram3step3 from '@/public/assets/redesign/logistics/diagram-3-step-3.webp';
-import diagram3step4 from '@/public/assets/redesign/logistics/diagram-3-step-4.webp';
-import diagram3step5 from '@/public/assets/redesign/logistics/diagram-3-step-5.webp';
 import { animateFadeIn } from '@/utils';
 import { motion } from 'framer-motion';
 
+import diagram3step1 from './assets/logistics_1.svg';
+import diagram3step2 from './assets/logistics_2.svg';
+import diagram3step3 from './assets/logistics_3.svg';
+import diagram3step4 from './assets/logistics_4.svg';
+
 const steps = [
   {
-    id: 'diagram3step1',
+    id: 'steps1',
     image: diagram3step1,
-    description: 'We receive your merchandise.',
+    description: 'We receive and check in your return including labeling and registration.',
   },
   {
-    id: 'diagram3step2',
+    id: 'steps2',
     image: diagram3step2,
-    description: 'We receive your return instructions.',
+    description: 'Your return is inspected and categorized based on packaging and item condition.',
   },
   {
-    id: 'diagram3step3',
+    id: 'steps3',
     image: diagram3step3,
-    description: 'We label and register your products.',
+    description: 'Your return is handled according to predefined instructions.',
   },
   {
-    id: 'diagram3step4',
+    id: 'steps4',
     image: diagram3step4,
-    description: 'We ship the returns with the select carrier.',
-  },
-  {
-    id: 'diagram3step5',
-    image: diagram3step5,
-    description: 'We send information that your goods are ready for pickup.',
+    description:
+      'Your return is moved to the next phase and either consolidated, forwarded, repackaged, and shipped to new destination.',
   },
 ];
 export default function LogisticProcess() {
