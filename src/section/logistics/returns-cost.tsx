@@ -1,11 +1,5 @@
 import { Section } from '@/components';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/carousel';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/carousel';
 import returnCostsData from '@/section/logistics/return-cost-data';
 import { animateFadeIn } from '@/utils';
 import clsx from 'clsx';
@@ -14,116 +8,69 @@ import Link from 'next/link';
 
 export default function ReturnsCost() {
   return (
-    <>
-      <Section id='returns-cost' className='space-y-8'>
-        <div className='space-y-8 md:mx-auto md:w-3/4'>
-          <motion.p {...animateFadeIn} className='text-center text-white'>
-            We work with RMA,inner-border RGA forms, or any other form of integration to update your
-            returns in real time.
-          </motion.p>
-          <motion.h3 {...animateFadeIn} className='text-center text-secondary'>
-            How much do returns cost?
-          </motion.h3>
-          <motion.p {...animateFadeIn} className='text-center text-white'>
-            While Front Dock offers several options for returns management, our most popular is the
-            consolidate and return to seller model. We receive your returns on a daily basis, inform
-            you of the inventory status, and consolidate. We ship back to you when you&apos;re
-            ready!
-          </motion.p>
-        </div>
-        <div className='px-8'>
-          <Carousel
-            className='w-full'
-            opts={{
-              align: 'start',
-              loop: true,
-            }}
-          >
-            <CarouselContent>
-              {returnCostsData.map(({ id, top, content }) => (
-                <CarouselItem key={id} className='basis-1/1 md:basis-1/2 xl:basis-1/4'>
-                  <div className='bg-white'>
-                    <div className='space-y-4 bg-secondary py-6 text-center text-primary'>
-                      <div className='text-2xl font-black uppercase'>{top.title}</div>
-                      <div className='text-6xl font-bold'>{top.cost}</div>
-                      <div className='text-xl font-bold'>{top.type}</div>
-                    </div>
-                    <div className='flex min-h-[32rem] flex-col items-center justify-between pb-6'>
-                      <div>{content}</div>
-                      <Link
-                        href='/contact-us#form'
-                        className={clsx(
-                          'btn btn-secondary btn-block flex gap-2 rounded-none py-0 text-base uppercase text-primary lg:w-56 lg:text-lg 2xl:text-xl',
-                        )}
-                      >
-                        Started
-                      </Link>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
-      </Section>
-      {/* <div className='overflow-x-auto bg-logistics-banner bg-cover bg-fixed bg-center px-4 py-6 sm:px-8 sm:py-10 md:px-12 md:py-14 lg:px-16 lg:py-[4.5rem] xl:px-20 xl:py-[5.5rem] 2xl:px-24 2xl:py-[6.5rem]'>
-        <motion.table
-          {...animateZoomIn}
-          className='table rounded-none bg-white text-primary shadow'
-        >
-          <thead className='text-sm uppercase text-primary lg:text-base'>
-            <tr>
-              <th className='inner-border table-break-headings table-center-content w-1/5 p-4'>
-                Service
-              </th>
-              <th className='inner-border table-break-headings table-center-content w-1/5 p-4'>
-                Size or Weight Limit
-              </th>
-              <th className='inner-border table-break-headings table-center-content w-1/5 p-4'>
-                Receiving Fee
-              </th>
-              <th className='inner-border table-break-headings table-center-content w-1/5 p-4'>
-                {returnCostsData[selectedData].type} Fee
-              </th>
-              <th className='inner-border table-break-headings table-center-content w-1/5 p-4'>
-                Shipping Fee
-              </th>
-            </tr>
-          </thead>
-          <tbody className='text-sm text-primary lg:text-base'>
-            <tr className='table-row border-none'>
-              <td className='inner-border table-center-content w-1/5 p-4'>
-                <select
-                  className='select select-ghost w-full max-w-xs font-black uppercase'
-                  onChange={(e) => setSelectedData(e.target.value as ReturnCostKeys)}
-                >
-                  {Object.keys(returnCostsData).map((key) => {
-                    return (
-                      <option key={key} value={key}>
-                        {returnCostsData[key].title}
-                      </option>
-                    );
-                  })}
-                </select>
-              </td>
-              <td className='inner-border table-center-content w-1/5 p-4'>
-                {returnCostsData[selectedData].limit}
-              </td>
-              <td className='inner-border table-center-content w-1/5 p-4'>
-                {returnCostsData[selectedData].receiving}
-              </td>
-              <td className='inner-border table-center-content w-1/5 p-4'>
-                {returnCostsData[selectedData].typeFee}
-              </td>
-              <td className='inner-border table-center-content w-1/5 p-4'>
-                {returnCostsData[selectedData].shipping}
-              </td>
-            </tr>
-          </tbody>
-        </motion.table>
-      </div> */}
-    </>
+    <Section id='returns-cost' className='space-y-4' withPadding={false}>
+      <div
+        className={clsx(
+          'space-y-8 md:mx-auto md:w-3/4',
+          'px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24',
+          'py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 2xl:py-12',
+        )}
+      >
+        <motion.h3 {...animateFadeIn} className='text-center text-secondary'>
+          How much do returns cost?
+        </motion.h3>
+        <motion.p {...animateFadeIn} className='text-center text-white'>
+          At Front Dock, we specialize in custom returns management, with our popular consolidate
+          and return to seller model. We process returns daily, update you on inventory, and ship
+          back when you&apos;re ready.
+        </motion.p>
+        <motion.p {...animateFadeIn} className='text-center text-white'>
+          Let&apos;s schedule a call to discuss your merchandise and how we can help. Your account
+          executive will provide a customized pricing proposal, considering your returns needs.
+        </motion.p>
+        <motion.p {...animateFadeIn} className='text-center text-white'>
+          In the meantime, don&apos;t forget—we&apos;re home to the{' '}
+          <span className='text-secondary'>$0.99</span> return!
+        </motion.p>
+      </div>
+      <Carousel
+        className='w-full px-4'
+        opts={{
+          align: 'center',
+          loop: true,
+          active: true,
+          startIndex: 0,
+        }}
+      >
+        <CarouselContent>
+          {returnCostsData.map(({ id, top, content }) => (
+            <CarouselItem
+              key={id}
+              className='w-full sm:w-auto md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5'
+            >
+              <div className='select-none bg-white'>
+                <div className='space-y-4 bg-secondary py-6 text-center text-primary'>
+                  <div className='text-2xl font-black uppercase'>{top.title}</div>
+                  <div className='text-6xl font-bold'>{top.cost}</div>
+                  <div className='text-xl font-bold'>{top.type}</div>
+                </div>
+                <div className='flex min-h-[630px] flex-col items-center justify-between pb-6'>
+                  <div>{content}</div>
+                  <Link
+                    href='/contact-us#form'
+                    className={clsx(
+                      'btn btn-secondary flex gap-2 rounded-none py-0 text-base uppercase text-primary lg:text-lg 2xl:text-xl',
+                      'w-3/4 md:w-1/3 xl:w-56',
+                    )}
+                  >
+                    Started
+                  </Link>
+                </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+    </Section>
   );
 }

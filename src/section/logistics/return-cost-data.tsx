@@ -4,6 +4,20 @@ import { getCurrencyFormat } from '@/utils';
 const returnCostsData = [
   {
     id: crypto.randomUUID(),
+    top: { title: 'Return Processing', cost: getCurrencyFormat(0.99), type: 'Per Item' },
+    content: (
+      <ul className='mx-auto flex list-disc flex-col gap-1 px-16 py-6 text-lg text-gray-500'>
+        <li>Return wholesale buy back offers</li>
+        <li>No account set up fees</li>
+        <li>Free storage for the first 60 days</li>
+        <li>No mandatory contracts</li>
+        <li>Customized pricing to fit your product</li>
+        <li>size, rotation, and handling requirements</li>
+      </ul>
+    ),
+  },
+  {
+    id: crypto.randomUUID(),
     top: { title: 'Dispose', cost: getCurrencyFormat(1.5), type: 'Receiving Fee' },
     content: (
       <div className='space-y-4 px-8 py-6'>
@@ -63,20 +77,7 @@ const returnCostsData = [
       </div>
     ),
   },
-  {
-    id: crypto.randomUUID(),
-    top: { title: 'Return Processing', cost: getCurrencyFormat(0.99), type: 'Per Item' },
-    content: (
-      <ul className='mx-auto flex list-disc flex-col gap-1 px-16 py-6 text-lg text-gray-500'>
-        <li>Return wholesale buy back offers</li>
-        <li>No account set up fees</li>
-        <li>Free storage for the first 60 days</li>
-        <li>No mandatory contracts</li>
-        <li>Customized pricing to fit your product</li>
-        <li>size, rotation, and handling requirements</li>
-      </ul>
-    ),
-  },
+
   {
     id: crypto.randomUUID(),
     top: { title: 'Resale', cost: getCurrencyFormat(1.5), type: 'Receiving Fee' },

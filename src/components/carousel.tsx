@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable consistent-return */
 /* eslint-disable react/jsx-no-constructed-context-values */
 
@@ -51,6 +52,7 @@ const Carousel = React.forwardRef<
     {
       ...opts,
       axis: orientation === 'horizontal' ? 'x' : 'y',
+      loop: opts?.loop,
     },
     plugins,
   );
@@ -131,6 +133,7 @@ const Carousel = React.forwardRef<
         {...props}
       >
         {children}
+        <CarouselControls />
       </div>
     </CarouselContext.Provider>
   );
@@ -180,20 +183,19 @@ const CarouselItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLD
 CarouselItem.displayName = 'CarouselItem';
 
 const CarouselPrevious = React.forwardRef<HTMLButtonElement>((props, ref) => {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+  const { scrollPrev, canScrollPrev } = useCarousel();
 
   return (
     <button
       type='button'
       ref={ref}
       className={cn(
-        'absolute h-12 w-12 text-secondary bg-transparent border border-secondary rounded-full p-2 hover:bg-secondary hover:text-primary focus:bg-secondary focus:text-primary',
-        orientation === 'horizontal'
-          ? '-left-12 top-1/2 -translate-y-1/2'
-          : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
+        'h-12 w-12 text-secondary bg-transparent border border-secondary rounded-full p-2 hover:bg-secondary hover:text-primary focus:bg-secondary focus:text-primary disabled:bg-gray-300 disabled:text-gray-500 disabled:border-gray-300 disabled:cursor-not-allowed',
+        'mr-2',
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
+      aria-disabled={!canScrollPrev}
       {...props}
     >
       <FontAwesomeIcon className='h-4 w-4' icon={faArrowLeft} />
@@ -204,20 +206,18 @@ const CarouselPrevious = React.forwardRef<HTMLButtonElement>((props, ref) => {
 CarouselPrevious.displayName = 'CarouselPrevious';
 
 const CarouselNext = React.forwardRef<HTMLButtonElement>((props, ref) => {
-  const { orientation, scrollNext, canScrollNext } = useCarousel();
+  const { scrollNext, canScrollNext } = useCarousel();
 
   return (
     <button
       type='button'
       ref={ref}
       className={cn(
-        'absolute h-12 w-12 text-secondary bg-transparent border border-secondary rounded-full p-2 hover:bg-secondary hover:text-primary focus:bg-secondary focus:text-primary',
-        orientation === 'horizontal'
-          ? '-right-12 top-1/2 -translate-y-1/2'
-          : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
+        'h-12 w-12 text-secondary bg-transparent border border-secondary rounded-full p-2 hover:bg-secondary hover:text-primary focus:bg-secondary focus:text-primary disabled:bg-gray-300 disabled:text-gray-500 disabled:border-gray-300 disabled:cursor-not-allowed',
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
+      aria-disabled={!canScrollNext}
       {...props}
     >
       <FontAwesomeIcon className='h-4 w-4' icon={faArrowRight} />
@@ -226,6 +226,15 @@ const CarouselNext = React.forwardRef<HTMLButtonElement>((props, ref) => {
   );
 });
 CarouselNext.displayName = 'CarouselNext';
+
+function CarouselControls() {
+  return (
+    <div className='mt-4 flex justify-start pb-4'>
+      <CarouselPrevious />
+      <CarouselNext />
+    </div>
+  );
+}
 
 export {
   Carousel,
